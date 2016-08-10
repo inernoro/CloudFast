@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.Owin</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.Owin.AbpOwinExtensions">
+            <summary>
+            OWIN extension methods for ABP.
+            </summary>
+        </member>
+        <member name="M:Abp.Owin.AbpOwinExtensions.UseAbp(Owin.IAppBuilder)">
+            <summary>
+            Uses ABP.
+            </summary>
+        </member>
+        <member name="T:Abp.Owin.AbpOwinModule">
+            <summary>
+            OWIN integration module for ABP.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -11,7 +11,7 @@ namespace Cloud.Web.Views
     {
         protected CloudWebViewPageBase()
         {
-            LocalizationSourceName = CloudConsts.LocalizationSourceName;
+          //  LocalizationSourceName = CloudConsts.LocalizationSourceName;
         }
     }
 }
