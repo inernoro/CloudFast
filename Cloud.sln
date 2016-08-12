@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,11 +14,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Core", "Cloud.Core\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Application", "Cloud.Application\Cloud.Application.csproj", "{EDF5D964-4C0F-4F19-B674-58A38A5E5401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.EntityFramework", "Cloud.EntityFramework\Cloud.EntityFramework.csproj", "{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Web", "Cloud.Web\Cloud.Web.csproj", "{897F6FD8-6F90-48E4-95A5-B4429B896205}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.WebApi", "Cloud.WebApi\Cloud.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Dapper", "Cloud.Dapper\Cloud.Dapper.csproj", "{3FFF4CAB-698F-4A20-9D7D-61263225C45C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Strategy", "Cloud.Strategy\Cloud.Strategy.csproj", "{2ABC3F13-E1B9-488C-8FF9-A78298CBC3B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Mongo", "Cloud.Mongo\Cloud.Mongo.csproj", "{229797FF-E55F-4EA8-B600-434F53DC7005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +38,6 @@ Global
 		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.Build.0 = Release|Any CPU
 		{897F6FD8-6F90-48E4-95A5-B4429B896205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{897F6FD8-6F90-48E4-95A5-B4429B896205}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{897F6FD8-6F90-48E4-95A5-B4429B896205}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +46,18 @@ Global
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFF4CAB-698F-4A20-9D7D-61263225C45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFF4CAB-698F-4A20-9D7D-61263225C45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFF4CAB-698F-4A20-9D7D-61263225C45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFF4CAB-698F-4A20-9D7D-61263225C45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ABC3F13-E1B9-488C-8FF9-A78298CBC3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABC3F13-E1B9-488C-8FF9-A78298CBC3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABC3F13-E1B9-488C-8FF9-A78298CBC3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABC3F13-E1B9-488C-8FF9-A78298CBC3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229797FF-E55F-4EA8-B600-434F53DC7005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229797FF-E55F-4EA8-B600-434F53DC7005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229797FF-E55F-4EA8-B600-434F53DC7005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229797FF-E55F-4EA8-B600-434F53DC7005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Cloud.Web.Models;
+using Cloud.Web.Framework;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
@@ -43,7 +43,7 @@ namespace Cloud.Web.Controllers
         /// <param name="identity"></param>
         /// <param name="rememberMe"></param>
         /// <returns></returns>
-        private async Task SignInAsync(Models.User user, ClaimsIdentity identity = null, bool rememberMe = false)
+        private async Task SignInAsync(User user, ClaimsIdentity identity = null, bool rememberMe = false)
         {
             if (identity == null)
                 identity = await _cloudUserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);

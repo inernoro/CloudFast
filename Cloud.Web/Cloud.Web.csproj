@@ -268,23 +268,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Localization\Cloud\Cloud-zh-CN.xml" />
-    <Content Include="Localization\Cloud\Cloud.ja.xml" />
-    <Content Include="Localization\Cloud\Cloud.tr.xml" />
-    <Content Include="Localization\Cloud\Cloud.xml" />
     <Content Include="log4net.config" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -299,18 +284,18 @@
     <Compile Include="App_Start\CloudWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
-    <Compile Include="Cloud\Web\Models\User.cs" />
+    <Compile Include="Framework\User.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CloudControllerBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AbpSession.cs" />
-    <Compile Include="Models\CloudUserManager.cs" />
-    <Compile Include="Models\CloudUserStore.cs" />
-    <Compile Include="Models\ICloudUserManager.cs" />
-    <Compile Include="Models\ICloudUserStore.cs" />
+    <Compile Include="Framework\AbpSession.cs" />
+    <Compile Include="Framework\CloudUserManager.cs" />
+    <Compile Include="Framework\CloudUserStore.cs" />
+    <Compile Include="Framework\ICloudUserManager.cs" />
+    <Compile Include="Framework\ICloudUserStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CloudWebViewPageBase.cs" />
   </ItemGroup>
@@ -329,7 +314,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cloud.Application\Cloud.Application.csproj">
@@ -339,10 +324,6 @@
     <ProjectReference Include="..\Cloud.Core\Cloud.Core.csproj">
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>Cloud.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cloud.EntityFramework\Cloud.EntityFramework.csproj">
-      <Project>{3979f157-deb0-4878-ab1d-4cef6b5a1300}</Project>
-      <Name>Cloud.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Cloud.WebApi\Cloud.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
