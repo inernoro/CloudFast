@@ -106,7 +106,6 @@
     <Compile Include="Framework\Dapper\IDapperHelper.cs" />
     <Compile Include="Framework\Dapper\IDapperRepositorie.cs" />
     <Compile Include="Framework\Dapper\PageEntity.cs" />
-    <Compile Include="Framework\Mongo\ContentDisplayAttribute.cs" />
     <Compile Include="Framework\Mongo\DbNameAttribute.cs" />
     <Compile Include="Framework\Mongo\IBaseMongodbModel.cs" />
     <Compile Include="Framework\Mongo\IMongodbHelper.cs" />

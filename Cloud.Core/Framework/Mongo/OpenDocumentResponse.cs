@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Cloud.Framework.Assembly;
 
 namespace Cloud.Framework.Mongo
 {

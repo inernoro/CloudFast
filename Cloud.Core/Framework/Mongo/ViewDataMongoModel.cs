@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Abp.Domain.Entities;
+using Cloud.Framework.Assembly;
 
 // ReSharper disable PossibleNullReferenceException
 

@@ -29,7 +29,6 @@
         /// </summary>
         /// <param name="info">描述信息</param>
         /// <param name="isShow">是否显示</param>
-        /// <param name="login"></param> 
         public ContentDisplayAttribute(string info, bool isShow)
             : this(info)
         {

@@ -7,8 +7,7 @@ using Abp.Dependency;
 using Abp.Domain.Services;
 using Abp.Extensions;
 using Cloud.Framework.Assembly;
-using Cloud.Framework.Mongo;
-using ContentDisplayAttribute = Cloud.Framework.Mongo.ContentDisplayAttribute;
+using Cloud.Framework.Mongo; 
 
 namespace Cloud.Strategy.Framework.AssemblyStrategy
 { 
@@ -26,7 +25,7 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
 
         private const string LocalUrl = "";
 
-        public IEnumerable<OpenDocumentResponse> Build(System.Reflection.Assembly assembly)
+        public IEnumerable<OpenDocumentResponse> Build(Assembly assembly)
         {
 
             var result = assembly.GetTypes().Where(type =>
