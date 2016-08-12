@@ -284,6 +284,8 @@
     <Compile Include="App_Start\CloudWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Framework\Ilogin.cs" />
+    <Compile Include="Framework\Signin.cs" />
     <Compile Include="Framework\User.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

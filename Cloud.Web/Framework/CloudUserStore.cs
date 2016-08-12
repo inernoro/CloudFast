@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace Cloud.Web.Framework
 {
@@ -8,29 +9,29 @@ namespace Cloud.Web.Framework
         public void Dispose()
         {
 
-        }
+        } 
 
-        public Task CreateAsync(User user)
+        public Task CreateAsync(IUser<long> user)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(User user)
+        public Task UpdateAsync(IUser<long> user)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(User user)
+        public Task DeleteAsync(IUser<long> user)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> FindByIdAsync(long userId)
+        public Task<IUser<long>> FindByIdAsync(long userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> FindByNameAsync(string userName)
+        public Task<IUser<long>> FindByNameAsync(string userName)
         {
             throw new NotImplementedException();
         }

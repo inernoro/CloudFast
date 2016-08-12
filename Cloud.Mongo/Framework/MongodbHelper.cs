@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Abp.Domain.Entities;
 using Cloud.Framework.Mongo;
 using MongoDB.Driver;
 
-namespace Cloud.Mongo
+namespace Cloud.Mongo.Framework
 {
     public class MongodbHelper<TEntity, TPrimaryKey> : MongodbBase<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>

@@ -7,7 +7,7 @@ using Abp;
 using Abp.Domain.Entities;
 using Cloud.Framework.Mongo;
 
-namespace Cloud.Mongo
+namespace Cloud.Mongo.Framework
 {
     public abstract class MongodbBase<TEntity, TPrimaryKey> : IMongodbHelper<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
     {

@@ -4,9 +4,9 @@ using Microsoft.AspNet.Identity;
 
 namespace Cloud.Web.Framework
 {
-    public class CloudUserManager : UserManager<User, long>, ICloudUserManager
+    public class CloudUserManager : UserManager<IUser<long>, long>, ICloudUserManager
     {
-        public override async Task<ClaimsIdentity> CreateIdentityAsync(User user, string authenticationType)
+        public override async Task<ClaimsIdentity> CreateIdentityAsync(IUser<long> user, string authenticationType)
         {
             var identity = await base.CreateIdentityAsync(user, authenticationType);
             return identity;
@@ -17,5 +17,7 @@ namespace Cloud.Web.Framework
         {
 
         }
+
+
     }
 }

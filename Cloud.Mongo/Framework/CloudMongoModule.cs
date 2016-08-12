@@ -1,9 +1,8 @@
 ﻿using System.Reflection;
 using Abp.Modules;
-using System.Configuration;
 using Cloud.Framework.Mongo;
 
-namespace Cloud.Mongo
+namespace Cloud.Mongo.Framework
 {
     [DependsOn(typeof(CloudCoreModule))]
 
