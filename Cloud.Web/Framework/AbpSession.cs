@@ -7,7 +7,6 @@ using Microsoft.AspNet.Identity;
 
 namespace Cloud.Web.Framework
 {
-
     public class AbpSession : IAbpSession, ISingletonDependency
     {
         public long? UserId
