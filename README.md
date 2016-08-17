@@ -40,3 +40,5 @@ Castle.Windsor + Modernizr +Shouldly + Log4Net + Angularjs<br/>
 > 架构图 
 
 ![image](http://images0.cnblogs.com/blog2015/534304/201505/272237582662256.png)<br/>
+
+本框架扩展于abp,若想访问abp,框架原地址[点击此处](https://github.com/aspnetboilerplate/aspnetboilerplate)
