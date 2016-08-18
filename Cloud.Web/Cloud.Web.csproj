@@ -339,6 +339,7 @@
     <Content Include="log4net.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -1219,6 +1220,22 @@
     <ProjectReference Include="..\Cloud.Core\Cloud.Core.csproj">
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>Cloud.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cloud.Dapper\Cloud.Dapper.csproj">
+      <Project>{3fff4cab-698f-4a20-9d7d-61263225c45c}</Project>
+      <Name>Cloud.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cloud.Mongo\Cloud.Mongo.csproj">
+      <Project>{229797ff-e55f-4ea8-b600-434f53dc7005}</Project>
+      <Name>Cloud.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cloud.Redis\Cloud.Redis.csproj">
+      <Project>{2fa138d4-76ed-406d-ab41-15d6afac4550}</Project>
+      <Name>Cloud.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cloud.Strategy\Cloud.Strategy.csproj">
+      <Project>{2abc3f13-e1b9-488c-8ff9-a78298cbc3b5}</Project>
+      <Name>Cloud.Strategy</Name>
     </ProjectReference>
     <ProjectReference Include="..\Cloud.WebApi\Cloud.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
