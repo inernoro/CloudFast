@@ -16,26 +16,23 @@ namespace Cloud.Framework.Assembly
             ConfigResult = configResult;
         }
 
-
         public string Url => ConfigResult.url;
 
-        public string Name => ConfigResult.url;
+        public string Name => ConfigResult.name;
 
-        public object Data { get; set; }
+        public object Data => ConfigResult.data;
 
-        public string Type => ConfigResult.url;
+        public string Type => ConfigResult.type;
 
-        public string DataType => ConfigResult.url;
+        public string DataType => ConfigResult.dataType;
 
-        public string ContentType => ConfigResult.url;
+        public string ContentType => ConfigResult.contentType;
 
-        public dynamic Excute { get; set; }
+        public dynamic Excute => ConfigResult.excute;
 
-        public dynamic Success { get; set; }
+        public dynamic Success => ConfigResult.success;
 
-        public dynamic Error { get; set; }
-
-
+        public dynamic Error => ConfigResult.error;
 
 
     }

@@ -99,6 +99,7 @@
     <Compile Include="Framework\AssemblyStrategy\AssemblyBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\CloudBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\LuaAssembly.cs" />
+    <Compile Include="Framework\AssemblyStrategy\StartupStrategy.cs" />
     <Compile Include="Framework\CloudAssembly.cs" />
     <Compile Include="Framework\StrategyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

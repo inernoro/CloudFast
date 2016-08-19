@@ -40,7 +40,7 @@ dataConfig.cache = function ( key , value )
 		contentType = "Exchange.Redis",
 		success = dataConfig.success(key , value),
 		error = dataConfig.error(key , value);
-	}; 
+	};
 	return result;
 end
 

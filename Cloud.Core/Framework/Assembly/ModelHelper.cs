@@ -7,11 +7,14 @@ using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework.Redis;
 using Jil;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Cloud.Framework.Assembly
 {
     public static class ModelHelper
     {
+
 
         #region Core
 
