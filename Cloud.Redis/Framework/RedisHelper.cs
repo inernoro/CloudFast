@@ -9,18 +9,9 @@ namespace Cloud.Redis.Framework
 {
     public class RedisHelper : IRedisHelper
     {
-        #region 初始化
-
         private static ConnectionMultiplexer _redis;
 
         private static readonly object Locker = new object();
-
-        private readonly IDatabase _database;
-
-        public RedisHelper()
-        {
-            _database = Manager.GetDatabase(CacheConfigurage.Database);
-        }
 
         public static ConnectionMultiplexer Manager
         {
@@ -31,8 +22,7 @@ namespace Cloud.Redis.Framework
                     lock (Locker)
                     {
                         if (_redis != null) return _redis;
-
-                        _redis = GetManager(CacheConfigurage.ConnectionString);
+                        _redis = ConnectionMultiplexer.Connect(CacheConfigurage.ConnectionString);
                         return _redis;
                     }
                 }
@@ -41,212 +31,143 @@ namespace Cloud.Redis.Framework
             }
         }
 
-        private static ConnectionMultiplexer GetManager(string connectionString = null)
-        {
-            if (string.IsNullOrEmpty(connectionString))
-            {
-                connectionString = CacheConfigurage.ConnectionString;
-            }
-
-            return ConnectionMultiplexer.Connect(connectionString);
-        }
-
-        #endregion
-
-        #region String 存储
-         
-        public bool Set<T>(string key, T t)
-        {
-            return Set(key, JsonConvert.SerializeObject(t));
-        }
-
-        public bool Set(string key, string value)
-        {
-            return _database.StringSet(key, value);
-        } 
-
-        public T Get<T>(string key)
-        {
-            if (ExistsKey(key))
-            {
-                var t = JsonConvert.DeserializeObject<T>(Get(key));
-                return t;
-            }
-            return default(T);
-        }
-
-        public string Get(string key)
-        {
-            return _database.StringGet(key);
-        }
-
-        public bool Remove(string key)
-        {
-            return _database.KeyDelete(key);
-        }
-
-        #endregion
-
-        #region 其他
-
-        /// <summary>
-        /// 判断Key是否存在
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public bool ExistsKey(string key)
-        {
-            return _database.KeyExists(key);
-        }
-
-        /// <summary>
-        /// 批量判断Key是否存在
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public List<string> ExistsKeyList(IEnumerable<string> key)
-        {
-            return key.Where(node => !ExistsKey(node)).ToList();
-        }
-
-        /// <summary>
-        /// 设置过期时间
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="timeSpan"></param>
-        public void Expire(string key, TimeSpan? timeSpan)
-        {
-            _database.KeyExpire(key, timeSpan);
-        }
-
-
-        /// <summary>
-        /// 清空缓存
-        /// </summary>
-        public void FlushDb()
-        {
-            //  Clear();
-        }
-
-        public void Clear()
-        {
-            var endpoints = Manager.GetEndPoints(true);
-            foreach (var endpoint in endpoints)
-            {
-                var server = Manager.GetServer(endpoint);
-                server.FlushAllDatabases();
-            }
-        }
-
-        #endregion
-
         #region
 
-        /// <summary>
-        /// 获取Hash值
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public string HGet(string key, string value)
+        public string HashGet(string key, string hashField, int database = 0)
         {
-            return _database.HashGet(key, value);
+            var redis = Manager.GetDatabase(database);
+            return redis.HashGet(key, hashField);
         }
 
-        /// <summary>
-        /// 获取所有对象
-        /// </summary>
-        /// <param name="key"></param> 
-        /// <returns></returns>
-        public T HGet<T>(string key)
+        public Dictionary<string, string> HashGetAll(string key, int database = 0)
         {
-            var value = _database.HashGet(key, CloudKey.CloudRedisEntityItself);
-            return JsonConvert.DeserializeObject<T>(value);
-        }
-        /// <summary>
-        /// 设置某个字段值
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="hashField"></param>
-        /// <param name="value"></param>
-        /// <param name="span"></param>
-        public void HSet(string key, string hashField, string value, int span = CacheConfigurage.TimeDefaultValidTime)
-        {
-            _database.HashSet(key, hashField, value);
-            SetExpire(key);
-
+            var redis = Manager.GetDatabase(database);
+            var date = redis.HashGetAll(key);
+            return date.ToDictionary<HashEntry, string, string>(hashEntry => hashEntry.Name, hashEntry => hashEntry.Value);
         }
 
-        public void HDel(string key, string hashField)
+        public string[] HashGet(string key, string[] hashFields, int database = 0)
         {
-            _database.HashDelete(key, hashField);
+            var redis = Manager.GetDatabase(database);
+            var date = redis.HashGet(key, hashFields.Select(hashField => (RedisValue)hashField).ToArray());
+            return date.Select(redisValue => (string)redisValue).ToArray();
         }
 
-        /// <summary>
-        /// 批量添加键值
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="entry"></param>
-        /// <param name="span"></param>
-        public void HSet(string key, List<KeyValueStruct> entry, int span = CacheConfigurage.TimeDefaultValidTime)
+
+
+        public void HashSet<TType>(string key, TType type, int database = 0)
         {
-            var list = entry.Select(node => new HashEntry(node.Name, node.Value ?? "")).ToArray();
-            _database.HashSet(key, list);
-            SetExpire(key);
+            var redis = Manager.GetDatabase(database);
+            var propertyLst = typeof(TType).GetProperties();
+            var redisEntity = propertyLst.Select(property => new HashEntry(property.Name, property.GetValue(type).ToString())).ToArray();
+            redis.HashSet(key, redisEntity);
         }
 
-        /// <summary>
-        /// 设置有效时间
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="span"></param>
-        public void SetExpire(string key, int span = CacheConfigurage.TimeDefaultValidTime)
+        public void HashSet(string key, string hashField, string value, int database = 0)
         {
-            var date = DateTime.Now.AddSeconds(span);
-            _database.KeyExpire(key, date);
-
+            var redis = Manager.GetDatabase(database);
+            redis.HashSet(key, hashField, value);
         }
 
-        /// <summary>
-        /// 根据Key批量获取模型
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="listKey"></param>
-        /// <returns></returns>
-        public List<T> HGetList<T>(IEnumerable<string> listKey)
+
+        public long HashIncrement(string key, string hashField, long value = 1, int database = 0)
         {
-            var list = new List<T>();
-            foreach (var node in listKey)
-            {
-                list.Add(HGet<T>(node));
-            }
-            return list;
+            var redis = Manager.GetDatabase(database);
+            return redis.HashIncrement(key, value, value);
+        }
+        public long HashDecrement(string key, string hashField, long value = 1, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.HashDecrement(key, value, value);
+
+        }
+        public bool HashDelete(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.HashDelete(key, value);
         }
 
+        #endregion
+
+        #region All
+
+        public void KeyDelete(string key, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            redis.KeyDelete(key);
+        }
+
+        public void KeyDelete(string[] key, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            var rediskey = key.Select(s => (RedisKey)s).ToArray();
+            redis.KeyDelete(rediskey);
+        }
+
+        #endregion 
+
+        #region String
+
+        public string StringGet(string key, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.StringGet(key);
+        }
+
+        public bool StringSet(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.StringSet(key, value);
+        }
+
+        #endregion
+
+        #region Set
+
+
+        public bool SetAdd(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.SetAdd(key, value);
+        }
+
+        public bool SetRemove(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.SetRemove(key, value);
+        }
+        public long SetLength(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.SetLength(key);
+        }
+
+        public List<string> SetMembers(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.SetMembers(key).Select(x => x.ToString()).ToList();
+        }
+        public string SetPop(string key, string value, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.SetPop(key);
+        }
         #endregion
 
         #region List
 
-        public void SetAdd(string key, string value)
+        public long ListRightPush(string key, string value, int database = 0)
         {
-            _database.SetAdd(key, value);
+            var redis = Manager.GetDatabase(database);
+            return redis.ListRightPush(key, value);
         }
 
-        public void SetPop(string key, string value)
+        public string[] ListRange(string key, long start, long end, int database = 0)
         {
-            _database.SetPop(key);
+            var redis = Manager.GetDatabase(database);
+            return redis.ListRange(key, start, end).Select(x => x.ToString()).ToArray();
         }
 
-        public void ListAdd(string key, string value)
-        {
-            _database.ListRightPush(key, value);
-        }
-
-        public List<string> ListRange(string key, int start, int end)
-        {
-            return _database.ListRange(key, start, end).Select(x => x.ToString()).ToList();
-        }
-        
 
         #endregion
     }
