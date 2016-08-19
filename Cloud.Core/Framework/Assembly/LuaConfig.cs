@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using Abp.Dependency;
@@ -16,7 +17,7 @@ namespace Cloud.Framework.Assembly
             ConfigResult = configResult;
         }
 
-        public string Url => ConfigResult.url;
+        public dynamic Url => ConfigResult.url;
 
         public string Name => ConfigResult.name;
 

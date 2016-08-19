@@ -29,52 +29,47 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
         /// <returns></returns>
         public dynamic NamespaceGetValue(string fullName)
         {
-            return Dictionary.ContainsKey(fullName)
-                ? Dictionary[fullName]
-                : DynamicNamespaceGetValue(fullName);
+            if (Dictionary.ContainsKey(fullName))
+            {
+                return Dictionary[fullName];
+            }
+            var dy = DynamicNamespaceGetValue(fullName);
+            Dictionary.Add(fullName, dy);
+            return dy;
         }
 
         /// <summary>
-        /// 每次都动态加载
+        /// 根据命名空间动态加载
         /// </summary>
         /// <param name="fullName"></param>
         /// <returns></returns>
         public dynamic DynamicNamespaceGetValue(string fullName)
         {
-            return FileLoad(GetScript(string.Format(_paths, fullName.Replace(".", "\\"))));
+            return ExecuteScript(GetScript(string.Format(_paths, fullName.Replace(".", "\\"))));
         }
 
         /// <summary>
-        /// 每次都动态加载
+        /// 根据地址动态加载
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>
         public dynamic AddressGetValue(string address)
         {
-            return FileLoad(GetScript(address));
+            return ExecuteScript(GetScript(address));
         }
 
         /// <summary>
-        /// 加载脚本文件并返回结果集
+        /// 执行脚本文件并返回结果集
         /// </summary>
         /// <param name="script">脚本</param>
         /// <returns></returns>
-        public dynamic FileLoad(string script)
+        public dynamic ExecuteScript(string script)
         {
             dynamic create = new Lua().CreateEnvironment();
             create.dochunk(script, "LuaHelper.lua");
-            Dictionary.Add(script, create);
             return create;
         }
-
-
-        /// <summary>
-        /// 更新缓存
-        /// </summary>
-        public void UpdateCache()
-        {
-            Dictionary = new Dictionary<string, dynamic>();
-        }
+         
 
         /// <summary>
         /// 根据地址获取脚本
@@ -87,6 +82,14 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
             {
                 return reader.ReadToEnd();
             }
+        }
+
+        /// <summary>
+        /// 更新缓存
+        /// </summary>
+        public void UpdateScriptAssembly()
+        {
+            Dictionary = new Dictionary<string, dynamic>();
         }
     }
 }

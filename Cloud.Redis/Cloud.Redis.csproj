@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cloud.Redis</RootNamespace>
     <AssemblyName>Cloud.Redis</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -91,9 +91,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloudRedisModule.cs" />
+    <Compile Include="Framework\CloudRedisModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RedisHelper.cs" />
+    <Compile Include="Framework\RedisHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

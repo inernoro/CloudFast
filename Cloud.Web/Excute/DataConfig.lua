@@ -1,12 +1,12 @@
-﻿local dataConfig = {}
-local excute = {}
+﻿dataConfig = {}
+excute = {}
 
 --持久
-dataConfig.persistent = function ( command )
+dataConfig.persistent = function ( )
 	local  result =  {
 		--该扩展的应用地址
 		url = {
-			default = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@",
+			master = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@",
 			slave = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@"
 		},
 		--该扩展的名称
@@ -30,7 +30,7 @@ dataConfig.persistent = function ( command )
 end
 
 --缓存
-dataConfig.cache = function ( key , value )
+dataConfig.cache = function ()
 	local  result =  {
 		url = "123.56.129.104:6380",
 		name = "Redis",
@@ -38,8 +38,8 @@ dataConfig.cache = function ( key , value )
 		type = "cache",
 		dataType = "Json",
 		contentType = "Exchange.Redis",
-		success = dataConfig.success(key , value),
-		error = dataConfig.error(key , value);
+		success = dataConfig.success,
+		error = dataConfig.error;
 	};
 	return result;
 end
@@ -60,7 +60,7 @@ dataConfig.search = function ( searchKey , document )
 end
 
 --文档
-dataConfig.document = function ( control , document )
+dataConfig.document = function ()
 	local  result =  {
 		url = "mongodb://root:KONGque00@123.56.129.104",
 		name = "Mongodb",

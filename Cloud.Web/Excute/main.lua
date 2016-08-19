@@ -1,13 +1,11 @@
-﻿local main = { };
-local dataConfig = require 'DataConfig'
-
+﻿main = { };
 -- startup
 function main.start()
     local system = {
         url = "F:\\wwwroot\\Luafile\\{0}.lua",
         data =
         {
-            infrastructure = dataConfig,
+            infrastructure = "",
             autoConnectionExtend = true
         },
         type = "SystemConfig",

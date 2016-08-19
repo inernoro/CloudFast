@@ -32,12 +32,12 @@ namespace Cloud.Framework.Assembly
         /// </summary>
         /// <param name="script">脚本</param>
         /// <returns></returns>
-        dynamic FileLoad(string script);
+        dynamic ExecuteScript(string script);
 
 
         /// <summary>
         /// 更新缓存
         /// </summary>
-        void UpdateCache();
+        void UpdateScriptAssembly();
     }
 }

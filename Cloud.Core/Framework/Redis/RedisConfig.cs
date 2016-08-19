@@ -1,6 +1,6 @@
 ﻿namespace Cloud.Framework.Redis
 {
-    public static class RedisConfig
+    public static class CacheConfigurage
     {
         public static string ConnectionString { get; set; }
 

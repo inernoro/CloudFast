@@ -77,13 +77,13 @@ namespace Cloud.Framework.Redis
 
         T HGet<T>(string key);
 
-        void HSet(string key, string hashField, string value, int span = RedisConfig.TimeDefaultValidTime);
+        void HSet(string key, string hashField, string value, int span = CacheConfigurage.TimeDefaultValidTime);
 
         void HDel(string key, string hashField);
 
-        void HSet(string key, List<KeyValueStruct> entry, int span = RedisConfig.TimeDefaultValidTime);
+        void HSet(string key, List<KeyValueStruct> entry, int span = CacheConfigurage.TimeDefaultValidTime);
 
-        void SetExpire(string key, int span = RedisConfig.TimeDefaultValidTime);
+        void SetExpire(string key, int span = CacheConfigurage.TimeDefaultValidTime);
 
         /// <summary>
         /// 根据Id列表获取数据

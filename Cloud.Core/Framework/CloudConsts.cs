@@ -1,4 +1,4 @@
-﻿namespace Cloud
+﻿namespace Cloud.Framework
 {
     public class CloudConsts
     {

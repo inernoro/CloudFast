@@ -24,7 +24,7 @@ namespace Cloud.Dapper.Framework
 #if DEBUG
             DebuggerSql(sql, obj);
 #endif
-            using (IDbConnection conn = new SqlConnection(DapperConnection.SlaveConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 var data = conn.Query<T>(sql, obj).ToList();
                 return data;
@@ -43,7 +43,7 @@ namespace Cloud.Dapper.Framework
 #if DEBUG
             DebuggerSql(sql, obj);
 #endif
-            using (IDbConnection conn = new SqlConnection(DapperConnection.SlaveConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.Query<T>(sql, obj);
             }
@@ -62,7 +62,7 @@ namespace Cloud.Dapper.Framework
 #if DEBUG
             DebuggerSql(proc, procParams);
 #endif
-            using (IDbConnection conn = new SqlConnection(DapperConnection.SlaveConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.Query<T>(proc, procParams, commandType: CommandType.StoredProcedure);
             }
@@ -86,7 +86,7 @@ namespace Cloud.Dapper.Framework
             SqlMapper.GridReader reader = null;
             try
             {
-                conn = new SqlConnection(DapperConnection.SlaveConnectionString);
+                conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString);
                 reader = conn.QueryMultiple(proc, procParams, commandType: CommandType.StoredProcedure);
                 return readResult(reader);
             }
@@ -115,7 +115,7 @@ namespace Cloud.Dapper.Framework
             SqlMapper.GridReader reader = null;
             try
             {
-                conn = new SqlConnection(DapperConnection.SlaveConnectionString);
+                conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString);
                 reader = conn.QueryMultiple(proc, sqlParams);
                 return readResult(reader);
             }
@@ -138,7 +138,7 @@ namespace Cloud.Dapper.Framework
 #if DEBUG
             DebuggerSql(sql, sqlParams);
 #endif
-            using (IDbConnection conn = new SqlConnection(DapperConnection.SlaveConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.ExecuteScalar<T>(sql, sqlParams);
             }
@@ -155,7 +155,7 @@ namespace Cloud.Dapper.Framework
 #if DEBUG
             DebuggerSql(sql, sqlParams);
 #endif
-            using (IDbConnection conn = new SqlConnection(DapperConnection.MasterConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
             {
                 return conn.Execute(sql, sqlParams, commandType: CommandType.Text);
             }
@@ -174,7 +174,7 @@ namespace Cloud.Dapper.Framework
             DebuggerSql(proc, procParams);
 #endif
 
-            using (IDbConnection conn = new SqlConnection(DapperConnection.MasterConnectionString))
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
             {
                 return conn.Execute(proc, procParams, commandType: CommandType.StoredProcedure);
             }

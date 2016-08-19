@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cloud</RootNamespace>
     <AssemblyName>Cloud.Application</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -90,8 +90,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloudApplicationModule.cs" />
-    <Compile Include="CloudAppServiceBase.cs" />
+    <Compile Include="Framework\CloudApplicationModule.cs" />
+    <Compile Include="Framework\CloudAppServiceBase.cs" />
     <Compile Include="Framework\IPageIndex.cs" />
     <Compile Include="Framework\PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

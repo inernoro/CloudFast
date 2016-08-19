@@ -1,4 +1,4 @@
-﻿namespace Cloud.Application
+﻿namespace Cloud.Framework
 {
     public interface IPageIndex
     {

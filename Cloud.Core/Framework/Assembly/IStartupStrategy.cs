@@ -4,6 +4,6 @@ namespace Cloud.Framework.Assembly
 {
     public interface IStartupStrategy : IStrategy
     {
-
+        void StartInitialization();
     }
 }

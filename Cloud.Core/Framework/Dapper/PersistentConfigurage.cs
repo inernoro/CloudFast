@@ -1,6 +1,6 @@
 ﻿namespace Cloud.Framework.Dapper
 {
-    public static class DapperConnection
+    public static class PersistentConfigurage
     {
         public static string MasterConnectionString { get; set; }
 

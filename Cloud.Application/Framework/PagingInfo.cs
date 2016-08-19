@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cloud.Application
+namespace Cloud.Framework
 {
     public class PagingInfo
     {

@@ -1,14 +1,13 @@
-﻿using System.Reflection;
-using Abp.Modules;
+﻿using Abp.Modules;
 
-namespace Cloud
+namespace Cloud.Framework
 {
     [DependsOn(typeof(CloudCoreModule))]
     public class CloudApplicationModule : AbpModule
     {
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            IocManager.RegisterAssemblyByConvention(System.Reflection.Assembly.GetExecutingAssembly());
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Cloud.Mongo.Framework
     public class MongodbHelper<TEntity, TPrimaryKey> : MongodbBase<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
     {
-        private static readonly string Conn = MongodbConfig.ConnectionString;
+        private static readonly string Conn = DocumentConfigurage.ConnectionString;
 
-        private static readonly string DatabaseName = MongodbConfig.Database;
+        private static readonly string DatabaseName = DocumentConfigurage.Database;
 
 
         /// <summary>

@@ -5,7 +5,7 @@ using Cloud.Framework.Redis;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 
-namespace Cloud.Redis
+namespace Cloud.Redis.Framework
 {
     public class RedisHelper : IRedisHelper
     {
@@ -19,7 +19,7 @@ namespace Cloud.Redis
 
         public RedisHelper()
         {
-            _database = Manager.GetDatabase(RedisConfig.Database);
+            _database = Manager.GetDatabase(CacheConfigurage.Database);
         }
 
         public static ConnectionMultiplexer Manager
@@ -32,7 +32,7 @@ namespace Cloud.Redis
                     {
                         if (_redis != null) return _redis;
 
-                        _redis = GetManager(RedisConfig.ConnectionString);
+                        _redis = GetManager(CacheConfigurage.ConnectionString);
                         return _redis;
                     }
                 }
@@ -45,7 +45,7 @@ namespace Cloud.Redis
         {
             if (string.IsNullOrEmpty(connectionString))
             {
-                connectionString = RedisConfig.ConnectionString;
+                connectionString = CacheConfigurage.ConnectionString;
             }
 
             return ConnectionMultiplexer.Connect(connectionString);
@@ -170,7 +170,7 @@ namespace Cloud.Redis
         /// <param name="hashField"></param>
         /// <param name="value"></param>
         /// <param name="span"></param>
-        public void HSet(string key, string hashField, string value, int span = RedisConfig.TimeDefaultValidTime)
+        public void HSet(string key, string hashField, string value, int span = CacheConfigurage.TimeDefaultValidTime)
         {
             _database.HashSet(key, hashField, value);
             SetExpire(key);
@@ -188,7 +188,7 @@ namespace Cloud.Redis
         /// <param name="key"></param>
         /// <param name="entry"></param>
         /// <param name="span"></param>
-        public void HSet(string key, List<KeyValueStruct> entry, int span = RedisConfig.TimeDefaultValidTime)
+        public void HSet(string key, List<KeyValueStruct> entry, int span = CacheConfigurage.TimeDefaultValidTime)
         {
             var list = entry.Select(node => new HashEntry(node.Name, node.Value ?? "")).ToArray();
             _database.HashSet(key, list);
@@ -200,7 +200,7 @@ namespace Cloud.Redis
         /// </summary>
         /// <param name="key"></param>
         /// <param name="span"></param>
-        public void SetExpire(string key, int span = RedisConfig.TimeDefaultValidTime)
+        public void SetExpire(string key, int span = CacheConfigurage.TimeDefaultValidTime)
         {
             var date = DateTime.Now.AddSeconds(span);
             _database.KeyExpire(key, date);

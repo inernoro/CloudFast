@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cloud.Strategy</RootNamespace>
     <AssemblyName>Cloud.Strategy</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -95,7 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloudStrategyModule.cs" />
+    <Compile Include="Framework\CloudStrategyModule.cs" />
     <Compile Include="Framework\AssemblyStrategy\AssemblyBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\CloudBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\LuaAssembly.cs" />

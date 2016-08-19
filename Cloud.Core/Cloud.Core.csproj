@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cloud</RootNamespace>
     <AssemblyName>Cloud.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -91,12 +91,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloudConsts.cs" />
-    <Compile Include="CloudCoreModule.cs" />
+    <Compile Include="Framework\CloudConsts.cs" />
+    <Compile Include="Framework\CloudCoreModule.cs" />
     <Compile Include="Domain\UserInfo.cs" />
     <Compile Include="Framework\Assembly\AssemblyDomainService.cs" />
     <Compile Include="Framework\Assembly\CacheAssembly.cs" />
     <Compile Include="Framework\Assembly\CacheBaseAssembly.cs" />
+    <Compile Include="Framework\Assembly\CloudConfigurage.cs" />
     <Compile Include="Framework\Assembly\ContentDisplayAttribute.cs" />
     <Compile Include="Framework\Assembly\ICloudAssembly.cs" />
     <Compile Include="Framework\Assembly\ICloudBuildStrategy.cs" />
@@ -105,7 +106,7 @@
     <Compile Include="Framework\Assembly\LuaAssembly.cs" />
     <Compile Include="Framework\Assembly\LuaConfig.cs" />
     <Compile Include="Framework\Assembly\ModelHelper.cs" />
-    <Compile Include="Framework\Dapper\DapperConnection.cs" />
+    <Compile Include="Framework\Dapper\PersistentConfigurage.cs" />
     <Compile Include="Framework\Dapper\IDapperHelper.cs" />
     <Compile Include="Framework\Dapper\IDapperRepositorie.cs" />
     <Compile Include="Framework\Dapper\PageEntity.cs" />

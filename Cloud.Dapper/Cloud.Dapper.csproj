@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cloud.Dapper</RootNamespace>
     <AssemblyName>Cloud.Dapper</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -97,7 +97,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloudDapperModule.cs" />
+    <Compile Include="Framework\CloudDapperModule.cs" />
     <Compile Include="Framework\BottomDapper.cs" />
     <Compile Include="Framework\DapperBase.cs" />
     <Compile Include="Framework\DapperHelper.cs" />

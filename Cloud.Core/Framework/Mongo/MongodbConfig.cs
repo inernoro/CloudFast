@@ -1,6 +1,6 @@
 ﻿namespace Cloud.Framework.Mongo
 {
-    public static class MongodbConfig
+    public static class DocumentConfigurage
     {
         public static string Database { get; set; }
 
