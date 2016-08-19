@@ -106,6 +106,19 @@ dataConfig.queue = function ( id , message )
 	return result;
 end
 
+dataConfig.message = function ()
+    local  result =  {
+		url = "ssh://123.56.132.94:Equeue.master",
+		name = "SignalR",
+		data = {  },
+		type = "message",
+		dataType = "Json",
+		contentType = "Microsoft.Signalr",
+		success = dataConfig.success,
+		error = dataConfig.error
+	}; 
+	return result;
+end
 
 dataConfig.error = function ( ... )
 	print("error : " , os.date() , " : " .. ...);
