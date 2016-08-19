@@ -6,7 +6,7 @@ namespace Cloud.Framework.Assembly
     /// <summary>
     /// 系统缓存操作类（内存存储）
     /// </summary>
-    public abstract class CentralCacheAreaBase
+    public abstract class CacheBaseAssembly
     {
         /// <summary>
         /// 该程序集的唯一键
@@ -23,7 +23,7 @@ namespace Cloud.Framework.Assembly
         /// <returns></returns>
         public object GetValue(string modelName)
         {
-            return CentralCacheArea.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + modelName);
+            return CacheAssembly.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + modelName);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Cloud.Framework.Assembly
         /// <returns></returns>
         public Dictionary<string, TModel> GetValue<TModel>(string key) where TModel : class
         {
-            var value = CentralCacheArea.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + key) as Dictionary<string, TModel> ?? new Dictionary<string, TModel>();
+            var value = CacheAssembly.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + key) as Dictionary<string, TModel> ?? new Dictionary<string, TModel>();
             return value;
         }
 
@@ -46,7 +46,7 @@ namespace Cloud.Framework.Assembly
         /// <param name="obj">该方法所有的值</param>
         public void SetValue(string modelName, object obj)
         {
-            CentralCacheArea.SetAreaValue(AreaKey, ChildrenNodeKey + ":" + modelName, obj);
+            CacheAssembly.SetAreaValue(AreaKey, ChildrenNodeKey + ":" + modelName, obj);
         }
 
         /// <summary>
@@ -73,14 +73,14 @@ namespace Cloud.Framework.Assembly
         /// <returns></returns>
         public T GetValue<T>(string methodName, string modelName, Func<T> func) where T : class
         {
-            var value = CentralCacheArea.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + methodName) as Dictionary<string, T> ?? new Dictionary<string, T>();
+            var value = CacheAssembly.GetAreaValue(AreaKey, ChildrenNodeKey + ":" + methodName) as Dictionary<string, T> ?? new Dictionary<string, T>();
             if (value.ContainsKey(modelName))
             {
                 return value[modelName];
             }
             var data = func();
             value.Add(modelName, data);
-            CentralCacheArea.SetAreaValue(AreaKey, ChildrenNodeKey + ":" + methodName, value);
+            CacheAssembly.SetAreaValue(AreaKey, ChildrenNodeKey + ":" + methodName, value);
             return data;
         }
 

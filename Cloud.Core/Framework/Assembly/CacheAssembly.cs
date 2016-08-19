@@ -6,12 +6,12 @@ namespace Cloud.Framework.Assembly
     /// 程序集中央缓存管理
     /// </summary>
 
-    public static class CentralCacheArea
+    public static class CacheAssembly
     {
         private static Dictionary<string, Dictionary<string, object>> _dictionary;
 
         private static readonly object CentralCacheAreaLocker = new object();
-        static CentralCacheArea()
+        static CacheAssembly()
         {
 
         }

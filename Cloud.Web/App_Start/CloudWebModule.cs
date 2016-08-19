@@ -12,12 +12,13 @@ using Cloud.Strategy;
 
 namespace Cloud.Web
 {
-    [DependsOn(typeof(CloudApplicationModule),
+    [DependsOn(
         typeof(CloudWebApiModule),
         typeof(AbpWebMvcModule),
         typeof(CloudMongoModule),
         typeof(CloudRedisModule),
         typeof(CloudDapperModule),
+        typeof(CloudApplicationModule),
         typeof(CloudStrategyModule))]
     public class CloudWebModule : AbpModule
     {

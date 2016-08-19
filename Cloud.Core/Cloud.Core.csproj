@@ -95,12 +95,14 @@
     <Compile Include="CloudCoreModule.cs" />
     <Compile Include="Domain\UserInfo.cs" />
     <Compile Include="Framework\Assembly\AssemblyDomainService.cs" />
-    <Compile Include="Framework\Assembly\CentralCacheArea.cs" />
-    <Compile Include="Framework\Assembly\CentralCacheAreaBase.cs" />
+    <Compile Include="Framework\Assembly\CacheAssembly.cs" />
+    <Compile Include="Framework\Assembly\CacheBaseAssembly.cs" />
     <Compile Include="Framework\Assembly\ContentDisplayAttribute.cs" />
-    <Compile Include="Framework\Assembly\IAssemblyKeyStrategy.cs" />
+    <Compile Include="Framework\Assembly\ICloudAssembly.cs" />
     <Compile Include="Framework\Assembly\ICloudBuildStrategy.cs" />
     <Compile Include="Framework\Assembly\INetWorkStrategy.cs" />
+    <Compile Include="Framework\Assembly\LuaAssembly.cs" />
+    <Compile Include="Framework\Assembly\LuaConfig.cs" />
     <Compile Include="Framework\Assembly\ModelHelper.cs" />
     <Compile Include="Framework\Dapper\DapperConnection.cs" />
     <Compile Include="Framework\Dapper\IDapperHelper.cs" />

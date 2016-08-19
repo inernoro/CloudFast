@@ -2,7 +2,7 @@
 
 namespace Cloud.Dapper.Framework
 {
-    public abstract class DapperBase : CentralCacheAreaBase
+    public abstract class DapperBase : CacheBaseAssembly
     {
         public override string AreaKey { get; } = "Cloud.Dapper";
 

@@ -79,7 +79,7 @@ namespace Cloud.Redis
         {
             return _database.StringGet(key);
         }
-         
+
         public bool Remove(string key)
         {
             return _database.KeyDelete(key);

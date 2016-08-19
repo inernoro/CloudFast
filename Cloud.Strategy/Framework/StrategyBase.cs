@@ -6,9 +6,9 @@ using Castle.Core.Internal;
 
 namespace Cloud.Strategy.Framework
 {
-    public abstract class StrategyBase<T> 
+    public abstract class StrategyBase<T>
     {
-        public abstract T[] Declare { get; }
+        public virtual T[] Declare { get; }
 
         public virtual void BoundaryJudgment(int value, string message = null)
         {
@@ -33,9 +33,14 @@ namespace Cloud.Strategy.Framework
 
         public virtual T[] GetArray(Predicate<T> match)
         {
-            var list = new List<T>(); 
+            var list = new List<T>();
             return Declare.FindAll(match);
         }
+
+    }
+
+    public abstract class StrategyBase : StrategyBase<string>
+    {
 
     }
 }
