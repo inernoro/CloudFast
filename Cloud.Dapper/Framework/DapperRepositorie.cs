@@ -53,8 +53,7 @@ namespace Cloud.Dapper.Framework
             List<string> list;
             var parament = GetParament(entity, out list);
             var sql = $"INSERT INTO [{TableName}] ({string.Join(",", list)}) VALUES (@{string.Join(",@", list)});SELECT @@IDENTITY";
-            entity.Id = BottomDapper.QueryScalar<int>(sql, parament);
-            entity.UpdateModel();
+            entity.Id = BottomDapper.QueryScalar<int>(sql, parament); 
             return entity;
         }
 
@@ -63,8 +62,7 @@ namespace Cloud.Dapper.Framework
             // ReSharper disable once PossibleMultipleEnumeration
             foreach (var node in list)
             {
-                Insert(node);
-                node.UpdateModel();
+                Insert(node); 
             }
             // ReSharper disable once PossibleMultipleEnumeration
             return list;
@@ -83,29 +81,25 @@ namespace Cloud.Dapper.Framework
                 return x;
             });
             var sql = $"UPDATE [{TableName}] SET {agg.ToString().TrimEnd(',')} WHERE ID = {entity.Id}";
-            BottomDapper.ExecuteSql(sql, parament);
-            entity.UpdateModel();
+            BottomDapper.ExecuteSql(sql, parament); 
             return entity;
         }
 
         public override void Delete(IEnumerable<TEntity> entities)
-        {
-            entities.RemoveCache();
+        { 
             var sql = $"delete from [{ TableName }] where id in @Id";
             var list = entities.Select(x => x.Id);
             BottomDapper.ExecuteSql(sql, new { Id = list });
         }
 
         public override void Delete(int id)
-        {
-            CacheExtension.RemoveCache<TEntity>(id);
+        { 
             BottomDapper.ExecuteSql($"delete from [{TableName}] where id = {id}");
         }
 
         public override void Delete(string where, object parament = null)
         {
-            var sql = $"delete from [{ TableName }] {where}";
-            Query<TEntity>(sql, parament).RemoveCache();
+            var sql = $"delete from [{ TableName }] {where}"; 
             BottomDapper.ExecuteSql(sql, parament);
         }
 
