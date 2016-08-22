@@ -7,5 +7,7 @@ namespace Cloud.Framework
     /// </summary>
     public abstract class CloudAppServiceBase : ApplicationService
     { 
+
+
     }
 }

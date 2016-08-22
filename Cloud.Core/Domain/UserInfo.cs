@@ -1,4 +1,7 @@
-﻿using Abp.Domain.Entities;
+﻿using System;
+using Abp.Domain.Entities;
+using Abp.Events.Bus;
+using Abp.Events.Bus.Handlers;
 
 namespace Cloud.Domain
 {
