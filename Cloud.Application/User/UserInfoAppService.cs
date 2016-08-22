@@ -2,6 +2,7 @@
 using Abp.Events.Bus;
 using Abp.Events.Bus.Entities;
 using Cloud.Domain;
+using Cloud.Framework.Assembly;
 
 namespace Cloud.User
 {
@@ -17,6 +18,9 @@ namespace Cloud.User
 
         public void Get()
         {
+           
+
+
             _eventBus.Trigger(new EntityChangedEventData<UserInfo>(new UserInfo()));
             _eventBus.Trigger(new EntityCreatedEventData<UserInfo>(new UserInfo()));
             _eventBus.Trigger(new EntityDeletedEventData<UserInfo>(new UserInfo()));

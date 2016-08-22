@@ -7,7 +7,9 @@ using Abp.Dependency;
 using Abp.Domain.Entities;
 using Abp.Events.Bus.Entities;
 using Abp.Events.Bus.Handlers;
+using Abp.Json;
 using Cloud.Domain;
+using Cloud.Framework.Redis;
 
 namespace Cloud.Framework.Assembly
 {
@@ -17,19 +19,36 @@ namespace Cloud.Framework.Assembly
         IEventHandler<EntityDeletedEventData<Entity>>,
         ITransientDependency
     {
+
+        private readonly ScriptDomainService _scriptDomainService;
+
+        public EntityCache(ScriptDomainService scriptDomainService)
+        {
+            _scriptDomainService = scriptDomainService;
+        }
+
+
         public void HandleEvent(EntityCreatedEventData<Entity> eventData)
         {
-
+            var result = _scriptDomainService.Physics.EntityCreatedEventData(eventData.Entity);
         }
 
         public void HandleEvent(EntityChangedEventData<Entity> eventData)
-        {
+        { 
+            var result = _scriptDomainService.Physics.EntityChangedEventData(eventData.Entity);
+            result.Call(eventData.Entity);
 
         }
 
         public void HandleEvent(EntityDeletedEventData<Entity> eventData)
         {
+            var result = _scriptDomainService.Physics.EntityDeletedEventData(eventData.Entity);
+        }
 
+        public static void Call(Entity entity)
+        {
+            var redis = IocManager.Instance.Resolve<IRedisHelper>();
+            redis.ListRightPush("testKey", entity.ToJsonString());
         }
     }
 }

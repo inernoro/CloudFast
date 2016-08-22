@@ -5,7 +5,7 @@ using Abp.UI;
 
 namespace Cloud.Framework.Assembly
 {
-    public class CloudCoreBase
+    public class ScriptDomainService : IDomainService
     {
         private static ILuaAssembly Dynamic => IocManager.Instance.Resolve<ILuaAssembly>();
 
@@ -13,8 +13,8 @@ namespace Cloud.Framework.Assembly
         {
             get
             {
-                var basetype = GetType().BaseType;
-                if (basetype != null) return Dynamic.NamespaceGetValue(basetype.FullName);
+                var basetype = new StackTrace().GetFrame(1).GetMethod().DeclaringType.FullName;
+                if (basetype != null) return Dynamic.NamespaceGetValue(basetype);
                 throw new UserFriendlyException("BaseType Is Null");
             }
         }
