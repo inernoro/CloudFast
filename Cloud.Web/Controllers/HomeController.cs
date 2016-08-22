@@ -6,9 +6,7 @@ using Cloud.Framework.Dapper;
 namespace Cloud.Web.Controllers
 {
     public class HomeController : CloudControllerBase
-    {
-
-
+    { 
         public ActionResult Index()
         {
             return View();

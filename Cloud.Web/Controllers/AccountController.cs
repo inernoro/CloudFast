@@ -17,7 +17,7 @@ namespace Cloud.Web.Controllers
         // GET: Account
         public async Task<ActionResult> Index()
         {
-            await _signin.SignInAsync(new User
+            await _signin.SignInAsync(new Framework.User
             {
                 Id = 1,
                 UserName = "123"

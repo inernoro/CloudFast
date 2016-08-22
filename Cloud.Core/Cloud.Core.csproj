@@ -91,7 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\CloudConsts.cs" />
+    <Compile Include="Framework\Assembly\CloudCoreBase.cs" />
+    <Compile Include="Framework\Assembly\EntityCache.cs" />
     <Compile Include="Framework\CloudCoreModule.cs" />
     <Compile Include="Domain\UserInfo.cs" />
     <Compile Include="Framework\Assembly\CacheAssembly.cs" />
