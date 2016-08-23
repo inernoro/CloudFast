@@ -36,7 +36,8 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
             var mongodbConfig = new LuaConfig(dataConfig.document());
             DocumentConfigurage.ConnectionString = mongodbConfig.Url.ToString();
 
-            LuaType.RegisterTypeExtension(typeof(Cache));
+            // LuaType.RegisterTypeExtension(typeof(Cache));
+            // LuaType.
 
         }
     }

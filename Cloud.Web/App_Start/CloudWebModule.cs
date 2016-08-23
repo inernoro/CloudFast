@@ -1,17 +1,13 @@
 ﻿using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Abp.Modules;
 using Abp.Web.Mvc;
-using Cloud.Dapper;
 using Cloud.Dapper.Framework;
 using Cloud.Framework;
 using Cloud.Mongo.Framework;
-using Cloud.Redis;
 using Cloud.Redis.Framework;
-using Cloud.Strategy;
 using Cloud.Strategy.Framework;
 
 namespace Cloud.Web

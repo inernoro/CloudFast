@@ -1113,6 +1113,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Excute\main.lua" />
     <Content Include="Excute\DataConfig.lua" />
+    <Content Include="Excute\Cloud\Framework\Assembly\EntityCache.lua" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />

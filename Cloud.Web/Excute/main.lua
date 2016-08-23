@@ -2,7 +2,7 @@
 -- startup
 function main.start()
     local system = {
-        url = "D:\CurrentProject\Cloud4\Cloud.Web\Excute\{0}.lua",
+        url = "D:/CurrentProject/Cloud4/Cloud.Web/Excute/{0}.lua",
         data =
         {
             infrastructure = "",

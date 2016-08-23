@@ -34,21 +34,14 @@ namespace Cloud.Framework.Assembly
         }
 
         public void HandleEvent(EntityChangedEventData<Entity> eventData)
-        { 
+        {  
             var result = _scriptDomainService.Physics.EntityChangedEventData(eventData.Entity);
-            result.Call(eventData.Entity);
 
         }
 
         public void HandleEvent(EntityDeletedEventData<Entity> eventData)
         {
             var result = _scriptDomainService.Physics.EntityDeletedEventData(eventData.Entity);
-        }
-
-        public static void Call(Entity entity)
-        {
-            var redis = IocManager.Instance.Resolve<IRedisHelper>();
-            redis.ListRightPush("testKey", entity.ToJsonString());
-        }
+        } 
     }
 }
