@@ -2257,3 +2257,99 @@ DEBUG 2016-08-23 19:01:59,140 [89   ] Abp.Modules.AbpModuleManager             -
 DEBUG 2016-08-23 19:01:59,142 [89   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2016-08-23 19:01:59,143 [89   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2016-08-23 19:01:59,143 [89   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-08-24 10:55:44,181 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-24 10:55:44,195 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-24 10:55:44,200 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,202 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 10:55:44,207 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-24 10:55:46,049 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-24 10:55:46,058 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-24 10:55:46,059 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-24 10:55:46,276 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 10:55:46,297 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-24 11:07:35,906 [12   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-08-24 11:07:35,908 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:07:35,908 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:07:35,908 [12   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-08-24 11:08:04,215 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-24 11:08:04,450 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-24 11:08:04,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,458 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,458 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,458 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,458 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,458 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,459 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,459 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,459 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,459 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:08:04,463 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-24 11:08:05,541 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-24 11:08:05,546 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-24 11:08:05,547 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-24 11:08:05,950 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:08:05,997 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-24 11:40:44,923 [20   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-08-24 11:40:44,924 [20   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:40:44,924 [20   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:40:44,924 [20   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-08-24 11:40:53,501 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-24 11:40:53,722 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-24 11:40:53,729 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 11:40:53,735 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-24 11:40:54,451 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-24 11:40:54,453 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-24 11:40:54,454 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-24 11:40:54,625 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 11:40:54,640 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-24 13:00:22,215 [117  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-08-24 13:00:22,217 [117  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 13:00:22,218 [117  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 13:00:22,218 [117  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-08-24 13:00:53,909 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-24 13:00:54,198 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-24 13:00:54,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,206 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-24 13:00:54,210 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-24 13:00:54,983 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-24 13:00:54,985 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-24 13:00:54,987 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-24 13:00:55,151 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-24 13:00:55,164 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.

@@ -1,12 +1,83 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <script src="~/Scripts/vue.js"></script>
 </head>
-<body>
-    <div> 
-    </div>
+<body id="app">
+
+    <button @@click="createman">创建一个人</button>
+    <span>name</span>
+    <input type="text" v-model="newNode.name" />
+    <span>age</span>
+    <input type="text" v-model="newNode.age" />
+    <span>score</span>
+    <input type="text" v-model="newNode.score" />
+    <span>sex</span>
+    <input type="text" v-model="newNode.sex" />
+    <table>
+        <tr>
+            <th v-for="h in heads">{{h}}</th>
+        </tr>
+        <tr v-for="node in nodes">
+            <td>{{node.name}}</td>
+            <td>{{node.age}}</td>
+            <td>{{node.score}}</td>
+            <td>{{node.sex}}</td>
+        </tr>
+    </table>
 </body>
 </html>
+<script type="text/javascript">
+
+    var model = {
+        heads: ["姓名", "年龄", "积分", "性别"],
+        newNode: {
+            name: "未命名",
+            age: 25,
+            score: 100,
+            sex: true
+        },
+        nodes: [
+        {
+            name: "蒋云峰",
+            age: 25,
+            score: 100,
+            sex: true
+        }, {
+            name: "范春苗",
+            age: 25,
+            score: 99,
+            sex: true
+        }, {
+            name: "张柏芝",
+            age: 15,
+            score: 65,
+            sex: false
+        }, {
+            name: "谢霆锋",
+            age: 33,
+            score: 28,
+            sex: true
+        }]
+    };
+
+    var vue = new Vue({
+        el: "#app",
+        data: model,
+        methods: {
+            createman: function () {
+
+                this.nodes.push({
+                    name: "新加了一个人",
+                    age: 99,
+                    score: 148,
+                    sex: true
+                });
+            }
+        }
+
+    });
+
+
+</script>
