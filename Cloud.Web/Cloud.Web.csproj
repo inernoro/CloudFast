@@ -1200,6 +1200,9 @@
     <Content Include="Scripts\jquery-3.1.0.min.map" />
     <Content Include="Areas\ApiManager\Views\Manager\List.cshtml" />
     <Content Include="Areas\ApiManager\Views\Manager\Edit.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1210,7 +1213,6 @@
   <ItemGroup>
     <Folder Include="Areas\ApiManager\Models\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cloud.Application\Cloud.Application.csproj">
