@@ -2512,3 +2512,7 @@ DEBUG 2016-08-25 14:15:49,168 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2016-08-25 14:15:49,169 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
 DEBUG 2016-08-25 14:15:49,453 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2016-08-25 14:15:49,478 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-25 14:20:46,447 [17   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-08-25 14:20:46,448 [17   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-25 14:20:46,449 [17   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-25 14:20:46,449 [17   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

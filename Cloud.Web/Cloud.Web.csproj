@@ -273,6 +273,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -1114,7 +1115,14 @@
     <Content Include="Excute\main.lua" />
     <Content Include="Excute\DataConfig.lua" />
     <Content Include="Excute\Cloud\Framework\Assembly\EntityCache.lua" />
+    <Content Include="Areas\ApiManager\Views\web.config" />
+    <Content Include="Areas\ApiManager\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Shared\_Layout.cshtml" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
@@ -1127,6 +1135,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment-with-locales.js" />
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
@@ -1142,6 +1151,8 @@
     <Compile Include="App_Start\CloudWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Areas\ApiManager\ApiManagerAreaRegistration.cs" />
+    <Compile Include="Areas\ApiManager\Controllers\ManagerController.cs" />
     <Compile Include="Framework\Ilogin.cs" />
     <Compile Include="Framework\Signin.cs" />
     <Compile Include="Framework\User.cs" />
@@ -1164,7 +1175,7 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Manager\Index.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
@@ -1187,8 +1198,8 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.0.min.map" />
-    <Content Include="Views\Home\List.cshtml" />
-    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Manager\List.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Manager\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1197,7 +1208,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\ApiManager\Models\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cloud.Application\Cloud.Application.csproj">

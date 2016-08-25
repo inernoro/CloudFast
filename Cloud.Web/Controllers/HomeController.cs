@@ -10,14 +10,6 @@ namespace Cloud.Web.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-        public ActionResult Edit()
-        {
-            return View();
-        }
-        public ActionResult List()
-        {
-            return View();
-        }
+        } 
     }
 }
