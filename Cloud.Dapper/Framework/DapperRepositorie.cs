@@ -100,14 +100,8 @@ namespace Cloud.Dapper.Framework
         {
             return (from node in typeof(T).GetProperties() where node.Name.ToLower() != "id" select node.Name).ToList();
         }
-
-        /// <summary>
-        /// 根据对象获取DynamicParament
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="t"></param>
-        /// <param name="list"></param>
-        /// <returns></returns>
+         
+        //根据对象获取DynamicParament  
         public DynamicParameters GetParament<T>(T t, out List<string> list)
         {
             list = new List<string>();
