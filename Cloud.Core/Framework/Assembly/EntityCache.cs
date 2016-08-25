@@ -34,7 +34,8 @@ namespace Cloud.Framework.Assembly
         }
 
         public void HandleEvent(EntityChangedEventData<Entity> eventData)
-        {  
+        {
+            //IocManager.Instance.Resolve<INetWorkStrategy>().Send("SqlCode", new { sql, parament });
             var result = _scriptDomainService.Physics.EntityChangedEventData(eventData.Entity);
 
         }
@@ -42,6 +43,6 @@ namespace Cloud.Framework.Assembly
         public void HandleEvent(EntityDeletedEventData<Entity> eventData)
         {
             var result = _scriptDomainService.Physics.EntityDeletedEventData(eventData.Entity);
-        } 
+        }
     }
 }

@@ -14,30 +14,15 @@ namespace Cloud.Framework.Dapper
     {
 
         #region Select/Get/Query 
-
-
-        IEnumerable<TEntity> Query(string sql, object parament = null);
-
+         
 
         List<TEntity> GetAllList(string where = null, object parament = null, string field = "*");
 
         Task<List<TEntity>> GetAllListAsync(string where = null, object parament = null, string field = "*");
 
-        TEntity Get(int id, string field = "*");
+        TEntity Get(int id);
 
-        Task<TEntity> GetAsync(int id, string field = "*");
-
-        TEntity Single(string where, object parament = null, string field = "*");
-
-        Task<TEntity> SingleAsync(string where, object parament = null, string field = "*");
-
-        TEntity FirstOrDefault(string where, object parament = null, string field = "*");
-
-        Task<TEntity> FirstOrDefaultAsync(int id, object parament = null, string field = "*");
-
-        TEntity FirstOrDefault(int id, object parament = null, string field = "*");
-
-        Task<TEntity> FirstOrDefaultAsync(string where, object parament = null, string field = "*");
+        Task<TEntity> GetAsync(int id); 
 
 
 
@@ -47,21 +32,7 @@ namespace Cloud.Framework.Dapper
 
         TEntity Insert(TEntity entity);
 
-        Task<TEntity> InsertAsync(TEntity entity);
-
-        IEnumerable<TEntity> InsertList(IEnumerable<TEntity> list);
-
-        int InsertAndGetId(TEntity entity);
-
-        Task<int> InsertAndGetIdAsync(TEntity entity);
-
-        TEntity InsertOrUpdate(TEntity entity);
-
-        Task<TEntity> InsertOrUpdateAsync(TEntity entity);
-
-        int InsertOrUpdateAndGetId(TEntity entity);
-
-        Task<int> InsertOrUpdateAndGetIdAsync(TEntity entity);
+        Task<TEntity> InsertAsync(TEntity entity);     
 
         #endregion
 
@@ -70,10 +41,6 @@ namespace Cloud.Framework.Dapper
         TEntity Update(TEntity entity);
 
         Task<TEntity> UpdateAsync(TEntity entity);
-
-        TEntity Update(int id, Action<TEntity> updateAction);
-
-        Task<TEntity> UpdateAsync(int id, Func<TEntity, Task> updateAction);
 
         #endregion
 
@@ -88,7 +55,6 @@ namespace Cloud.Framework.Dapper
         void Delete(int id);
 
         Task DeleteAsync(int id);
-
 
         void Delete(string where, object parament = null);
 
@@ -106,11 +72,7 @@ namespace Cloud.Framework.Dapper
 
         Task<int> CountAsync(string where, object parament = null);
 
-        #endregion
-
-        #region Proc
-
-        #endregion
+        #endregion 
 
     }
 
@@ -145,6 +107,7 @@ namespace Cloud.Framework.Dapper
              object parament = null
             );
 
+
         List<TOutType> Pagination<TOutType>(
             string sql,
             int currentIndex,
@@ -153,6 +116,7 @@ namespace Cloud.Framework.Dapper
             string orderBy = "Id",
            object parament = null
             );
+
 
         List<IEnumerable<object>> QueryMultiple(string sql, object p, params Type[] type);
 
