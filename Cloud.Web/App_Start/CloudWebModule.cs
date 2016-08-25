@@ -20,6 +20,7 @@ namespace Cloud.Web
         typeof(CloudDapperModule),
         typeof(CloudApplicationModule),
         typeof(CloudStrategyModule))]
+
     public class CloudWebModule : AbpModule
     {
         public override void PreInitialize()

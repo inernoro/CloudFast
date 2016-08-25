@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Abp.Domain.Entities;
 using Castle.Components.DictionaryAdapter;
 using Cloud.Framework.Dapper;
@@ -100,7 +101,7 @@ namespace Cloud.Dapper.Framework
         {
             return (from node in typeof(T).GetProperties() where node.Name.ToLower() != "id" select node.Name).ToList();
         }
-         
+
         //根据对象获取DynamicParament  
         public DynamicParameters GetParament<T>(T t, out List<string> list)
         {
@@ -130,7 +131,7 @@ namespace Cloud.Dapper.Framework
 
         }
 
-        #region 
+        #region  
 
         public List<IEnumerable<object>> QueryMultiple(string sql, object p, params Type[] type)
         {
@@ -141,6 +142,9 @@ namespace Cloud.Dapper.Framework
         }
 
         #endregion
+
+        #region Sync
+
 
         public IEnumerable<TType> Query<TType>(string sql, object parament = null)
         {
@@ -173,6 +177,47 @@ namespace Cloud.Dapper.Framework
         {
             return ExecProc(procName, null, func);
         }
+
+
+        #endregion
+
+
+        #region Async
+        public Task<IEnumerable<TType>> QueryAsync<TType>(string sql, object parament = null)
+        {
+            return Connection.QueryAsync<TType>(sql, parament);
+        }
+
+        public Task<int> ExcuteAsync(string sql, object parament = null)
+        {
+            return Connection.ExecuteAsync(sql, parament);
+        }
+
+        public async Task ExecProcAsync(string procName, object parament = null, Action func = null)
+        {
+            await Connection.ExecuteAsync(procName, parament, commandType: CommandType.StoredProcedure);
+            func?.Invoke();
+        }
+
+        public Task<IEnumerable<TModel>> ExecProcAsync<TModel>(string procName, object parament, Action func = null)
+        {
+            return Connection.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+        }
+
+        public async Task<TOutType> ExecProcAsync<TModel, TOutType>(string procName, object parament, Func<IEnumerable<TModel>, TOutType> func)
+        {
+            var data = Connection.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+            return func(await data);
+        }
+
+        public Task<TOutType> ExecProcAsync<TModel, TOutType>(string procName, Func<IEnumerable<TModel>, TOutType> func)
+        {
+            return ExecProcAsync(procName, null, func);
+        }
+
+        #endregion
+
+        #region Paging
 
         public List<TOutType> Pagination<TOutType>(
             string sql,
@@ -210,5 +255,11 @@ namespace Cloud.Dapper.Framework
             var start = currentIndex == 0 || currentIndex == 1 ? 1 : ((currentIndex - 1) * pageSize) + 1;
             return $"SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY {orderBy})NewRow ,{translate} FROM {sql} ) AUS WHERE NewRow BETWEEN {start} AND {start + pageSize - 1}";
         }
+
+        #endregion
+
+
+
+
     }
 }
