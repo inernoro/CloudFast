@@ -15,22 +15,9 @@ namespace Cloud.Dapper.Framework
     {
         public string TableName { get; set; }
 
-        public override string ChildrenNodeKey { get; } = "DapperRepositorieBase";
-
         public DapperRepositorie()
         {
             TableName = typeof(TEntity).Name;
-        }
-
-
-        public override IEnumerable<TType> Query<TType>(string sql, object parament = null)
-        {
-            return BottomDapper.QueryEnumerable<TType>(sql, parament);
-        }
-
-        public override int Excute(string sql, object parament = null)
-        {
-            return BottomDapper.ExecuteSql(sql, parament);
         }
 
         public override IEnumerable<TEntity> Query(string sql, object parament = null)
@@ -53,7 +40,7 @@ namespace Cloud.Dapper.Framework
             List<string> list;
             var parament = GetParament(entity, out list);
             var sql = $"INSERT INTO [{TableName}] ({string.Join(",", list)}) VALUES (@{string.Join(",@", list)});SELECT @@IDENTITY";
-            entity.Id = BottomDapper.QueryScalar<int>(sql, parament); 
+            entity.Id = BottomDapper.QueryScalar<int>(sql, parament);
             return entity;
         }
 
@@ -62,7 +49,7 @@ namespace Cloud.Dapper.Framework
             // ReSharper disable once PossibleMultipleEnumeration
             foreach (var node in list)
             {
-                Insert(node); 
+                Insert(node);
             }
             // ReSharper disable once PossibleMultipleEnumeration
             return list;
@@ -81,25 +68,25 @@ namespace Cloud.Dapper.Framework
                 return x;
             });
             var sql = $"UPDATE [{TableName}] SET {agg.ToString().TrimEnd(',')} WHERE ID = {entity.Id}";
-            BottomDapper.ExecuteSql(sql, parament); 
+            BottomDapper.ExecuteSql(sql, parament);
             return entity;
         }
 
         public override void Delete(IEnumerable<TEntity> entities)
-        { 
+        {
             var sql = $"delete from [{ TableName }] where id in @Id";
             var list = entities.Select(x => x.Id);
             BottomDapper.ExecuteSql(sql, new { Id = list });
         }
 
         public override void Delete(int id)
-        { 
+        {
             BottomDapper.ExecuteSql($"delete from [{TableName}] where id = {id}");
         }
 
         public override void Delete(string where, object parament = null)
         {
-            var sql = $"delete from [{ TableName }] {where}"; 
+            var sql = $"delete from [{ TableName }] {where}";
             BottomDapper.ExecuteSql(sql, parament);
         }
 
@@ -113,22 +100,6 @@ namespace Cloud.Dapper.Framework
             return BottomDapper.QueryScalar<int>("SELECT COUNT(1) FROM [" + TableName + "] " + where, parament);
         }
 
-        public override void ExecProc(string procName, object parament = null, Action func = null)
-        {
-            BottomDapper.ExecuteProc(procName, parament);
-            func?.Invoke();
-        }
-
-        public override IEnumerable<TModel> ExecProc<TModel>(string procName, object parament, Action func = null)
-        {
-            return BottomDapper.QueryProc<TModel, object>(procName, parament);
-        }
-
-        public override TOutType ExecProc<TModel, TOutType>(string procName, object parament, Func<IEnumerable<TModel>, TOutType> func)
-        {
-            var data = BottomDapper.QueryProc<TModel, object>(procName, parament);
-            return func(data);
-        }
 
         public override TEntity FirstOrDefault(string where, object parament = null, string field = "*")
         {
@@ -137,8 +108,7 @@ namespace Cloud.Dapper.Framework
 
         public List<string> GetFieNameArray<T>()
         {
-            return GetValue(nameof(GetFieNameArray), typeof(T).Name,
-                () => (from node in typeof(T).GetProperties() where node.Name.ToLower() != "id" select node.Name).ToList());
+            return (from node in typeof(T).GetProperties() where node.Name.ToLower() != "id" select node.Name).ToList();
         }
 
         /// <summary>
@@ -159,70 +129,6 @@ namespace Cloud.Dapper.Framework
             }
             return parament;
         }
-
-
-
-        #region Page
-
-        public override List<TOutType> Pagination<TOutType>(
-            string sql,
-            int currentIndex,
-            int pageSize,
-            string translate = "*",
-            string orderBy = "Id",
-            object parament = null
-            )
-        {
-            var excuteSql = GetPaginationSql(sql, currentIndex, pageSize, translate, orderBy);
-            return BottomDapper.Query<TOutType>(excuteSql, parament).ToList();
-        }
-
-        public override PageEntity<TOutType> Pagination<TOutType>(string sql, int currentIndex, int pageSize, bool sumCount, string translate = "*", string orderBy = "Id", object parament = null)
-        {
-            var excuteSql = GetPaginationSql(sql, currentIndex, pageSize, translate, orderBy) + $";SELECT A.COUNT FROM ( SELECT COUNT(1) AS COUNT FROM {sql}) A";
-
-
-            var Return = BottomDapper.QueryMultiple(excuteSql, parament,
-                  read =>
-                  {
-                      var page = new PageEntity<TOutType>
-                      {
-                          EntityList = read.Read<TOutType>().ToList(),
-                          Count = read.Read<int>().Single()
-                      };
-                      return page;
-                  });
-            return Return;
-        }
-
-        public static string GetPaginationSql(
-            string sql,
-            int currentIndex,
-            int pageSize,
-            string translate = "*",
-            string orderBy = "Id")
-        {
-            var start = currentIndex == 0 || currentIndex == 1 ? 1 : ((currentIndex - 1) * pageSize) + 1;
-            return $"SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY {orderBy})NewRow ,{translate} FROM {sql} ) AUS WHERE NewRow BETWEEN {start} AND {start + pageSize - 1}";
-        }
-        #endregion
-
-        #region
-
-        public override List<IEnumerable<object>> QueryMultiple(string sql, object p, params Type[] type)
-        {
-            var procMultiple = BottomDapper.QueryMultiple(sql,
-                  p, userinfo =>
-                  {
-                      var list = new List<IEnumerable<object>>();
-                      list.AddRange(type.Select(node => userinfo.Read(node)));
-                      return list;
-                  });
-
-            return procMultiple.ToList();
-        }
-
-        #endregion
     }
 
     public class DapperRepositorie : IDapperRepositorie

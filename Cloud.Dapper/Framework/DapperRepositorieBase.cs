@@ -7,15 +7,12 @@ using Cloud.Framework.Dapper;
 
 namespace Cloud.Dapper.Framework
 {
-    public abstract class DapperRepositorieBase<TEntity> : DapperBase, IDapperRepositorie<TEntity> where TEntity : IEntity
+    public abstract class DapperRepositorieBase<TEntity> : DapperRepositorie, IDapperRepositorie<TEntity> where TEntity : IEntity
     {
-        #region query
-
-        public abstract IEnumerable<TType> Query<TType>(string sql, object parament = null);
+        #region query 
 
         public abstract IEnumerable<TEntity> Query(string sql, object parament = null);
-
-        public abstract int Excute(string sql, object parament = null);
+         
 
         public abstract List<TEntity> GetAllList(string where, object parament = null, string field = "*");
 
@@ -199,43 +196,6 @@ namespace Cloud.Dapper.Framework
             return Task.FromResult(Count(where, parament));
         }
 
-        #endregion
-
-        #region Proc
-
-        public abstract void ExecProc(string procName, object parament = null, Action func = null);
-
-        public abstract IEnumerable<TModel> ExecProc<TModel>(string procName, object parament, Action func = null);
-
-        public abstract TOutType ExecProc<TModel, TOutType>(string procName, object parament, Func<IEnumerable<TModel>, TOutType> func);
-
-        public TOutType ExecProc<TModel, TOutType>(string procName, Func<IEnumerable<TModel>, TOutType> func)
-        {
-            return ExecProc(procName, null, func);
-        }
-
-
-        public abstract PageEntity<TOutType> Pagination<TOutType>(
-            string sql,
-            int currentIndex,
-            int pageSize,
-            bool sumCount,
-            string translate = "*",
-            string orderBy = "Id",
-            object parament = null
-            );
-
-        public abstract List<TOutType> Pagination<TOutType>(
-             string sql,
-             int currentIndex,
-             int pageSize,
-             string translate = "*",
-             string orderBy = "Id",
-             object parament = null
-             );
-
-        public abstract List<IEnumerable<object>> QueryMultiple(string sql, object p, params Type[] type);
-
-        #endregion
+        #endregion 
     }
 }

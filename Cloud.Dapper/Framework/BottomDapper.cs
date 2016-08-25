@@ -21,9 +21,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static List<T> Query<T>(string sql, object obj = null)
         {
-#if DEBUG
             DebuggerSql(sql, obj);
-#endif
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 var data = conn.Query<T>(sql, obj).ToList();
@@ -40,9 +38,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static IEnumerable<T> QueryEnumerable<T>(string sql, object obj)
         {
-#if DEBUG
             DebuggerSql(sql, obj);
-#endif
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.Query<T>(sql, obj);
@@ -59,9 +55,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static IEnumerable<T> QueryProc<T, TParentType>(string proc, TParentType procParams)
         {
-#if DEBUG
             DebuggerSql(proc, procParams);
-#endif
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.Query<T>(proc, procParams, commandType: CommandType.StoredProcedure);
@@ -79,9 +73,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static T QueryProc<T, TParentType>(string proc, TParentType procParams, Func<SqlMapper.GridReader, T> readResult)
         {
-#if DEBUG
             DebuggerSql(proc, procParams);
-#endif
             IDbConnection conn = null;
             SqlMapper.GridReader reader = null;
             try
@@ -108,9 +100,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static T QueryMultiple<T, TPType>(string proc, TPType sqlParams, Func<SqlMapper.GridReader, T> readResult)
         {
-#if DEBUG
             DebuggerSql(proc, sqlParams);
-#endif
             IDbConnection conn = null;
             SqlMapper.GridReader reader = null;
             try
@@ -135,9 +125,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static T QueryScalar<T>(string sql, object sqlParams = null)
         {
-#if DEBUG
             DebuggerSql(sql, sqlParams);
-#endif
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.SlaveConnectionString))
             {
                 return conn.ExecuteScalar<T>(sql, sqlParams);
@@ -152,9 +140,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static int ExecuteSql(string sql, object sqlParams = null)
         {
-#if DEBUG
             DebuggerSql(sql, sqlParams);
-#endif
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
             {
                 return conn.Execute(sql, sqlParams, commandType: CommandType.Text);
@@ -169,11 +155,7 @@ namespace Cloud.Dapper.Framework
         /// <returns></returns>
         public static int ExecuteProc(string proc, object procParams = null)
         {
-
-#if DEBUG
             DebuggerSql(proc, procParams);
-#endif
-
             using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
             {
                 return conn.Execute(proc, procParams, commandType: CommandType.StoredProcedure);
@@ -182,6 +164,7 @@ namespace Cloud.Dapper.Framework
 
         public static void DebuggerSql(string sql, object parament)
         {
+#if DEBUG
             try
             {
                 IocManager.Instance.Resolve<INetWorkStrategy>().Send("SqlCode", new { sql, parament });
@@ -190,6 +173,7 @@ namespace Cloud.Dapper.Framework
             {
                 /**/
             }
+#endif
         }
     }
 }

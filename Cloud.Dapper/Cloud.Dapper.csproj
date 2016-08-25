@@ -99,8 +99,6 @@
   <ItemGroup>
     <Compile Include="Framework\CloudDapperModule.cs" />
     <Compile Include="Framework\BottomDapper.cs" />
-    <Compile Include="Framework\DapperBase.cs" />
-    <Compile Include="Framework\DapperHelper.cs" />
     <Compile Include="Framework\DapperRepositorie.cs" />
     <Compile Include="Framework\DapperRepositorieBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
