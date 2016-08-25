@@ -1,193 +1,100 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "List";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-3.1.0.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <nav class="navbar navbar-default" role="navigation">
-                        <div class="navbar-header">
 
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                            </button> <a class="navbar-brand" href="/ApiManager/Manager/Index">首页</a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class="active">
-                                    <a href="/ApiManager/Manager/List">列表</a>
-                                </li>
-                                <li>
-                                    <a href="/ApiManager/Manager/List">问答</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他<strong class="caret"></strong></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">站外链接</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">测试</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">其他接口</a>
-                                        </li>
-                                        <li class="divider">
-                                        </li>
-                                        <li>
-                                            <a href="#">帮助</a>
-                                        </li>
-                                        <li class="divider">
-                                        </li>
-                                        <li>
-                                            <a href="#">Wiki</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <form class="navbar-form navbar-left" role="search">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" />
-                                </div>
-                                <button type="submit" class="btn btn-default">
-                                    搜索
-                                </button>
-                            </form>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="#">Link</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">Action</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Another action</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider">
-                                        </li>
-                                        <li>
-                                            <a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+<div class="row">
+    <div class="panel-group" id="panel-655605">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-432164">后台管理</a>
+            </div>
+            <div id="panel-element-432164" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche...
                 </div>
-                <div class="row">
-                    <div class="panel-group" id="panel-655605">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-432164">后台管理</a>
-                            </div>
-                            <div id="panel-element-432164" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638041">权限管理</a>
-                            </div>
-                            <div id="panel-element-7638041" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638042">系统管理</a>
-                            </div>
-                            <div id="panel-element-7638042" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638043">角色管理</a>
-                            </div>
-                            <div id="panel-element-7638043" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                                <div class="panel-body">
-                                    Anim pariatur cliche...
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638041">权限管理</a>
+            </div>
+            <div id="panel-element-7638041" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638042">系统管理</a>
+            </div>
+            <div id="panel-element-7638042" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638043">角色管理</a>
+            </div>
+            <div id="panel-element-7638043" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
+                </div>
+                <div class="panel-body">
+                    Anim pariatur cliche...
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>

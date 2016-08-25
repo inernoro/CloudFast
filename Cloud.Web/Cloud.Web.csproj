@@ -1118,6 +1118,7 @@
     <Content Include="Areas\ApiManager\Views\web.config" />
     <Content Include="Areas\ApiManager\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ApiManager\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Manager\List1.cshtml" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

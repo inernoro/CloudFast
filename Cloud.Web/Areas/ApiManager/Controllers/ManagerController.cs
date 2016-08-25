@@ -17,5 +17,9 @@ namespace Cloud.Web.Areas.ApiManager.Controllers
         {
             return View();
         }
+        public ActionResult List1()
+        {
+            return View();
+        }
     }
 }
