@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Mongo", "Cloud.Mongo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Redis", "Cloud.Redis\Cloud.Redis.csproj", "{2FA138D4-76ED-406D-AB41-15D6AFAC4550}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6EE3F1F3-ADD7-4380-89DF-D4AA49086388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud.Test", "Cloud.Test\Cloud.Test.csproj", "{AA58BD33-D169-4206-AC2D-B4FD17674EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,8 +68,15 @@ Global
 		{2FA138D4-76ED-406D-AB41-15D6AFAC4550}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA138D4-76ED-406D-AB41-15D6AFAC4550}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA138D4-76ED-406D-AB41-15D6AFAC4550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA58BD33-D169-4206-AC2D-B4FD17674EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA58BD33-D169-4206-AC2D-B4FD17674EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA58BD33-D169-4206-AC2D-B4FD17674EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA58BD33-D169-4206-AC2D-B4FD17674EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA58BD33-D169-4206-AC2D-B4FD17674EE4} = {6EE3F1F3-ADD7-4380-89DF-D4AA49086388}
 	EndGlobalSection
 EndGlobal
