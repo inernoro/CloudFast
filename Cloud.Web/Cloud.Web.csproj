@@ -272,6 +272,10 @@
     <Content Include="Areas\ApiManager\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ApiManager\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ApiManager\Views\Manager\List1.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Test\Index.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Test\Query.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Test\Monitor.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Test\Function.cshtml" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
@@ -298,6 +302,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Areas\ApiManager\ApiManagerAreaRegistration.cs" />
     <Compile Include="Areas\ApiManager\Controllers\ManagerController.cs" />
+    <Compile Include="Areas\ApiManager\Controllers\TestController.cs" />
     <Compile Include="Framework\Ilogin.cs" />
     <Compile Include="Framework\Signin.cs" />
     <Compile Include="Framework\User.cs" />
