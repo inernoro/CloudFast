@@ -111,7 +111,7 @@
     <Compile Include="Framework\Assembly\Helper.cs" />
     <Compile Include="Framework\Dapper\PersistentConfigurage.cs" />
     <Compile Include="Framework\Dapper\IDapperHelper.cs" />
-    <Compile Include="Framework\Dapper\IDapperRepositorie.cs" />
+    <Compile Include="Framework\Dapper\IDapperRepositories.cs" />
     <Compile Include="Framework\Dapper\PageEntity.cs" />
     <Compile Include="Framework\Mongo\DbNameAttribute.cs" />
     <Compile Include="Framework\Mongo\IBaseMongodbModel.cs" />
