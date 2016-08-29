@@ -11,5 +11,9 @@ namespace Cloud.Domain
     {
         public override int Id { get; set; }
         public string Name { get; set; }
+
+        public int Age { get; set; }
+
+        public int Sex { get; set; }
     }
 }

@@ -91,6 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Manager.cs" />
+    <Compile Include="Domain\IManagerMongoRepositories.cs" />
     <Compile Include="Framework\Assembly\Cache.cs" />
     <Compile Include="Framework\Assembly\ScriptDomainService.cs" />
     <Compile Include="Framework\Assembly\EntityCache.cs" />
@@ -113,7 +115,7 @@
     <Compile Include="Framework\Dapper\PageEntity.cs" />
     <Compile Include="Framework\Mongo\DbNameAttribute.cs" />
     <Compile Include="Framework\Mongo\IBaseMongodbModel.cs" />
-    <Compile Include="Framework\Mongo\IMongodbHelper.cs" />
+    <Compile Include="Framework\Mongo\IMongoRepositories.cs" />
     <Compile Include="Framework\Mongo\MobileHelperMongo.cs" />
     <Compile Include="Framework\Mongo\MongodbConfig.cs" />
     <Compile Include="Framework\Mongo\NetMonitor.cs" />

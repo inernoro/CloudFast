@@ -4,7 +4,7 @@ using Cloud.Web.Controllers;
 namespace Cloud.Web.Areas.ApiManager.Controllers
 {
     public class ManagerController : CloudControllerBase
-    { 
+    {
         public ActionResult Index()
         {
             return View();

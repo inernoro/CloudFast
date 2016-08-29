@@ -10,7 +10,7 @@ namespace Cloud.Framework.Dapper
     /// 对象仓储
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public interface IDapperRepositorie<TEntity> : IDapperRepositorie where TEntity : IEntity
+    public interface IDapperRepositories<TEntity> : IDapperRepositorie where TEntity : IEntity
     {
 
         #region Select/Get/Query  

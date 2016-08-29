@@ -35,9 +35,9 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
             //聚合层
             var mongodbConfig = new LuaConfig(dataConfig.document());
             DocumentConfigurage.ConnectionString = mongodbConfig.Url.ToString();
+            DocumentConfigurage.Database = "CloudPlatfrom";
 
-            // LuaType.RegisterTypeExtension(typeof(Cache));
-            // LuaType.
+            // LuaType.RegisterTypeExtension(typeof(Cache)); 
 
         }
     }

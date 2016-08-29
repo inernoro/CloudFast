@@ -7,7 +7,7 @@ using Cloud.Framework.Dapper;
 
 namespace Cloud.Dapper.Framework
 {
-    public abstract class DapperRepositorieBase<TEntity> : DapperRepositorie, IDapperRepositorie<TEntity> where TEntity : IEntity
+    public abstract class DapperRepositoriesBase<TEntity> : DapperRepositories, IDapperRepositories<TEntity> where TEntity : IEntity
     {
         #region query  
 

@@ -9,8 +9,9 @@ using Cloud.Framework.Mongo;
 
 namespace Cloud.Mongo.Framework
 {
-    public abstract class MongodbBase<TEntity, TPrimaryKey> : IMongodbHelper<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
+    public abstract class MongodbBase<TEntity, TPrimaryKey> : IMongoRepositories<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
     {
+        #region Query
         public abstract IQueryable<TEntity> GetAll();
 
         public virtual List<TEntity> GetAllList()
@@ -38,42 +39,7 @@ namespace Cloud.Mongo.Framework
             return queryMethod(GetAll());
         }
 
-        public virtual TEntity Get(TPrimaryKey id)
-        {
-            var entity = FirstOrDefault(id);
-            if (entity == null)
-            {
-                throw new AbpException("There is no such an entity with given primary key. Entity type: " + typeof(TEntity).FullName + ", primary key: " + id);
-            }
-
-            return entity;
-        }
-
-        public virtual async Task<TEntity> GetAsync(TPrimaryKey id)
-        {
-            var entity = await FirstOrDefaultAsync(id);
-            if (entity == null)
-            {
-                throw new AbpException("There is no such an entity with given primary key. Entity type: " + typeof(TEntity).FullName + ", primary key: " + id);
-            }
-
-            return entity;
-        }
-
-        public virtual TEntity Single(Expression<Func<TEntity, bool>> predicate)
-        {
-            return GetAll().Single(predicate);
-        }
-
-        public virtual Task<TEntity> SingleAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return Task.FromResult(Single(predicate));
-        }
-
-        public virtual TEntity FirstOrDefault(TPrimaryKey id)
-        {
-            return GetAll().FirstOrDefault(CreateEqualityExpressionForId(id));
-        }
+        public abstract TEntity FirstOrDefault(TPrimaryKey id);
 
         public virtual Task<TEntity> FirstOrDefaultAsync(TPrimaryKey id)
         {
@@ -90,10 +56,9 @@ namespace Cloud.Mongo.Framework
             return Task.FromResult(FirstOrDefault(predicate));
         }
 
-        public virtual TEntity Load(TPrimaryKey id)
-        {
-            return Get(id);
-        }
+        #endregion
+
+        #region Insert
 
         public abstract TEntity Insert(TEntity entity);
 
@@ -104,40 +69,9 @@ namespace Cloud.Mongo.Framework
 
         public abstract IEnumerable<TEntity> InsertList(IEnumerable<TEntity> list);
 
+        #endregion
 
-        public virtual TPrimaryKey InsertAndGetId(TEntity entity)
-        {
-            return Insert(entity).Id;
-        }
-
-        public virtual Task<TPrimaryKey> InsertAndGetIdAsync(TEntity entity)
-        {
-            return Task.FromResult(InsertAndGetId(entity));
-        }
-
-        public virtual TEntity InsertOrUpdate(TEntity entity)
-        {
-            return entity.IsTransient()
-                ? Insert(entity)
-                : Update(entity);
-        }
-
-        public virtual async Task<TEntity> InsertOrUpdateAsync(TEntity entity)
-        {
-            return entity.IsTransient()
-                ? await InsertAsync(entity)
-                : await UpdateAsync(entity);
-        }
-
-        public virtual TPrimaryKey InsertOrUpdateAndGetId(TEntity entity)
-        {
-            return InsertOrUpdate(entity).Id;
-        }
-
-        public virtual Task<TPrimaryKey> InsertOrUpdateAndGetIdAsync(TEntity entity)
-        {
-            return Task.FromResult(InsertOrUpdateAndGetId(entity));
-        }
+        #region Update
 
         public abstract TEntity Update(TEntity entity);
 
@@ -146,33 +80,25 @@ namespace Cloud.Mongo.Framework
             return Task.FromResult(Update(entity));
         }
 
-        public virtual TEntity Update(TPrimaryKey id, Action<TEntity> updateAction)
-        {
-            var entity = Get(id);
-            updateAction(entity);
-            return entity;
-        }
+        #endregion
 
-        public virtual async Task<TEntity> UpdateAsync(TPrimaryKey id, Func<TEntity, Task> updateAction)
-        {
-            var entity = await GetAsync(id);
-            await updateAction(entity);
-            return entity;
-        }
+        #region Delete
 
-        public abstract void Delete(TEntity entity);
+        public virtual void Delete(TEntity entity)
+        {
+            Delete(entity.Id);
+        }
 
         public virtual Task DeleteAsync(TEntity entity)
         {
-            Delete(entity);
-            return Task.FromResult(0);
+            return Task.Run(() => Delete(entity.Id));
         }
 
         public abstract void Delete(TPrimaryKey id);
+
         public virtual Task DeleteAsync(TPrimaryKey id)
         {
-            Delete(id);
-            return Task.FromResult(0);
+            return Task.Run(() => Delete(id));
         }
 
         public virtual void Delete(Expression<Func<TEntity, bool>> predicate)
@@ -188,6 +114,10 @@ namespace Cloud.Mongo.Framework
 
             await Task.Run(() => Delete(predicate));
         }
+
+        #endregion
+
+        #region Ad 
 
         public virtual int Count()
         {
@@ -240,5 +170,7 @@ namespace Cloud.Mongo.Framework
 
             return Expression.Lambda<Func<TEntity, bool>>(lambdaBody, lambdaParam);
         }
+
+        #endregion
     }
 }

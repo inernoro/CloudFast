@@ -14,13 +14,13 @@ using Dapper;
 namespace Cloud.Dapper.Framework
 {
 
-    public class DapperRepositorie<TEntity> : DapperRepositorieBase<TEntity> where TEntity : Entity
+    public class DapperRepositories<TEntity> : DapperRepositoriesBase<TEntity> where TEntity : Entity
     {
 
 
         public string TableName { get; set; }
 
-        public DapperRepositorie()
+        public DapperRepositories()
         {
             TableName = typeof(TEntity).Name;
         }
@@ -117,7 +117,7 @@ namespace Cloud.Dapper.Framework
         }
     }
 
-    public class DapperRepositorie : IDapperRepositorie
+    public class DapperRepositories : IDapperRepositorie
     {
         public static IDbConnection Connection
         {

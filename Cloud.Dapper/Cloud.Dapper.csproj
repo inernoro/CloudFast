@@ -98,8 +98,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\CloudDapperModule.cs" />
-    <Compile Include="Framework\DapperRepositorie.cs" />
-    <Compile Include="Framework\DapperRepositorieBase.cs" />
+    <Compile Include="Framework\DapperRepositories.cs" />
+    <Compile Include="Framework\DapperRepositoriesBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
