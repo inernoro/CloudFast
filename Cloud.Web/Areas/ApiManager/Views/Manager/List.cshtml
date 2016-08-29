@@ -2,8 +2,16 @@
 @{
     ViewBag.Title = "List";
 }
-<script src="~/Scripts/vue.min.js"></script>
+@model List<Cloud.Framework.Mongo.OpenDocumentResponse>
+
 <div class="row">
+
+    @{
+        foreach (var node in Model)
+        {
+  
+        }
+    }
     <div class="panel-group" id="panel-655605">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -30,6 +38,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638041">权限管理</a>
@@ -52,51 +62,5 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638042">系统管理</a>
-            </div>
-            <div id="panel-element-7638042" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638043">角色管理</a>
-            </div>
-            <div id="panel-element-7638043" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-
-<script type="text/javascript"></script>

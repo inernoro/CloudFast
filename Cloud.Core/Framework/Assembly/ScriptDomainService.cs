@@ -19,7 +19,7 @@ namespace Cloud.Framework.Assembly
             }
         }
 
-        public dynamic Pointer
+        public dynamic Current
         {
             get
             {

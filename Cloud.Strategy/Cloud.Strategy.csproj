@@ -95,6 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiManager\ManagerUrlStrategy.cs" />
     <Compile Include="Framework\CloudStrategyModule.cs" />
     <Compile Include="Framework\AssemblyStrategy\AssemblyBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\CloudBuildStrategy.cs" />

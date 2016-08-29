@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\IManagerUrlStrategy.cs" />
     <Compile Include="Domain\Manager.cs" />
     <Compile Include="Domain\IManagerMongoRepositories.cs" />
     <Compile Include="Framework\Assembly\Cache.cs" />
