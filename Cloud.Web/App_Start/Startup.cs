@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Configuration;
+using System.Web.Http;
+using System.Web.Http.Cors;
 using Abp.Owin;
 using Cloud.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
@@ -24,6 +27,9 @@ namespace Cloud.Web
 
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
             app.MapSignalR();
+            app.UseCors(CorsOptions.AllowAll);
+
+            GlobalConfiguration.Configuration.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
 
         private static bool IsTrue(string appSettingName)

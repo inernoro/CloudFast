@@ -4,20 +4,17 @@
 }
 @model List<Cloud.Framework.Mongo.OpenDocumentResponse>
 
-<div class="row">
+<script src="~/Scripts/vue.min.js"></script>
 
-    @{
-        foreach (var node in Model)
-        {
-  
-        }
-    }
+<div class="row" id="list">
     <div class="panel-group" id="panel-655605">
-        <div class="panel panel-default">
+
+
+        <div v-for="node in namespace" class="panel panel-default">
             <div class="panel-heading">
-                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-432164">后台管理</a>
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#node" href="#{{node}}">>{{node}}</a>
             </div>
-            <div id="panel-element-432164" class="panel-collapse collapse">
+            <div id="{{node}}" class="panel-collapse collapse">
                 <div class="panel-body">
                     Anim pariatur cliche...
                 </div>
@@ -39,28 +36,29 @@
             </div>
         </div>
 
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-655605" href="#panel-element-7638041">权限管理</a>
-            </div>
-            <div id="panel-element-7638041" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+<script type="text/javascript" language="javascript">
+    $(function () {
+        $.ajax({
+            url: "http://localhost/api/services/cloudapi/Manager/GetNamespace",
+            data: JSON.stringify({}),
+            type: "post",
+            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                model = data.result.items;
+            },
+            error: function (e, r) {
+                console.log(e, r);
+            }
+        });
+
+    });
+    var model = { namespace: new Array() }
+
+    var vue = new Vue({
+        el: "#list",
+        date: model
+    });
+</script>
