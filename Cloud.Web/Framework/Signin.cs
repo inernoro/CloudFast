@@ -33,5 +33,9 @@ namespace Cloud.Web.Framework
             HttpContext.User = User;
         }
 
+        public async Task SignIn()
+        {
+            await Task.Run(() => HtmlHelper.SetCookie("token", "token:123456789"));
+        }
     }
 }

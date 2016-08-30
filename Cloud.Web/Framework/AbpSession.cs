@@ -9,18 +9,7 @@ namespace Cloud.Web.Framework
 {
     public class AbpSession : IAbpSession, ISingletonDependency
     {
-        public long? UserId
-        {
-            get
-            {
-                var userIdAsString = Thread.CurrentPrincipal.Identity.GetUserId();
-                if (string.IsNullOrEmpty(userIdAsString))
-                {
-                    return null;
-                }
-                return Convert.ToInt64(userIdAsString);
-            }
-        }
+        public long? UserId => 1;
 
 
         public int? TenantId { get; }

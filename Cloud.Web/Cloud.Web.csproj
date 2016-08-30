@@ -315,6 +315,7 @@
     <Compile Include="Areas\ApiManager\ApiManagerAreaRegistration.cs" />
     <Compile Include="Areas\ApiManager\Controllers\ManagerController.cs" />
     <Compile Include="Areas\ApiManager\Controllers\TestController.cs" />
+    <Compile Include="Framework\HtmlHelper.cs" />
     <Compile Include="Framework\Ilogin.cs" />
     <Compile Include="Framework\Signin.cs" />
     <Compile Include="Framework\User.cs" />
@@ -329,6 +330,7 @@
     <Compile Include="Framework\CloudUserStore.cs" />
     <Compile Include="Framework\ICloudUserManager.cs" />
     <Compile Include="Framework\ICloudUserStore.cs" />
+    <Compile Include="Models\CurrentUser.cs" />
     <Compile Include="Models\Network.cs" />
     <Compile Include="Models\Root.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

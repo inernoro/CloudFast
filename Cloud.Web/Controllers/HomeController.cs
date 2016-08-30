@@ -9,6 +9,7 @@ namespace Cloud.Web.Controllers
 {
     public class HomeController : CloudControllerBase
     {
+       
         private readonly IMongoRepositories<UserInfo, int> _mongoRepositories;
 
         public HomeController(IMongoRepositories<UserInfo, int> mongoRepositories)

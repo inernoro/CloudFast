@@ -4,6 +4,10 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Abp.Dependency;
+using Abp.Runtime.Session;
+using Cloud.Domain;
+using Cloud.Framework.Assembly;
+using Cloud.Framework.Redis;
 using Cloud.Manager.Models;
 using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
@@ -17,6 +21,15 @@ namespace Cloud.Web.Models
         private static Func<string> _getguidFunc;
         private static Action<string> _writeCookieAction;
         private static readonly Dictionary<string, CookieContainer> Dictionary = new Dictionary<string, CookieContainer>();
+
+        static Network()
+        {
+            var redis = IocManager.Instance.Resolve<IRedisHelper>();
+            var user = IocManager.Instance.Resolve<ICurrentUser>();
+            _loginFunc = () => new Login { UserName = user.UserName, Password = user.Password };
+            _getguidFunc = () => user.Token;
+
+        }
 
         #region Http请求
 
@@ -156,14 +169,14 @@ namespace Cloud.Web.Models
     {
         public Login()
         {
-            //IocManager.Instance.
-
+            var url = IocManager.Instance.Resolve<IManagerUrlStrategy>();
+            LoginUrl = url.LoginUrl;
         }
 
         public string UserName { get; set; }
 
         public string Password { get; set; }
 
-        public string LoginUrl { get; set; } = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}";
+        public string LoginUrl { get; }
     }
 }

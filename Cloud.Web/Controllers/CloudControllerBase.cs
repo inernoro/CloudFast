@@ -6,7 +6,7 @@ namespace Cloud.Web.Controllers
     /// Derive all Controllers from this class.
     /// </summary>
     public abstract class CloudControllerBase : AbpController
-    { 
-
+    {
+         
     }
 }

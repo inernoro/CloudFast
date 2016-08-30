@@ -7,5 +7,7 @@ namespace Cloud.Web.Framework
     public interface ISignin : ITransientDependency
     {
         Task SignInAsync(IUser<long> user, bool rememberMe = false);
+
+        Task SignIn();
     }
 }
