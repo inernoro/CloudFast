@@ -11,6 +11,8 @@ namespace Cloud.Domain
 
         string GetNamespace { get; }
 
+        string LoginUrl { get; } 
+
         void Init(Dictionary<string, string> dictionary);
     }
 }

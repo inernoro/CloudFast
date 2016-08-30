@@ -329,6 +329,8 @@
     <Compile Include="Framework\CloudUserStore.cs" />
     <Compile Include="Framework\ICloudUserManager.cs" />
     <Compile Include="Framework\ICloudUserStore.cs" />
+    <Compile Include="Models\Network.cs" />
+    <Compile Include="Models\Root.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CloudWebViewPageBase.cs" />
   </ItemGroup>
@@ -360,7 +362,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\ApiManager\Models\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cloud.Application\Cloud.Application.csproj">

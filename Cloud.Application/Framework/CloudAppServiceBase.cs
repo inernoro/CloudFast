@@ -10,7 +10,14 @@ namespace Cloud.Framework
     /// </summary>
     public abstract class CloudAppServiceBase : ApplicationService
     {
-      
+        /// <summary>
+        /// 中断并执行
+        /// </summary>
+        /// <param name="message"></param>
+        public void SystemInfo(string message)
+        {
+            throw new UserFriendlyException(message);
+        }
 
     }
 }

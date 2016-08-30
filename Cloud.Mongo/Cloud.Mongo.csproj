@@ -107,6 +107,7 @@
     <Compile Include="Framework\CloudMongoModule.cs" />
     <Compile Include="Framework\MongodbBase.cs" />
     <Compile Include="Framework\MongoRepositories.cs" />
+    <Compile Include="Manager\ManagerMongoRepositories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

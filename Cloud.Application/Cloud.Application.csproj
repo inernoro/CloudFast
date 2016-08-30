@@ -100,7 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiManager\Manager\Dtos\DeleteInput.cs" />
+    <Compile Include="ApiManager\Manager\Dtos\GetInfoOutput.cs" />
     <Compile Include="ApiManager\Manager\Dtos\GetInput.cs" />
+    <Compile Include="ApiManager\Manager\Dtos\NamespaceDto.cs" />
     <Compile Include="ApiManager\Manager\Dtos\GetOutput.cs" />
     <Compile Include="ApiManager\Manager\Dtos\PostInput.cs" />
     <Compile Include="ApiManager\Manager\Dtos\PutInput.cs" />

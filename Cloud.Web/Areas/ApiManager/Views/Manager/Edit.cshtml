@@ -3,24 +3,19 @@
     ViewBag.Title = "Edit";
 }
 
-<div class="row">
-    <form role="form">
-        <div class="form-group">
-
-            <label for="exampleInputEmail1">
-                Email address
+<div class="row" id="edit">
+    <h3 class="text-center">
+       {{namespace.actionDisplay}} ({{namespace.actionName}})
+    </h3>
+    <form role="form" >
+        <div v-for="node in namespace.inputParantrens" class="form-group">
+            <label :for="node.name">
+                {{node.description}} ({{node.name}})
             </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" />
-        </div>
-        <div class="form-group">
-
-            <label for="exampleInputPassword1">
-                Password
-            </label>
-            <input type="password" class="form-control" id="exampleInputPassword1" />
+            <input type="email" class="form-control" :id="node.name" :placeholder="node.type" />
         </div>
         <button type="submit" class="btn btn-default">
-            Submit
+            提交
         </button>
     </form>
 </div>
@@ -40,3 +35,41 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" language="javascript">
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") !== -1) {
+            var str = url.substr(1);
+            var strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    $(function () {
+        $.ajax({
+            url: "/api/services/app/Manager/GetInfo",
+            data: { input: GetRequest()["url"] },
+            type: "Get",
+            dataType: "json",
+            success: function (data) {
+                model.namespace = data.result;
+            },
+            error: function (e, r) {
+                console.log(e, r);
+            }
+        });
+    });
+
+    var model = {
+        namespace: new Array()
+    }
+    var vue = new Vue({
+        el: "#edit",
+        data: model
+    });
+
+</script>

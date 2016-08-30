@@ -1,64 +1,46 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "List";
 }
 @model List<Cloud.Framework.Mongo.OpenDocumentResponse>
-
-<script src="~/Scripts/vue.min.js"></script>
-
 <div class="row" id="list">
     <div class="panel-group" id="panel-655605">
 
-
-        <div v-for="node in namespace" class="panel panel-default">
+        <div v-for="node in namespace" class="panel panel-default text-center">
             <div class="panel-heading">
-                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#node" href="#{{node}}">>{{node}}</a>
+                <a class="panel-title collapsed" data-toggle="collapse" :data-parent="'#'+node.name" :href="'#'+node.name">{{node.display}} ({{node.name}})</a>
             </div>
-            <div id="{{node}}" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-                <div class="panel-body">
-                    Anim pariatur cliche...
-                </div>
-            </div>
-        </div>
 
+            <div class="panel-collapse collapse" :id="node.name">
+                <div v-for="children in node.children" class="panel-body">
+                    <a :href="'/apimanager/manager/edit?url='+children.url">{{children.display}}  ({{children.name}})</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 <script type="text/javascript" language="javascript">
     $(function () {
         $.ajax({
-            url: "http://localhost/api/services/cloudapi/Manager/GetNamespace",
-            data: JSON.stringify({}),
-            type: "post",
+            url: "/api/services/app/Manager/GetNamespace",
+            data: {},
+            type: "Get",
             dataType: "json",
-            contentType: "application/json",
             success: function (data) {
-                model = data.result.items;
+                model.namespace = data.result;
             },
             error: function (e, r) {
                 console.log(e, r);
             }
         });
-
     });
-    var model = { namespace: new Array() }
 
+    var model = {
+        namespace: new Array()
+    }
     var vue = new Vue({
         el: "#list",
-        date: model
+        data: model
     });
+
 </script>

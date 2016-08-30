@@ -125,14 +125,15 @@ dataConfig.message = function()
 end
 
 -- ApiManager
-dataConfig.test = function()
+dataConfig.testUrl = function()
 
     local result = {
         url =
         {
-            allInterface = "http://localhost:6234/api/services/CloudApi/Manager/AllInterface",
-            interface = "http://localhost:6234/api/services/CloudApi/Manager/Interface",
-            getNamespace = "http://localhost:6234/api/services/CloudApi/Manager/GetNamespace",
+            allInterface = "/api/services/app/Manager/AllInterface",
+            interface = "/api/services/app/Manager/Interface",
+            getNamespace = "/api/services/app/Manager/GetNamespace",
+            loginUrl = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}"
         },
         name = "NetWord",
         data = { },
