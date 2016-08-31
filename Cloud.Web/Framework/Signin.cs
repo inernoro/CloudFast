@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using Microsoft.Owin.Security;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -33,9 +34,24 @@ namespace Cloud.Web.Framework
             HttpContext.User = User;
         }
 
-        public async Task SignIn()
+        public Task SignIn()
         {
-            await Task.Run(() => HtmlHelper.SetCookie("token", "token:123456789"));
+            throw new NotImplementedException();
+        }
+
+        public async Task SignIn(HttpRequestBase requestBase)
+        {
+            await Task.Run(() => SetCookie("token", "123456", DateTime.Now.AddDays(7), requestBase));
+        }
+
+        public static void SetCookie(string cookiename, string cookievalue, DateTime expires, HttpRequestBase requestBase)
+        {
+            var cookie = new HttpCookie(cookiename)
+            {
+                Value = cookievalue,
+                Expires = expires
+            };
+            requestBase.Cookies.Add(cookie);
         }
     }
 }

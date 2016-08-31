@@ -2,17 +2,17 @@
 @{
     ViewBag.Title = "Edit";
 }
-
 <div class="row" id="edit">
     <h3 class="text-center">
-       {{namespace.actionDisplay}} ({{namespace.actionName}})
+        {{namespace.actionDisplay}} ({{namespace.actionName}})
     </h3>
-    <form role="form" >
+    <form role="form">
         <div v-for="node in namespace.inputParantrens" class="form-group">
             <label :for="node.name">
                 {{node.description}} ({{node.name}})
             </label>
-            <input type="email" class="form-control" :id="node.name" :placeholder="node.type" />
+            <input v-bind:type="node.type | toType node.description" class="form-control" :id="node.name" :placeholder="node.type" />
+            <input type="hidden" />
         </div>
         <button type="submit" class="btn btn-default">
             提交
@@ -24,13 +24,13 @@
     <div class="view">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title" contenteditable="true">输入参数</h3>
+                <h3 class="panel-title" contenteditable="false">结果</h3>
             </div>
             <div class="panel-body" contenteditable="true">
                 结果集
             </div>
-            <div class="panel-footer" contenteditable="true">
-                状态码
+            <div v-if="error && error!=200" class="panel-footer" contenteditable="false">
+                状态:{{error}}
             </div>
         </div>
     </div>
@@ -65,11 +65,65 @@
     });
 
     var model = {
-        namespace: new Array()
+        namespace: new Array(),
+        error: false
     }
+    var first = true;
     var vue = new Vue({
-        el: "#edit",
-        data: model
+        el: "#parent",
+        data: model,
+        filters: {
+            toType: function (value, display) {
+                console.log(value, display);
+                if (!!display) {
+                    console.log(1);
+                    if (display.indexOf("type:") !== -1) {
+                        var field = "type:";
+                        var left = display.substring(display.indexOf(field) + field.length);
+                        var type = left.substring(0, left.indexOf(")"));
+                        console.log(2);
+                        switch (type) {
+                            case "string":
+                                return "text";
+                            case "phone":
+                                return "tel";
+                            case "datetime":
+                                return "datetime-local";
+                            case "date":
+                                return "date";
+                            case "time":
+                                return "time";
+                            case "long":
+                            case "int":
+                            case "double":
+                            case "flolt":
+                                return "number";
+                            case "bool":
+                                return "checkbox";
+                            default:
+                        }
+                    }
+                }
+                switch (value) {
+                    case "Int32":
+                    case "Int32(NULL)":
+                        return "number";
+                    case "String":
+                        return "text";
+                    case "Boolean":
+                    case "Boolean(NULL)":
+                        return "checkbox";
+                    case "DateTime(NULL)":
+                    case "DateTime":
+                        return "datetime-local";
+                    default:
+                        return "text";
+
+                }
+
+            }
+        }
+
     });
 
 </script>

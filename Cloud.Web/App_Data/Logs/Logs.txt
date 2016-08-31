@@ -3943,3 +3943,329 @@ System.Web.HttpException (0x80004005): The "RenderBody" method has not been call
    在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-30 19:07:43,559 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-30 19:07:43,573 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-30 19:07:43,577 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,579 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-30 19:07:43,583 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-30 19:07:45,489 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-30 19:07:45,497 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-30 19:07:45,498 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-30 19:07:45,744 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-30 19:07:45,789 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-30 19:07:45,790 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-30 19:07:48,461 [8    ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-31 11:55:39,914 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 11:55:39,929 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 11:55:39,934 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 11:55:39,941 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 11:55:42,004 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 11:55:42,013 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 11:55:42,014 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 11:55:42,221 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 11:55:42,239 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 11:55:42,240 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-31 11:55:57,020 [8    ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-31 12:49:32,771 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 12:49:32,784 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 12:49:32,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 12:49:32,794 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 12:49:34,672 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 12:49:34,679 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 12:49:34,680 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 12:49:34,872 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 12:49:34,892 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 12:49:34,893 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-31 12:49:39,804 [9    ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-31 13:07:16,496 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 13:07:16,509 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 13:07:16,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:07:16,520 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 13:07:18,580 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 13:07:18,588 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 13:07:18,590 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 13:07:18,808 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 13:07:18,835 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 13:07:18,836 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-31 13:07:21,916 [10   ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-31 13:39:56,593 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 13:39:56,848 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 13:39:56,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,856 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,856 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,856 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,856 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,856 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,857 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,857 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 13:39:56,859 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 13:39:57,977 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 13:39:57,984 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 13:39:57,986 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 13:39:58,224 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 13:39:58,242 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 13:39:58,243 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-31 13:40:00,056 [9    ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2016-08-31 13:45:18,548 [11   ] nHandling.AbpApiExceptionFilterAttribute - 抱歉,查询不到此接口
+Abp.UI.UserFriendlyException: 抱歉,查询不到此接口
+   在 Cloud.ApiManager.Manager.ManagerAppService.GetInfo(String input) 位置 D:\CurrentProject\Cloud4\Cloud.Application\ApiManager\Manager\ManagerAppService.cs:行号 98
+   在 Castle.Proxies.ManagerAppServiceProxy.GetInfo_callback(String input)
+   在 Castle.Proxies.Invocations.IManagerAppService_GetInfo.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Auditing\AuditingInterceptor.cs:行号 53
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.GetInfo(String input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.GetInfo(String input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2016-08-31 14:00:00,183 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 14:00:00,418 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 14:00:00,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:00:00,430 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 14:00:01,549 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 14:00:01,555 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 14:00:01,556 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 14:00:01,803 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 14:00:01,822 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 14:00:01,823 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-08-31 14:00:03,660 [9    ] Cloud.Web.Controllers.HomeController     - The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+System.Web.HttpException (0x80004005): The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+   在 System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-08-31 14:14:14,405 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 14:14:14,418 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 14:14:14,422 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 14:14:14,430 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 14:14:16,442 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 14:14:16,450 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 14:14:16,451 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 14:14:16,661 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 14:14:16,680 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 14:14:16,681 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.

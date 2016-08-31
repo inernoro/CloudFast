@@ -6,7 +6,7 @@ namespace Cloud.Web.Framework
     /// <summary> 
     /// 通用类库，提供Html级别的处理函数
     /// </summary>
-   public  class HtmlHelper
+    public class HtmlHelper
     {
         #region cookie操作
         /// <summary>
@@ -20,7 +20,6 @@ namespace Cloud.Web.Framework
             {
                 cookie.Expires = DateTime.Now.AddYears(-3);
                 cookie.Value = string.Empty;
-                //cookie.Domain = Cloud.Manager.Tools.Utils.GetAppValueByName("Domain");
                 HttpContext.Current.Response.Cookies.Add(cookie);
             }
         }
@@ -33,7 +32,7 @@ namespace Cloud.Web.Framework
             var cookies = HttpContext.Current.Request.Cookies.AllKeys;
             foreach (var item in cookies)
             {
-                SetCookie(item, string.Empty, -10 );
+                SetCookie(item, string.Empty, -10);
             }
         }
 
@@ -52,7 +51,7 @@ namespace Cloud.Web.Framework
             }
             return str;
         }
-        
+
         /// <summary>
         /// 添加一个Cookie
         /// </summary>
@@ -60,15 +59,14 @@ namespace Cloud.Web.Framework
         /// <param name="cookievalue">cookie值</param>
         /// <param name="expDay">几天后过期</param>
         public static void SetCookie(string cookiename, string cookievalue, double expDay)
-        { 
+        {
             HttpCookie cookie = new HttpCookie(cookiename)
             {
                 Value = HttpUtility.UrlEncode(cookievalue),
-                Expires =  DateTime.Now.AddDays(expDay),
-                //Domain = Cloud.Manager.Tools.Utils.GetAppValueByName("Domain")
-            }; 
+                Expires = DateTime.Now.AddDays(expDay),
+            };
             HttpContext.Current.Response.Cookies.Add(cookie);
-        } 
+        }
         #endregion
 
         /// <summary>
@@ -100,13 +98,11 @@ namespace Cloud.Web.Framework
         /// <param name="expires">过期时间 DateTime</param>
         public static void SetCookie(string cookiename, string cookievalue, DateTime expires)
         {
-            HttpCookie cookie = new HttpCookie(cookiename)
+            var cookie = new HttpCookie(cookiename)
             {
-                Value = HttpUtility.UrlEncode(cookievalue),
-                Expires = expires,
-                //Domain = Cloud.Manager.Tools.Utils.GetAppValueByName("Domain")
+                Value = cookievalue,
+                Expires = expires
             };
-            //cookie.Domain = "fao.com";
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
     }
