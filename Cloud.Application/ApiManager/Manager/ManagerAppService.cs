@@ -10,6 +10,7 @@ using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Domain;
+using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
 using Cloud.Framework.Redis;
 using Newtonsoft.Json;
@@ -21,11 +22,14 @@ namespace Cloud.ApiManager.Manager
         private readonly string managerKey = "Cloud:Manager:KeyNamespace";
         private readonly IManagerMongoRepositories _managerMongoRepositories;
         private readonly IRedisHelper _redisHelper;
+        private readonly IManagerUrlStrategy _managerUrlStrategy;
 
-        public ManagerAppService(IManagerMongoRepositories managerMongoRepositories, IRedisHelper redisHelper)
+
+        public ManagerAppService(IManagerMongoRepositories managerMongoRepositories, IRedisHelper redisHelper, IManagerUrlStrategy managerUrlStrategy)
         {
             _managerMongoRepositories = managerMongoRepositories;
             _redisHelper = redisHelper;
+            _managerUrlStrategy = managerUrlStrategy;
         }
 
         /// <summary>
@@ -37,7 +41,6 @@ namespace Cloud.ApiManager.Manager
             return new ListResultOutput<GetOutput>((await _managerMongoRepositories.GetAllListAsync()).MapTo<IReadOnlyList<GetOutput>>());
         }
 
-
         private static ViewDataMongoModel _data;
 
         private ViewDataMongoModel ViewDataMongoModel
@@ -48,7 +51,10 @@ namespace Cloud.ApiManager.Manager
                     return _data;
                 var value = _redisHelper.StringGet(managerKey);
                 if (value == null)
-                    throw new UserFriendlyException("没有初始化");
+                { 
+                    _data = Network.HttpGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl).result;
+                }
+                value = _redisHelper.StringGet(managerKey);
                 _data = JsonConvert.DeserializeObject<ViewDataMongoModel>(value);
                 return _data;
             }

@@ -1,4 +1,6 @@
-﻿using Cloud.Framework.Assembly;
+﻿using Abp.Dependency;
+using Abp.Runtime.Session;
+using Cloud.Framework.Assembly;
 using Cloud.Web.Framework;
 
 namespace Cloud.Web.Models
@@ -13,8 +15,10 @@ namespace Cloud.Web.Models
         {
             get
             {
-                var token = HtmlHelper.GetCookieValue("token"); 
-                return token;
+                //var token = HtmlHelper.GetCookieValue("token"); 
+                //return token;
+                return IocManager.Instance.Resolve<IAbpSession>().UserId.ToString();
+
             }
         }
     }

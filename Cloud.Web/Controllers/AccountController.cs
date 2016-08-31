@@ -16,8 +16,7 @@ namespace Cloud.Web.Controllers
 
         // GET: Account
         public async Task<ActionResult> Index()
-        {
-            await _signin.SignIn();
+        { 
             return View();
         }
     }

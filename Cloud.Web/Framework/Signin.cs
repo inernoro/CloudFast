@@ -34,11 +34,6 @@ namespace Cloud.Web.Framework
             HttpContext.User = User;
         }
 
-        public Task SignIn()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task SignIn(HttpRequestBase requestBase)
         {
             await Task.Run(() => SetCookie("token", "123456", DateTime.Now.AddDays(7), requestBase));

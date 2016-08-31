@@ -336,8 +336,6 @@
     <Compile Include="Framework\ICloudUserManager.cs" />
     <Compile Include="Framework\ICloudUserStore.cs" />
     <Compile Include="Models\CurrentUser.cs" />
-    <Compile Include="Models\Network.cs" />
-    <Compile Include="Models\Root.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CloudWebViewPageBase.cs" />
   </ItemGroup>
