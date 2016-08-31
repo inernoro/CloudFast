@@ -4269,3 +4269,185 @@ DEBUG 2016-08-31 14:14:16,451 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2016-08-31 14:14:16,661 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2016-08-31 14:14:16,680 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
 DEBUG 2016-08-31 14:14:16,681 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-08-31 15:33:47,192 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 15:33:47,205 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 15:33:47,209 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:33:47,215 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+FATAL 2016-08-31 15:34:16,504 [1    ] Abp.AbpBootstrapper                      - Neo.IronLua.LuaParseException: Unexpected token 'Identifier'. '}' expected.
+   在 Neo.IronLua.Parser.FetchToken(LuaToken typ, LuaLexer code, Boolean lOptional) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2347
+   在 Neo.IronLua.Parser.ParseTableConstructor(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2257
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1171
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.ParseTableField(ParameterExpression tableVar, Scope scope, LuaLexer code, Int32& iIndex) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2298
+   在 Neo.IronLua.Parser.ParseTableConstructor(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2241
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1171
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.<ParseExpressionList>d__33.MoveNext() 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1315
+   在 Neo.IronLua.Parser.ParseExpressionStatement(Scope scope, LuaLexer code, Boolean lLocal) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 875
+   在 Neo.IronLua.Parser.ParseStatement(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 809
+   在 Neo.IronLua.Parser.ParseBlock(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 649
+   在 Neo.IronLua.Parser.ParseLamdaDefinition(Scope parent, LuaLexer code, String sName, Boolean lSelfParameter, Action`1 functionTypeCollected) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2204
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1176
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.<ParseExpressionList>d__33.MoveNext() 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1315
+   在 Neo.IronLua.Parser.ParseExpressionStatement(Scope scope, LuaLexer code, Boolean lLocal) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 875
+   在 Neo.IronLua.Parser.ParseStatement(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 765
+   在 Neo.IronLua.Parser.ParseBlock(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 649
+   在 Neo.IronLua.Parser.ParseChunk(Lua runtime, LuaCompileOptions options, Boolean lHasEnvironment, LuaLexer code, Type typeDelegate, Type returnType, IEnumerable`1 args) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 576
+   在 Neo.IronLua.Lua.CompileChunk(String sChunkName, LuaCompileOptions options, TextReader tr, IEnumerable`1 args) 位置 C:\Projects\NeoLua\NeoLua\Lua.cs:行号 224
+   在 Neo.IronLua.LuaGlobalPortable.DoChunk(TextReader tr, String sName, KeyValuePair`2[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 149
+   在 Neo.IronLua.LuaGlobalPortable.DoChunk(String sCode, String sName, KeyValuePair`2[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 123
+   在 Neo.IronLua.LuaGlobalPortable.LuaDoChunk(Object[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 266
+   在 CallSite.Target(Closure , CallSite , Object , String , String )
+   在 CallSite.Target(Closure , CallSite , Object , String , String )
+   在 Cloud.Strategy.Framework.AssemblyStrategy.LuaAssembly.ExecuteScript(String script) 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\LuaAssembly.cs:行号 69
+   在 Cloud.Strategy.Framework.AssemblyStrategy.LuaAssembly.AddressGetValue(String address) 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\LuaAssembly.cs:行号 58
+   在 Cloud.Strategy.Framework.AssemblyStrategy.StartupStrategy.StartInitialization() 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\StartupStrategy.cs:行号 28
+   在 Cloud.Framework.Assembly.CloudConfigurage.StartInitializationType() 位置 D:\CurrentProject\Cloud4\Cloud.Core\Framework\Assembly\CloudConfigurage.cs:行号 9
+   在 Cloud.Strategy.Framework.CloudStrategyModule.Initialize() 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\CloudStrategyModule.cs:行号 15
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__16_1(AbpModuleInfo module) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 48
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 48
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:行号 133
+Neo.IronLua.LuaParseException: Unexpected token 'Identifier'. '}' expected.
+   在 Neo.IronLua.Parser.FetchToken(LuaToken typ, LuaLexer code, Boolean lOptional) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2347
+   在 Neo.IronLua.Parser.ParseTableConstructor(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2257
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1171
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.ParseTableField(ParameterExpression tableVar, Scope scope, LuaLexer code, Int32& iIndex) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2298
+   在 Neo.IronLua.Parser.ParseTableConstructor(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2241
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1171
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.<ParseExpressionList>d__33.MoveNext() 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1315
+   在 Neo.IronLua.Parser.ParseExpressionStatement(Scope scope, LuaLexer code, Boolean lLocal) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 875
+   在 Neo.IronLua.Parser.ParseStatement(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 809
+   在 Neo.IronLua.Parser.ParseBlock(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 649
+   在 Neo.IronLua.Parser.ParseLamdaDefinition(Scope parent, LuaLexer code, String sName, Boolean lSelfParameter, Action`1 functionTypeCollected) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 2204
+   在 Neo.IronLua.Parser.ParsePrefix(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1176
+   在 Neo.IronLua.Parser.ParseExpressionCast(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1608
+   在 Neo.IronLua.Parser.ParseExpressionPower(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1584
+   在 Neo.IronLua.Parser.ParseExpressionUnary(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1575
+   在 Neo.IronLua.Parser.ParseExpressionMultiply(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1527
+   在 Neo.IronLua.Parser.ParseExpressionPlus(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1505
+   在 Neo.IronLua.Parser.ParseExpressionShift(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1482
+   在 Neo.IronLua.Parser.ParseExpressionCon(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1460
+   在 Neo.IronLua.Parser.ParseExpressionCmp(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1430
+   在 Neo.IronLua.Parser.ParseExpressionBitAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1411
+   在 Neo.IronLua.Parser.ParseExpressionBitXOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1393
+   在 Neo.IronLua.Parser.ParseExpressionBitOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1375
+   在 Neo.IronLua.Parser.ParseExpressionAnd(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1360
+   在 Neo.IronLua.Parser.ParseExpressionOr(Scope scope, LuaLexer code, InvokeResult result, Boolean& lWrap) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1345
+   在 Neo.IronLua.Parser.<ParseExpressionList>d__33.MoveNext() 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 1315
+   在 Neo.IronLua.Parser.ParseExpressionStatement(Scope scope, LuaLexer code, Boolean lLocal) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 875
+   在 Neo.IronLua.Parser.ParseStatement(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 765
+   在 Neo.IronLua.Parser.ParseBlock(Scope scope, LuaLexer code) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 649
+   在 Neo.IronLua.Parser.ParseChunk(Lua runtime, LuaCompileOptions options, Boolean lHasEnvironment, LuaLexer code, Type typeDelegate, Type returnType, IEnumerable`1 args) 位置 C:\Projects\NeoLua\NeoLua\Parser.cs:行号 576
+   在 Neo.IronLua.Lua.CompileChunk(String sChunkName, LuaCompileOptions options, TextReader tr, IEnumerable`1 args) 位置 C:\Projects\NeoLua\NeoLua\Lua.cs:行号 224
+   在 Neo.IronLua.LuaGlobalPortable.DoChunk(TextReader tr, String sName, KeyValuePair`2[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 149
+   在 Neo.IronLua.LuaGlobalPortable.DoChunk(String sCode, String sName, KeyValuePair`2[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 123
+   在 Neo.IronLua.LuaGlobalPortable.LuaDoChunk(Object[] args) 位置 C:\Projects\NeoLua\NeoLua\LuaGlobalPortable.cs:行号 266
+   在 CallSite.Target(Closure , CallSite , Object , String , String )
+   在 CallSite.Target(Closure , CallSite , Object , String , String )
+   在 Cloud.Strategy.Framework.AssemblyStrategy.LuaAssembly.ExecuteScript(String script) 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\LuaAssembly.cs:行号 69
+   在 Cloud.Strategy.Framework.AssemblyStrategy.LuaAssembly.AddressGetValue(String address) 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\LuaAssembly.cs:行号 58
+   在 Cloud.Strategy.Framework.AssemblyStrategy.StartupStrategy.StartInitialization() 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\AssemblyStrategy\StartupStrategy.cs:行号 28
+   在 Cloud.Framework.Assembly.CloudConfigurage.StartInitializationType() 位置 D:\CurrentProject\Cloud4\Cloud.Core\Framework\Assembly\CloudConfigurage.cs:行号 9
+   在 Cloud.Strategy.Framework.CloudStrategyModule.Initialize() 位置 D:\CurrentProject\Cloud4\Cloud.Strategy\Framework\CloudStrategyModule.cs:行号 15
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__16_1(AbpModuleInfo module) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 48
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 48
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:行号 133
+DEBUG 2016-08-31 15:34:32,430 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-31 15:34:32,661 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-08-31 15:34:32,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-31 15:34:32,672 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-08-31 15:34:36,203 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-08-31 15:34:36,211 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-31 15:34:36,212 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-31 15:34:36,416 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-31 15:34:36,434 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-08-31 15:34:36,435 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.

@@ -19,16 +19,15 @@ namespace Cloud.ApiManager.Manager
 {
     public class ManagerAppService : AbpServiceBase, IManagerAppService
     {
-        private readonly string managerKey = "Cloud:Manager:KeyNamespace";
         private readonly IManagerMongoRepositories _managerMongoRepositories;
-        private readonly IRedisHelper _redisHelper;
         private readonly IManagerUrlStrategy _managerUrlStrategy;
 
 
-        public ManagerAppService(IManagerMongoRepositories managerMongoRepositories, IRedisHelper redisHelper, IManagerUrlStrategy managerUrlStrategy)
+        public ManagerAppService(
+            IManagerMongoRepositories managerMongoRepositories, 
+            IManagerUrlStrategy managerUrlStrategy)
         {
             _managerMongoRepositories = managerMongoRepositories;
-            _redisHelper = redisHelper;
             _managerUrlStrategy = managerUrlStrategy;
         }
 
@@ -43,22 +42,7 @@ namespace Cloud.ApiManager.Manager
 
         private static ViewDataMongoModel _data;
 
-        private ViewDataMongoModel ViewDataMongoModel
-        {
-            get
-            {
-                if (_data != null)
-                    return _data;
-                var value = _redisHelper.StringGet(managerKey);
-                if (value == null)
-                { 
-                    _data = Network.HttpGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl).result;
-                }
-                value = _redisHelper.StringGet(managerKey);
-                _data = JsonConvert.DeserializeObject<ViewDataMongoModel>(value);
-                return _data;
-            }
-        }
+        private ViewDataMongoModel ViewDataMongoModel => _data ?? (_data = Network.HttpGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl).result);
 
         public ViewDataMongoModel AllInterface()
         {

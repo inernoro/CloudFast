@@ -133,8 +133,8 @@ dataConfig.testUrl = function()
             allInterface = "/api/services/app/Manager/AllInterface",
             interface = "/api/services/app/Manager/Interface",
             getNamespace = "/api/services/app/Manager/GetNamespace",
-            loginUrl = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}"
-            initUrl = "http://test.e2e100.com/api/services/CloudAPI/Manager/AllInterface",
+            loginUrl = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}",
+            initUrl = "http://test.e2e100.com/api/services/CloudAPI/Manager/AllInterface"
         },
         name = "NetWord",
         data = { },
