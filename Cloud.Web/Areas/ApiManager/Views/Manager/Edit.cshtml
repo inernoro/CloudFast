@@ -73,8 +73,7 @@
         el: "#parent",
         data: model,
         filters: {
-            toType: function (value, display) {
-                console.log(value, display);
+            toType: function (value, display) { 
                 if (!!display) {
                     console.log(1);
                     if (display.indexOf("type:") !== -1) {

@@ -166,7 +166,7 @@ namespace Cloud.Framework.Assembly
         /// <summary>
         /// HttpClient实现Post请求
         /// </summary>
-        private static string DoPost(string url, string parament)
+        public static string DoPost(string url, string parament)
         {
             var handler = new HttpClientHandler
             {
@@ -186,7 +186,7 @@ namespace Cloud.Framework.Assembly
         /// <summary>
         /// HttpClient实现Get请求
         /// </summary>
-        private static string DoGet(string url)
+        public static string DoGet(string url)
         {
             var handler = new HttpClientHandler
             {
@@ -202,8 +202,19 @@ namespace Cloud.Framework.Assembly
             }
         }
 
+        public static T DoGet<T>(string url)
+        {
+            return JsonConvert.DeserializeObject<Root<T>>(DoGet(url)).result;
+        }
+
+        public static T DoPost<T>(string url, string parament)
+        {
+            return JsonConvert.DeserializeObject<Root<T>>(DoPost(url, parament)).result;
+        }
+
         #endregion
     }
+
 
     public class Login
     {

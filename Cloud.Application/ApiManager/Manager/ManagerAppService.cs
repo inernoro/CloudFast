@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Abp;
 using Abp.Application.Services.Dto;
@@ -12,7 +9,6 @@ using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Domain;
 using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
-using Cloud.Framework.Redis;
 using Newtonsoft.Json;
 
 namespace Cloud.ApiManager.Manager
@@ -24,7 +20,7 @@ namespace Cloud.ApiManager.Manager
 
 
         public ManagerAppService(
-            IManagerMongoRepositories managerMongoRepositories, 
+            IManagerMongoRepositories managerMongoRepositories,
             IManagerUrlStrategy managerUrlStrategy)
         {
             _managerMongoRepositories = managerMongoRepositories;
@@ -42,7 +38,7 @@ namespace Cloud.ApiManager.Manager
 
         private static ViewDataMongoModel _data;
 
-        private ViewDataMongoModel ViewDataMongoModel => _data ?? (_data = Network.HttpGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl).result);
+        private ViewDataMongoModel ViewDataMongoModel => _data ?? (_data = (Network.DoGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl)));
 
         public ViewDataMongoModel AllInterface()
         {

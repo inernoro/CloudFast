@@ -13,7 +13,7 @@ namespace Cloud.Strategy.ApiManager
         public string Interface => GetDictionary["interface"];
         public string GetNamespace => GetDictionary["getNamespace"];
         public string LoginUrl => GetDictionary["initUrl"];
-        public string InitUrl => GetDictionary["loginUrl"];
+        public string InitUrl => GetDictionary["initUrl"];
         public void Init(Dictionary<string, string> dictionary)
         {
             GetDictionary = dictionary;

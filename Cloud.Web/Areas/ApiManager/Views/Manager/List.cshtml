@@ -5,14 +5,15 @@
 <div class="row" id="list">
     <div class="panel-group" id="panel-655605">
 
-        <div v-for="node in namespace" class="panel panel-default text-center">
+        <div v-for="node in namespace" v-if="search(searchKey,node)" class="panel panel-default text-center">
             <div class="panel-heading">
                 <a class="panel-title collapsed" data-toggle="collapse" :data-parent="'#'+node.name" :href="'#'+node.name">{{node.display}} ({{node.name}})</a>
             </div>
 
             <div class="panel-collapse collapse" :id="node.name">
-                <div v-for="children in node.children" class="panel-body">
-                    <a :href="'/apimanager/manager/edit?url='+children.url">{{children.display}}  ({{children.name}})</a>
+                @* v-if="(children.display.indexOf(searchKey) !== -1 || children.name.indexOf(searchKey) !== -1)" *@
+                <div v-if="fatherFilters() || (children.display.indexOf(searchKey) !== -1 || children.name.indexOf(searchKey) !== -1)" v-for="children in node.children" class="panel-body">
+                    <a :href="'/apimanager/manager/edit?url='+children.url">{{{children.display | toSearch searchKey}}} ({{{children.name | toSearch searchKey}}})</a>
                 </div>
             </div>
 
@@ -36,11 +37,42 @@
     });
 
     var model = {
-        namespace: new Array()
+        namespace: new Array(),
+        searchKey: ""
     }
     var vue = new Vue({
-        el: "#list",
-        data: model
+        el: "#parent",
+        data: model,
+        methods: {
+            search: function (searchKey, node) {
+                if (this.fatherFilters(searchKey, node)) {
+                    return true;
+                }
+                for (var index = 0; index < node.children.length; index++) {
+                    var child = node.children[index];
+                    if (child.display.indexOf(searchKey) !== -1 || child.name.indexOf(searchKey) !== -1) {
+                        return true;
+                    }
+                }
+                return false;
+            },
+            fatherFilters: function (searchKey, node) {
+                if (searchKey === "" || node.display.indexOf(searchKey) !== -1 || node.name.indexOf(searchKey) !== -1) {
+                    return true;
+                }
+                return false;
+            }
+
+        },
+        filters: {
+            toSearch: function (value, searchKey) {
+                if (!!value && value.indexOf(this.searchKey) !== -1) {
+                    var newvalue = value.replace(searchKey, "<strong><span style=\"color:red\">" + searchKey + "</span></strong>");
+                    return newvalue;
+                }
+                return value;
+            }
+        }
     });
 
 </script>
