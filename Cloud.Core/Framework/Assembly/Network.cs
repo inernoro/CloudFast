@@ -186,14 +186,17 @@ namespace Cloud.Framework.Assembly
         /// <summary>
         /// HttpClient实现Get请求
         /// </summary>
-        public static string DoGet(string url)
+        public static string DoGet(string url, Dictionary<string, string> dictionary = null)
         {
+            if (dictionary == null)
+                dictionary = new Dictionary<string, string>();
             var handler = new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip
             };
             using (var http = new HttpClient(handler))
             {
+                var content = new FormUrlEncodedContent(dictionary);
                 var getMessage = http.GetAsync(url);
                 getMessage.Wait();
                 var response = getMessage.Result;

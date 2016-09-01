@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp;
@@ -83,6 +84,28 @@ namespace Cloud.ApiManager.Manager
             if (data == null)
                 throw new UserFriendlyException("抱歉,查询不到此接口");
             return data;
+        }
+
+        public TestOutput Test(TestInput input)
+        { 
+            var watch = new Stopwatch();
+            var output = new TestOutput();
+            watch.Start();
+            switch (input.Type)
+            {
+                case "Post":
+                    output.Result = Network.DoPost(input.Url, input.Data);
+                    break;
+                case "Get":
+                    output.Result = Network.DoGet(input.Url, input.Data.Deserialize<Dictionary<string, string>>());
+                    break;
+                default:
+                    throw new UserFriendlyException("没有该类型的地址");
+            }
+            watch.Stop();
+            output.ErrorCode = "200";
+            output.Take = watch.ElapsedMilliseconds;
+            return output;
         }
     }
 }

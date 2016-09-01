@@ -108,6 +108,8 @@
     <Compile Include="ApiManager\Manager\Dtos\PutInput.cs" />
     <Compile Include="ApiManager\Manager\IManagerAppService.cs" />
     <Compile Include="ApiManager\Manager\ManagerAppService.cs" />
+    <Compile Include="ApiManager\Manager\TestInput.cs" />
+    <Compile Include="ApiManager\Manager\TestOutput.cs" />
     <Compile Include="Framework\CloudApplicationModule.cs" />
     <Compile Include="Framework\CloudAppServiceBase.cs" />
     <Compile Include="Framework\IPageIndex.cs" />

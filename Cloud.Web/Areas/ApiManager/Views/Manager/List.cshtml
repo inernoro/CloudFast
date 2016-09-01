@@ -12,7 +12,7 @@
 
             <div class="panel-collapse collapse" :id="node.name">
                 @* v-if="(children.display.indexOf(searchKey) !== -1 || children.name.indexOf(searchKey) !== -1)" *@
-                <div v-if="fatherFilters() || (children.display.indexOf(searchKey) !== -1 || children.name.indexOf(searchKey) !== -1)" v-for="children in node.children" class="panel-body">
+                <div v-if="fatherFilters(searchKey,node) || (children.display.indexOf(searchKey) !== -1 || children.name.indexOf(searchKey) !== -1)" v-for="children in node.children" class="panel-body">
                     <a :href="'/apimanager/manager/edit?url='+children.url">{{{children.display | toSearch searchKey}}} ({{{children.name | toSearch searchKey}}})</a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
         el: "#parent",
         data: model,
         methods: {
-            search: function (searchKey, node) {
+            search: function (searchKey, node) { 
                 if (this.fatherFilters(searchKey, node)) {
                     return true;
                 }
@@ -66,10 +66,13 @@
         },
         filters: {
             toSearch: function (value, searchKey) {
+                console.log(value, searchKey);
                 if (!!value && value.indexOf(this.searchKey) !== -1) {
                     var newvalue = value.replace(searchKey, "<strong><span style=\"color:red\">" + searchKey + "</span></strong>");
+                    console.log(newvalue);
                     return newvalue;
                 }
+                console.log(value);
                 return value;
             }
         }
