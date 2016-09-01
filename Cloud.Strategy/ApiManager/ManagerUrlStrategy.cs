@@ -14,6 +14,7 @@ namespace Cloud.Strategy.ApiManager
         public string GetNamespace => GetDictionary["getNamespace"];
         public string LoginUrl => GetDictionary["initUrl"];
         public string InitUrl => GetDictionary["initUrl"];
+        public string TestHost => GetDictionary["testHost"];
         public void Init(Dictionary<string, string> dictionary)
         {
             GetDictionary = dictionary;

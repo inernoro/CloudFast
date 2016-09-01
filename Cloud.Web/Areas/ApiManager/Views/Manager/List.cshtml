@@ -44,7 +44,7 @@
         el: "#parent",
         data: model,
         methods: {
-            search: function (searchKey, node) { 
+            search: function (searchKey, node) {
                 if (this.fatherFilters(searchKey, node)) {
                     return true;
                 }
@@ -66,13 +66,10 @@
         },
         filters: {
             toSearch: function (value, searchKey) {
-                console.log(value, searchKey);
                 if (!!value && value.indexOf(this.searchKey) !== -1) {
                     var newvalue = value.replace(searchKey, "<strong><span style=\"color:red\">" + searchKey + "</span></strong>");
-                    console.log(newvalue);
                     return newvalue;
                 }
-                console.log(value);
                 return value;
             }
         }

@@ -13,6 +13,7 @@ namespace Cloud.Domain
 
         string LoginUrl { get; } 
         string InitUrl { get; } 
+        string TestHost { get; } 
 
         void Init(Dictionary<string, string> dictionary);
     }

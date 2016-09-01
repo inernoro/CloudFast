@@ -87,16 +87,17 @@ namespace Cloud.ApiManager.Manager
         }
 
         public TestOutput Test(TestInput input)
-        { 
+        {
+            input.Url = _managerUrlStrategy.TestHost + input.Url;
             var watch = new Stopwatch();
             var output = new TestOutput();
             watch.Start();
             switch (input.Type)
             {
-                case "Post":
+                case HttpReponse.Post:
                     output.Result = Network.DoPost(input.Url, input.Data);
                     break;
-                case "Get":
+                case HttpReponse.Get:
                     output.Result = Network.DoGet(input.Url, input.Data.Deserialize<Dictionary<string, string>>());
                     break;
                 default:

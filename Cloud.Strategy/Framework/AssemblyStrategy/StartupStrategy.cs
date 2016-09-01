@@ -50,6 +50,7 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
                 { "@interface",testUrl.Url.@interface.ToString() },
                 { "getNamespace",testUrl.Url.getNamespace.ToString() },
                 { "initUrl",testUrl.Url.initUrl.ToString() },
+                { "testHost",testUrl.Url.testHost.ToString() },
                 { "loginUrl",testUrl.Url.loginUrl.ToString() }
             });
 

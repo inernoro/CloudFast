@@ -4993,3 +4993,446 @@ DEBUG 2016-09-01 10:07:57,178 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2016-09-01 10:07:57,408 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2016-09-01 10:07:57,428 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
 DEBUG 2016-09-01 10:07:57,430 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-01 10:17:30,471 [47   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-01 10:17:30,472 [47   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 10:17:30,473 [47   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 10:17:30,473 [47   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-09-01 10:17:32,880 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 10:17:33,013 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 10:17:33,018 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 10:17:33,027 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 10:17:33,695 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 10:17:33,701 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 10:17:33,702 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 10:17:33,848 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 10:17:33,853 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 10:17:33,854 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-01 15:14:34,566 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 15:14:34,580 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 15:14:34,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:14:34,592 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 15:14:36,812 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 15:14:36,826 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 15:14:36,828 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 15:14:37,093 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 15:14:37,115 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 15:14:37,116 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-01 15:27:34,405 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 15:27:34,426 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 15:27:34,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:27:34,442 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 15:27:36,342 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 15:27:36,350 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 15:27:36,352 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 15:27:36,563 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 15:27:36,585 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 15:27:36,586 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+WARN  2016-09-01 15:27:53,089 [10   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 92
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 31
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.Test(TestInput input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.Test(TestInput input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-09-01 15:27:53,100 [10   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-09-01 15:27:53,100 [10   ] nHandling.AbpApiExceptionFilterAttribute - input is null! (input)
+WARN  2016-09-01 15:28:00,086 [10   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 92
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 31
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.Test(TestInput input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.Test(TestInput input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-09-01 15:28:00,086 [10   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-09-01 15:28:00,086 [10   ] nHandling.AbpApiExceptionFilterAttribute - input is null! (input)
+DEBUG 2016-09-01 15:29:21,455 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 15:29:21,469 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 15:29:21,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,478 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:29:21,481 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 15:29:23,378 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 15:29:23,389 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 15:29:23,391 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 15:29:23,625 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 15:29:23,655 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 15:29:23,656 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+WARN  2016-09-01 15:29:28,050 [9    ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 92
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 31
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.Test(TestInput input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.Test(TestInput input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-09-01 15:29:28,061 [9    ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-09-01 15:29:28,061 [9    ] nHandling.AbpApiExceptionFilterAttribute - input is null! (input)
+WARN  2016-09-01 15:29:49,292 [9    ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 92
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 31
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.Test(TestInput input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.Test(TestInput input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-09-01 15:29:49,293 [9    ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-09-01 15:29:49,293 [9    ] nHandling.AbpApiExceptionFilterAttribute - input is null! (input)
+DEBUG 2016-09-01 15:35:09,516 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 15:35:09,532 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 15:35:09,536 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 15:35:09,542 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 15:35:11,481 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 15:35:11,489 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 15:35:11,490 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 15:35:11,701 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 15:35:11,721 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 15:35:11,722 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+ERROR 2016-09-01 15:37:32,977 [10   ] nHandling.AbpApiExceptionFilterAttribute - 发生一个或多个错误。
+System.AggregateException: 发生一个或多个错误。 ---> System.Net.Http.HttpRequestException: 发送请求时出错。 ---> System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:6234
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   在 System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- 内部异常堆栈跟踪的结尾 ---
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   在 System.Threading.Tasks.Task`1.get_Result()
+   在 Cloud.Framework.Assembly.Network.DoPost(String url, String parament) 位置 D:\CurrentProject\Cloud4\Cloud.Core\Framework\Assembly\Network.cs:行号 179
+   在 Cloud.ApiManager.Manager.ManagerAppService.Test(TestInput input) 位置 D:\CurrentProject\Cloud4\Cloud.Application\ApiManager\Manager\ManagerAppService.cs:行号 98
+   在 Castle.Proxies.ManagerAppServiceProxy.Test_callback(TestInput input)
+   在 Castle.Proxies.Invocations.IManagerAppService_Test.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Auditing\AuditingInterceptor.cs:行号 53
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ManagerAppServiceProxy.Test(TestInput input)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 44
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy.Test(TestInput input)
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__24.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__4.MoveNext() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 39
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (内部异常 #0) System.Net.Http.HttpRequestException: 发送请求时出错。 ---> System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:6234
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   在 System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- 内部异常堆栈跟踪的结尾 ---<---
+
+DEBUG 2016-09-01 16:00:57,601 [35   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-01 16:00:57,602 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:00:57,603 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:00:57,603 [35   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-09-01 16:01:03,253 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 16:01:03,433 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 16:01:03,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,441 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,441 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,443 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,443 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,443 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,443 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:01:03,446 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 16:01:04,403 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 16:01:04,409 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 16:01:04,410 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 16:01:04,666 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:01:04,686 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 16:01:04,687 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-01 16:08:11,259 [58   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-01 16:08:11,264 [58   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:08:11,272 [58   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:08:11,272 [58   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-09-01 16:08:14,148 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 16:08:14,301 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 16:08:14,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:08:14,311 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 16:08:15,040 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 16:08:15,049 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 16:08:15,050 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 16:08:15,231 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:08:15,237 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 16:08:15,239 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-01 16:24:02,760 [81   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-01 16:24:02,762 [81   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:24:02,763 [81   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:24:02,763 [81   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-09-01 16:24:07,220 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-01 16:24:07,372 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-09-01 16:24:07,377 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,379 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-01 16:24:07,384 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-09-01 16:24:08,102 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-01 16:24:08,108 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-01 16:24:08,109 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-01 16:24:08,291 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-01 16:24:08,296 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-01 16:24:08,297 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
