@@ -28,7 +28,7 @@ namespace Cloud.ApiManager.Manager
         OpenDocumentResponse GetInfo(string input);
 
 
-        TestOutput Test(TestInput input);
+        Task<TestOutput> Test(TestInput input);
 
     }
 }

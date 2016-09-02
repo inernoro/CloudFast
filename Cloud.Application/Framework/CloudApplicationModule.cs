@@ -1,8 +1,9 @@
-﻿using Abp.Modules;
+﻿using Abp.AutoMapper;
+using Abp.Modules;
 
 namespace Cloud.Framework
 {
-    [DependsOn(typeof(CloudCoreModule))]
+    [DependsOn(typeof(CloudCoreModule), typeof(AbpAutoMapperModule))]
     public class CloudApplicationModule : AbpModule
     {
         public override void Initialize()

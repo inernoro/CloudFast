@@ -42,32 +42,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.0.10.3.1\lib\net452\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.0.11.2.0\lib\net452\Abp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.0.10.3.1\lib\net452\Abp.AutoMapper.dll</HintPath>
+    <Reference Include="Abp.AutoMapper, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.AutoMapper.0.11.2.0\lib\net452\Abp.AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Owin, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Owin.0.10.3.1\lib\net452\Abp.Owin.dll</HintPath>
+    <Reference Include="Abp.Owin, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Owin.0.11.2.0\lib\net452\Abp.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.0.10.3.1\lib\net452\Abp.Web.dll</HintPath>
+    <Reference Include="Abp.Web, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.0.11.2.0\lib\net452\Abp.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Api, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Api.0.10.3.1\lib\net452\Abp.Web.Api.dll</HintPath>
+    <Reference Include="Abp.Web.Api, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Api.0.11.2.0\lib\net452\Abp.Web.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Common, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Common.0.10.3.1\lib\net452\Abp.Web.Common.dll</HintPath>
+    <Reference Include="Abp.Web.Common, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Common.0.11.2.0\lib\net452\Abp.Web.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Mvc, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Mvc.0.10.3.1\lib\net452\Abp.Web.Mvc.dll</HintPath>
+    <Reference Include="Abp.Web.Mvc, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Mvc.0.11.2.0\lib\net452\Abp.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Antlr3.Runtime">
@@ -251,6 +251,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Abp\Framework\scripts\abp.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.blockUI.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.jquery.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.jtable.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.moment.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.signalr.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.spin.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.sweet-alert.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.toastr.js" />
+    <Content Include="Abp\Framework\scripts\libs\angularjs\abp.ng.js" />
+    <Content Include="Abp\Framework\scripts\libs\requirejs\plugins\service.js" />
+    <Content Include="Abp\Framework\scripts\utils\ie10fix.js" />
+    <Content Include="Abp\Framework\styles\abp.css" />
+    <Content Include="Abp\Framework\styles\abp.min.css" />
+    <Content Include="Abp\Framework\styles\abp.mixings.css" />
+    <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
+    <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -293,6 +310,10 @@
     <Content Include="Areas\ApiManager\Views\Test\Monitor.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\Function.cshtml" />
     <Content Include="Content\datetimepicker.less" />
+    <Content Include="Abp\Framework\styles\abp.mixings.less" />
+    <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
+    <Content Include="Abp\Framework\styles\abp.less" />
+    <Content Include="Abp\Framework\styles\abp.css.map" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />

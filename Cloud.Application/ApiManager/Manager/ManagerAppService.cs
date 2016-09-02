@@ -20,6 +20,7 @@ namespace Cloud.ApiManager.Manager
         private readonly IManagerUrlStrategy _managerUrlStrategy;
 
 
+
         public ManagerAppService(
             IManagerMongoRepositories managerMongoRepositories,
             IManagerUrlStrategy managerUrlStrategy)
@@ -86,11 +87,12 @@ namespace Cloud.ApiManager.Manager
             return data;
         }
 
-        public TestOutput Test(TestInput input)
+        public async Task<TestOutput> Test(TestInput input)
         {
             input.Url = _managerUrlStrategy.TestHost + input.Url;
             var watch = new Stopwatch();
             var output = new TestOutput();
+            var task = _managerMongoRepositories.AdditionalTestData(input.Url, input.MapTo<Domain.TestManager>());
             watch.Start();
             switch (input.Type)
             {
@@ -106,6 +108,7 @@ namespace Cloud.ApiManager.Manager
             watch.Stop();
             output.ErrorCode = "200";
             output.Take = watch.ElapsedMilliseconds;
+            await task;
             return output;
         }
     }

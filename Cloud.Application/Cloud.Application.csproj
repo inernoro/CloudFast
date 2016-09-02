@@ -33,12 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.0.10.3.1\lib\net452\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.0.11.2.0\lib\net452\Abp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=0.10.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.0.10.3.1\lib\net452\Abp.AutoMapper.dll</HintPath>
+    <Reference Include="Abp.AutoMapper, Version=0.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.AutoMapper.0.11.2.0\lib\net452\Abp.AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -110,6 +110,8 @@
     <Compile Include="ApiManager\Manager\ManagerAppService.cs" />
     <Compile Include="ApiManager\Manager\TestInput.cs" />
     <Compile Include="ApiManager\Manager\TestOutput.cs" />
+    <Compile Include="ApiManager\TestManager\ITestManagerAppService.cs" />
+    <Compile Include="ApiManager\TestManager\TestManagerAppService.cs" />
     <Compile Include="Framework\CloudApplicationModule.cs" />
     <Compile Include="Framework\CloudAppServiceBase.cs" />
     <Compile Include="Framework\IPageIndex.cs" />
@@ -128,6 +130,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ApiManager\TestManager\Dtos\" />
     <Folder Include="User\Dtos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

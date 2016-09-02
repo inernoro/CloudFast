@@ -25,7 +25,7 @@ namespace Cloud.Mongo.Framework
         /// <summary>
         /// 数据连接池
         /// </summary>
-        private static IMongoCollection<TEntity> Collection
+        protected static IMongoCollection<TEntity> Collection
         {
             get
             {
@@ -34,7 +34,7 @@ namespace Cloud.Mongo.Framework
             }
         }
 
-        public override IQueryable<TEntity> GetAll()
+        public override IQueryable<TEntity> Queryable()
         {
             return Collection.AsQueryable();
         }
@@ -42,7 +42,7 @@ namespace Cloud.Mongo.Framework
 
         public override TEntity FirstOrDefault(TPrimaryKey id)
         {
-            return GetAll().FirstOrDefault(x => Equals(x.Id, id));
+            return Queryable().FirstOrDefault(x => Equals(x.Id, id));
         }
 
         public override TEntity Insert(TEntity entity)

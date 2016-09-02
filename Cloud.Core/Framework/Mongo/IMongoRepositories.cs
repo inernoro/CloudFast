@@ -13,7 +13,7 @@ namespace Cloud.Framework.Mongo
     {
 
         #region Select/Get/Query 
-        IQueryable<TEntity> GetAll(); 
+        IQueryable<TEntity> Queryable(); 
         List<TEntity> GetAllList(); 
         Task<List<TEntity>> GetAllListAsync(); 
         List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate); 

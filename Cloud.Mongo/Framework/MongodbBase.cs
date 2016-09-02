@@ -12,11 +12,11 @@ namespace Cloud.Mongo.Framework
     public abstract class MongodbBase<TEntity, TPrimaryKey> : IMongoRepositories<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
     {
         #region Query
-        public abstract IQueryable<TEntity> GetAll();
+        public abstract IQueryable<TEntity> Queryable();
 
         public virtual List<TEntity> GetAllList()
         {
-            return GetAll().ToList();
+            return Queryable().ToList();
         }
 
         public virtual Task<List<TEntity>> GetAllListAsync()
@@ -26,7 +26,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate)
         {
-            return GetAll().Where(predicate).ToList();
+            return Queryable().Where(predicate).ToList();
         }
 
         public virtual Task<List<TEntity>> GetAllListAsync(Expression<Func<TEntity, bool>> predicate)
@@ -36,7 +36,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual T Query<T>(Func<IQueryable<TEntity>, T> queryMethod)
         {
-            return queryMethod(GetAll());
+            return queryMethod(Queryable());
         }
 
         public abstract TEntity FirstOrDefault(TPrimaryKey id);
@@ -48,7 +48,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
-            return GetAll().FirstOrDefault(predicate);
+            return Queryable().FirstOrDefault(predicate);
         }
 
         public virtual Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
@@ -103,7 +103,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual void Delete(Expression<Func<TEntity, bool>> predicate)
         {
-            foreach (var entity in GetAll().Where(predicate).ToList())
+            foreach (var entity in Queryable().Where(predicate).ToList())
             {
                 Delete(entity);
             }
@@ -121,7 +121,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual int Count()
         {
-            return GetAll().Count();
+            return Queryable().Count();
         }
 
         public virtual Task<int> CountAsync()
@@ -131,7 +131,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual int Count(Expression<Func<TEntity, bool>> predicate)
         {
-            return GetAll().Where(predicate).Count();
+            return Queryable().Where(predicate).Count();
         }
 
         public virtual Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate)
@@ -141,7 +141,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual long LongCount()
         {
-            return GetAll().LongCount();
+            return Queryable().LongCount();
         }
 
         public virtual Task<long> LongCountAsync()
@@ -151,7 +151,7 @@ namespace Cloud.Mongo.Framework
 
         public virtual long LongCount(Expression<Func<TEntity, bool>> predicate)
         {
-            return GetAll().Where(predicate).LongCount();
+            return Queryable().Where(predicate).LongCount();
         }
 
         public virtual Task<long> LongCountAsync(Expression<Func<TEntity, bool>> predicate)
