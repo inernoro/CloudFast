@@ -6,7 +6,6 @@ using Abp.Application.Services.Dto;
 using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
-using Cloud.Manager.Models;
 
 namespace Cloud.ApiManager.Manager
 {

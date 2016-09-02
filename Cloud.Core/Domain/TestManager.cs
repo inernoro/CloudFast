@@ -1,25 +1,64 @@
 ﻿using System;
+using System.Collections.Generic;
 using Abp.Domain.Entities;
+using Abp.Web.Models;
+using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
+using Newtonsoft.Json.Linq;
 
 namespace Cloud.Domain
 {
-    public class TestManager : Entity<string>
-    {
-        public override string Id { get; set; } = Guid.NewGuid().ToString();
+    public class TestManager
+    { 
 
-        public string Data { get; set; }
+        /// <summary>
+        /// 参数列表
+        /// </summary>
+        public Dictionary<string, string> Parament { get; set; }
 
-        public HttpReponse Type { get; set; }
+        /// <summary>
+        /// 请求方式
+        /// </summary>
+        public string CallType { get; set; }
 
+        /// <summary>
+        /// 数据类型
+        /// </summary>
         public string DateType { get; set; }
 
+        /// <summary>
+        /// 链接类型
+        /// </summary>
         public string ContentType { get; set; }
 
-        public string Success { get; set; }
-
-        public string Error { get; set; }
-
+        /// <summary>
+        /// 是否需要登陆
+        /// </summary>
         public bool IsLogin { get; set; }
+
+        /// <summary>
+        /// 调用状态
+        /// </summary>
+        public bool CallState { get; set; } = true;
+
+        /// <summary>
+        /// 返回结果集
+        /// </summary>
+        public AjaxResponse<dynamic> Result { get; set; }
+
+        /// <summary>
+        /// 耗时
+        /// </summary>
+        public long Take { get; set; }
+
+        /// <summary>
+        /// 调用时间
+        /// </summary>
+        public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 调用者
+        /// </summary>
+        public long? UserId { get; set; }
     }
 }

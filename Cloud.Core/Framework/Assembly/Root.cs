@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Activities.Validation;
+using System.Collections.Generic;
 
-namespace Cloud.Manager.Models
-{
-
-
+namespace Cloud.Framework.Assembly
+{ 
     public class Error
     {
         /// <summary>
@@ -11,7 +10,7 @@ namespace Cloud.Manager.Models
         /// </summary>
         public int code { get; set; }
         /// <summary>
-        /// 
+        /// 您的请求无效!
         /// </summary>
         public string message { get; set; }
         /// <summary>
@@ -21,12 +20,10 @@ namespace Cloud.Manager.Models
         /// <summary>
         /// 
         /// </summary>
-        public string validationErrors { get; set; }
+        public List<ValidationError> validationErrors { get; set; }
     }
-    public class ListResult<T>
-    {
-        public IList<T> items { get; set; }
-    }
+     
+
     public class Root<T>
     {
         /// <summary>

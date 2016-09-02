@@ -5,10 +5,10 @@ using Abp.Dependency;
 using Cloud.Domain;
 using Cloud.Framework.Redis;
 using Newtonsoft.Json;
-using Cloud.Manager.Models;
 using Abp.Extensions;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace Cloud.Framework.Assembly
 {
@@ -166,7 +166,7 @@ namespace Cloud.Framework.Assembly
         /// <summary>
         /// HttpClient实现Post请求
         /// </summary>
-        public static string DoPost(string url, string parament)
+        public static Task<string> DoPost(string url, string parament)
         {
             var handler = new HttpClientHandler
             {
@@ -178,7 +178,7 @@ namespace Cloud.Framework.Assembly
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 var response = http.PostAsync(url, content).Result;
                 response.EnsureSuccessStatusCode();
-                var resultValue = response.Content.ReadAsStringAsync().Result;
+                var resultValue = response.Content.ReadAsStringAsync();
                 return resultValue;
             }
         }
@@ -186,7 +186,7 @@ namespace Cloud.Framework.Assembly
         /// <summary>
         /// HttpClient实现Get请求
         /// </summary>
-        public static string DoGet(string url, Dictionary<string, string> dictionary = null)
+        public static Task<string> DoGet(string url, IEnumerable<KeyValuePair<string, string>> dictionary = null)
         {
             if (dictionary == null)
                 dictionary = new Dictionary<string, string>();
@@ -201,18 +201,18 @@ namespace Cloud.Framework.Assembly
                 getMessage.Wait();
                 var response = getMessage.Result;
                 response.EnsureSuccessStatusCode();
-                return response.Content.ReadAsStringAsync().Result;
+                return response.Content.ReadAsStringAsync();
             }
         }
 
         public static T DoGet<T>(string url)
         {
-            return JsonConvert.DeserializeObject<Root<T>>(DoGet(url)).result;
+            return JsonConvert.DeserializeObject<Root<T>>(DoGet(url).Result).result;
         }
 
         public static T DoPost<T>(string url, string parament)
         {
-            return JsonConvert.DeserializeObject<Root<T>>(DoPost(url, parament)).result;
+            return JsonConvert.DeserializeObject<Root<T>>(DoPost(url, parament).Result).result;
         }
 
         #endregion

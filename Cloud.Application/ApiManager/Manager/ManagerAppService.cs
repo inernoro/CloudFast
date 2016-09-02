@@ -1,16 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using Abp.Json;
+using Abp.Runtime.Session;
 using Abp.UI;
+using Abp.Web.Models;
 using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Domain;
 using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
 using Newtonsoft.Json;
+using MongoDB.Bson;
+using Newtonsoft.Json.Linq;
 
 namespace Cloud.ApiManager.Manager
 {
@@ -18,15 +24,17 @@ namespace Cloud.ApiManager.Manager
     {
         private readonly IManagerMongoRepositories _managerMongoRepositories;
         private readonly IManagerUrlStrategy _managerUrlStrategy;
+        private readonly IAbpSession _abpSession;
 
 
 
         public ManagerAppService(
             IManagerMongoRepositories managerMongoRepositories,
-            IManagerUrlStrategy managerUrlStrategy)
+            IManagerUrlStrategy managerUrlStrategy, IAbpSession abpSession)
         {
             _managerMongoRepositories = managerMongoRepositories;
             _managerUrlStrategy = managerUrlStrategy;
+            _abpSession = abpSession;
         }
 
         /// <summary>
@@ -92,23 +100,39 @@ namespace Cloud.ApiManager.Manager
             input.Url = _managerUrlStrategy.TestHost + input.Url;
             var watch = new Stopwatch();
             var output = new TestOutput();
-            var task = _managerMongoRepositories.AdditionalTestData(input.Url, input.MapTo<Domain.TestManager>());
+            var dictionary = input.Data.Deserialize<Dictionary<string, string>>();
+            var back = input.MapTo<Domain.TestManager>();
             watch.Start();
             switch (input.Type)
             {
                 case HttpReponse.Post:
-                    output.Result = Network.DoPost(input.Url, input.Data);
+                    output.Result = Network.DoPost(input.Url, input.Data).Result;
+                    back.ContentType = "application/json";
+                    back.CallType = "Post";
                     break;
                 case HttpReponse.Get:
-                    output.Result = Network.DoGet(input.Url, input.Data.Deserialize<Dictionary<string, string>>());
+                    output.Result = Network.DoGet(input.Url, dictionary).Result;
+                    back.CallType = "Get";
                     break;
                 default:
                     throw new UserFriendlyException("没有该类型的地址");
             }
             watch.Stop();
-            output.ErrorCode = "200";
             output.Take = watch.ElapsedMilliseconds;
-            await task;
+            output.ErrorCode = "200";
+            var result = JsonConvert.DeserializeObject<AjaxResponse<object>>(output.Result);
+            back.Parament = dictionary;
+            if (!result.Success)
+            {
+                back.CallState = false;
+                output.ErrorCode = "500";
+            }
+            back.Result = result;
+            back.Result.Result = result.Result.ToJsonString();
+            back.Take = output.Take;
+            back.CreateTime = DateTime.Now;
+            back.UserId = _abpSession.UserId;
+            await _managerMongoRepositories.AdditionalTestData(input.Url, back);
             return output;
         }
     }
