@@ -1,4 +1,6 @@
 ﻿local temp = { };
+
+--数据库每个对象对应的类型
 function getFieldXtype()
     if (temp ~= nil) then
         return temp;
@@ -28,12 +30,12 @@ function ExcuteBuild(tableName,fields)
 
 end
 
---获取class文件
-function template(tableName , fields)
+--模板文件
+function template( )
     local temp = [[
-        
     
-    ]]
+    
+]]
 
 
 end
