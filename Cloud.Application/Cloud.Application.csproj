@@ -116,11 +116,14 @@
     <Compile Include="ApiManager\Manager\ManagerAppService.cs" />
     <Compile Include="ApiManager\Manager\TestInput.cs" />
     <Compile Include="ApiManager\Manager\TestOutput.cs" />
+    <Compile Include="ApiManager\TestManager\Dtos\GetAllInput.cs" />
+    <Compile Include="ApiManager\TestManager\Dtos\TestManagerDto.cs" />
     <Compile Include="ApiManager\TestManager\ITestManagerAppService.cs" />
     <Compile Include="ApiManager\TestManager\TestManagerAppService.cs" />
     <Compile Include="Framework\CloudApplicationModule.cs" />
     <Compile Include="Framework\CloudAppServiceBase.cs" />
     <Compile Include="Framework\IPageIndex.cs" />
+    <Compile Include="Framework\PageIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\IUserInfoAppService.cs" />
     <Compile Include="User\UserInfoAppService.cs" />
@@ -136,7 +139,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApiManager\TestManager\Dtos\" />
     <Folder Include="User\Dtos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

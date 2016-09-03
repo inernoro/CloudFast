@@ -26,5 +26,18 @@ namespace Cloud.Mongo.Manager
             else
                 await Collection.FindOneAndUpdateAsync(x => x.Id == url, Builders<InterfaceManager>.Update.Push(x => x.TestManager, addManager));
         }
+
+        /// <summary>
+        /// 获取成功的，最后一条数据(待定)
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="addManager"></param>
+        /// <returns></returns>
+        public async Task GetDefaultValue(string url, TestManager addManager)
+        {
+            var query = Builders<InterfaceManager>.Filter.Exists(x => x.Id == url);
+           // Collection.
+
+        }
     }
 }

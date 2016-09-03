@@ -30,6 +30,31 @@ dataConfig.persistent = function()
     return result;
 end
 
+
+-- ApiManager
+dataConfig.testUrl = function()
+
+    local result = {
+        url =
+        {
+            allInterface = "/api/services/app/Manager/AllInterface",
+            interface = "/api/services/app/Manager/Interface",
+            getNamespace = "/api/services/app/Manager/GetNamespace",
+            loginUrl = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}",
+            initUrl = "http://test.e2e100.com/api/services/CloudAPI/Manager/AllInterface",
+            testHost = "http://Test.e2e100.com",
+        },
+        name = "NetWord",
+        data = { },
+        type = "DynamicApi",
+        dataType = "Json",
+        contentType = "",
+        success = dataConfig.success,
+        error = dataConfig.error
+    };
+    return result;
+end
+
 -- 缓存
 dataConfig.cache = function()
     local result = {
@@ -124,29 +149,6 @@ dataConfig.message = function()
     return result;
 end
 
--- ApiManager
-dataConfig.testUrl = function()
-
-    local result = {
-        url =
-        {
-            allInterface = "/api/services/app/Manager/AllInterface",
-            interface = "/api/services/app/Manager/Interface",
-            getNamespace = "/api/services/app/Manager/GetNamespace",
-            loginUrl = "http://test.e2e100.com/Account/LoginViewGet?userName={0}&password={1}",
-            initUrl = "http://test.e2e100.com/api/services/CloudAPI/Manager/AllInterface",
-            testHost = "http://Test.e2e100.com",
-        },
-        name = "NetWord",
-        data = { },
-        type = "DynamicApi",
-        dataType = "Json",
-        contentType = "",
-        success = dataConfig.success,
-        error = dataConfig.error
-    };
-    return result;
-end
 
 
 
