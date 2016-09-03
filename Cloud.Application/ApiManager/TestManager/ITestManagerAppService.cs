@@ -16,6 +16,5 @@ namespace Cloud.ApiManager.TestManager
         
         [ContentDisplay("按分页获取测试案例，带状态")]
         ListResultOutput<TestManagerDto> GetAll(GetAllInput input);
-
     }
 }

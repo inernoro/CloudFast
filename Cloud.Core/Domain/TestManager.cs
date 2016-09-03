@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 namespace Cloud.Domain
 {
     public class TestManager
-    { 
+    {
 
         /// <summary>
         /// 参数列表
@@ -20,6 +20,11 @@ namespace Cloud.Domain
         /// 请求方式
         /// </summary>
         public string CallType { get; set; }
+
+        /// <summary>
+        /// 测试环境
+        /// </summary>
+        public TestEnvironment TestEnvironment => StaticEnvironment.TestEnvironment;
 
         /// <summary>
         /// 数据类型
