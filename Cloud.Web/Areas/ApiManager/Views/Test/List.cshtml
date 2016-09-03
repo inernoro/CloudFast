@@ -9,91 +9,77 @@
             <thead>
                 <tr>
                     <th>
-                        编号
+                        参数
                     </th>
                     <th>
-                        产品
+                        耗时
                     </th>
                     <th>
-                        交付时间
-                    </th>
-                    <th>
-                        状态
+                        创建时间
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr v-for="m in testManagers" :class="m.callState?'success':''">
                     <td>
-                        1
+                        {{m.parament}}
                     </td>
                     <td>
-                        TB - Monthly
+                        {{m.take}}
                     </td>
                     <td>
-                        01/04/2012
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                </tr>
-                <tr class="success">
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                    <td>
-                        Approved
-                    </td>
-                </tr>
-                <tr class="error">
-                    <td>
-                        2
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        02/04/2012
-                    </td>
-                    <td>
-                        Declined
-                    </td>
-                </tr>
-                <tr class="warning">
-                    <td>
-                        3
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        03/04/2012
-                    </td>
-                    <td>
-                        Pending
-                    </td>
-                </tr>
-                <tr class="info">
-                    <td>
-                        4
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        04/04/2012
-                    </td>
-                    <td>
-                        Call in to confirm
+                        {{m.createTime}}
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+<script type="text/javascript" language="javascript">
+
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") !== -1) {
+            var str = url.substr(1);
+            var strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    $(function () {
+        $.ajax({
+            url: "/api/services/app/TestManager/GetAll",
+            data: JSON.stringify({ pageSize: 20, id: GetRequest()["id"] }),
+            type: "post",
+            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                var result = data.result.items;
+                for (var index = 0; index < result.length; index++) {
+                    result[index]["parament"] = JSON.stringify(result[index]["parament"]);
+                    result[index]["createTime"] = new Date(result[index]["createTime"]).toLocaleString();
+                }
+                model.testManagers = result;
+            },
+            error: function (e, r) {
+                console.log(e, r);
+            }
+        });
+    });
+
+    var model = {
+        testManagers: {}
+    };
+
+    var vue = new Vue({
+        el: "#parent",
+        data: model
+    });
+
+</script>

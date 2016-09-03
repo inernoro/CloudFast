@@ -10,7 +10,7 @@ using MongoDB.Driver.Builders;
 
 namespace Cloud.Mongo.Manager
 {
-    public class ManagerMongoRepositories : MongoRepositories<Domain.InterfaceManager, string>, IManagerMongoRepositories
+    public class ManagerMongoRepositories : MongoRepositories<InterfaceManager, string>, IManagerMongoRepositories
     {
         /// <summary>
         /// 往测试数据中追加数据

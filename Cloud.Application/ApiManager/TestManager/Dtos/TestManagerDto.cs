@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Abp.AutoMapper;
 using Abp.Web.Models;
+using Cloud.Domain;
 
 namespace Cloud.ApiManager.TestManager.Dtos
 {
@@ -17,6 +18,11 @@ namespace Cloud.ApiManager.TestManager.Dtos
         /// 请求方式
         /// </summary>
         public string CallType { get; set; }
+
+        /// <summary>
+        /// 测试环境
+        /// </summary>
+        public TestEnvironment TestEnvironment { set; get; }
 
         /// <summary>
         /// 数据类型

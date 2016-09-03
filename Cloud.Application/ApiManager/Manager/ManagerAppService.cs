@@ -132,7 +132,7 @@ namespace Cloud.ApiManager.Manager
             back.Take = output.Take;
             back.CreateTime = DateTime.Now;
             back.UserId = _abpSession.UserId;
-            back.TestEnvironment = new TestEnvironment(true);
+           // back.TestEnvironment = new TestEnvironment(true);
             await _managerMongoRepositories.AdditionalTestData(input.Url, back);
             return output;
         }
