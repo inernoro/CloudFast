@@ -23,8 +23,8 @@ function getFieldXtype()
     end
 end
 
-
-function ExcuteBuild(tableName, fields)
+--执行生成的配置文件
+function ExcuteBuild(fields)
     local xtype = getFieldXtype();
     local tempData = {
         dto =
@@ -59,7 +59,8 @@ function ExcuteBuild(tableName, fields)
     return tempData;
 end
 
-function build( )
+--生成代码的主方法
+function build()
     local  data = ExcuteBuild("temp",{"Id","name"});
     for k,v in pairs(data) do
         if(type(v.tempList)=="string") then 
@@ -85,12 +86,11 @@ public class @tableName :Entity
     return model;
 end
 
---print(templateModel({"item","buide"}));
 
 --获取仓储
 function templateRepositories()
     local templateCode = { };
-
+    --仓储接口
     templateCode.IRepositories = [[
             using Cloud.Framework.Dapper;
             namespace Cloud.Domain
@@ -100,7 +100,7 @@ function templateRepositories()
         	    }
             }
         ]];
-
+    --仓储实现
     templateCode.Repositories = [[
         using Cloud.Domain;
         namespace Cloud.Dapper.Framework
@@ -114,6 +114,7 @@ function templateRepositories()
     return templateCode;
 end
 
+--应用服务层
 function templateAppService()
 
     local templateCode = { };
@@ -164,7 +165,7 @@ function templateAppService()
             }
         }
                 ]]
-
+    --应用服务接口层
     templateCode.IAppService = [[
         using System.Threading.Tasks;
         using Abp.Application.Services;
@@ -191,7 +192,7 @@ function templateAppService()
     return templateCode;
 end
 
--- 模板文件
+-- dto代码
 function templateDtos()
 
     local templateCode = { };
@@ -235,11 +236,9 @@ function templateDtos()
                     ]];
 
     templateCode.GetOutput = [[
-                    namespace Cloud.@tableName.Dtos
-                {
-                    public class GetOutput
-                {
-                    }
+                    namespace Cloud.@tableName.Dtos {
+                    public class GetOutput {
+                        }
                     }
                     ]];
     templateCode.PostInput = [[
@@ -279,3 +278,4 @@ end
 
 
 build();
+
