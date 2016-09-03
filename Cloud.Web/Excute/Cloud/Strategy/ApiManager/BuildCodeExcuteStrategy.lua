@@ -1,4 +1,4 @@
-﻿local temp = { };
+local temp = { };
 
 -- 数据库每个对象对应的类型
 function getFieldXtype()
@@ -26,11 +26,11 @@ end
 
 function ExcuteBuild(tableName, fields)
     local xtype = getFieldXtype();
-    local tempDate = {
+    local tempData = {
         dto =
         {
             url = "/@tableName/Dtos/@selfName",
-            tempList = templateDto()
+            tempList = templateDtos()
         },
 
         appService =
@@ -38,56 +38,77 @@ function ExcuteBuild(tableName, fields)
             url = "/@tableName/@tableNameAppServices",
             tempList = templateAppService().AppService
         },
-        iAppService =
+        model =
         {
-            url = "/@tableName/I@selfNameAppServices",
-            tempList = templateAppService().Repositories
+            url = "/Domain/@tableName",
+            tempList = templateModel(fields)
         },
 
         repositories =
         {
             url = "/Repositories/@tableNameRepositories",
             tempList = templateRepositories().Repositories
+        },
+        iAppService =
+        {
+            url = "/@tableName/I@selfNameAppServices",
+            tempList = templateRepositories().IRepositories
         }
 
     }
+    return tempData;
 end
 
+function build( )
+    local  data = ExcuteBuild("temp",{"Id","name"});
+    for k,v in pairs(data) do
+        if(type(v.tempList)=="string") then 
+            print(string.gsub(v.tempList, "@tableName", "tempEntity"),"")
+        else
+            for k2,v2 in pairs(v.tempList) do
+                print(string.gsub(v2, "@tableName", "tempEntity"),"")
+            end
+        end
+    end
+
+end
+ 
+--获取模型方法
 function templateModel(fields)
+    local  model = [[
+public class @tableName :Entity
+{ ]];
      for k,v in ipairs(fields) do
-		
+		model = model .. "\r\n\t" .. "public string " .. v .. "{ get; set; }";
 	end
-
+    model = model .. "\r\n}"
+    return model;
 end
 
+--print(templateModel({"item","buide"}));
 
-
+--获取仓储
 function templateRepositories()
     local templateCode = { };
 
     templateCode.IRepositories = [[
             using Cloud.Framework.Dapper;
-
             namespace Cloud.Domain
             {
         	    public interface I@tableNameRepositories : IDapperRepositories<@tableName>
         	    {
-
         	    }
             }
         ]];
 
     templateCode.Repositories = [[
         using Cloud.Domain;
-
         namespace Cloud.Dapper.Framework
         {
         	public class @tableNameRepositorie : DapperRepositories<@tableName>, I@tableNameRepositories
         	{
-
         	}
         }
-
         ]];
 
     return templateCode;
@@ -105,30 +126,24 @@ function templateAppService()
         using Cloud.Domain;
         using Cloud.Framework;
         using Cloud.@tableName.Dtos;
-
         namespace Cloud.@tableName
         {
             public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
             {
                 private readonly I@tableNameRepositorie _@tableNameRepositorie;
-
                 public @tableNameAppService(I@tableNameRepositorie @tableNameRepositorie)
                 {
                     _@tableNameRepositorie = @tableNameRepositorie;
                 }
-
-
                 public Task Post(PostInput input)
                 {
                     var model = input.MapTo<Domain.@tableName>();
                     return _@tableNameRepositorie.InsertAsync(model);
                 }
-
                 public Task Delete(DeletetInput input)
                 {
                     return _@tableNameRepositorie.DeleteAsync(input.Id);
                 }
-
                 public Task Put(PutInput input)
                 {
                     var oldData = _@tableNameRepositorie.Get(input.Id);
@@ -136,49 +151,37 @@ function templateAppService()
                         throw new UserFriendlyException("该数据为空，不能修改");
                     var newData = input.MapTo(oldData);
                     return _@tableNameRepositorie.UpdateAsync(newData);
-
                 }
-
                 public Task<GetOutput> Get(GetInput input)
                 {
                     return Task.Run(() => _@tableNameRepositorie.Get(input.Id).MapTo<GetOutput>());
-
                 }
-
                 public async Task<GetAllOutput> GetAll(GetAllInput input)
                 {
                     var page = await Task.Run(() => _@tableNameRepositorie.ToPaging("@tableName", input, "*", "Id", new { }));
-
                     return new GetAllOutput() { Items = page.MapTo<IEnumerable<@tableNameDto>>() };
-
                 }
             }
         }
                 ]]
 
     templateCode.IAppService = [[
-
         using System.Threading.Tasks;
         using Abp.Application.Services;
         using Cloud.Framework.Assembly;
         using Cloud.@tableName.Dtos;
-
         namespace Cloud.@tableName
         {
             public interface I@tableNameAppService : IApplicationService
             {
                 [ContentDisplay("添加")]
                 Task Post(PostInput input);
-
                 [ContentDisplay("删除")]
                 Task Delete(DeletetInput input);
-
                 [ContentDisplay("修改")]
                 Task Put(PutInput input);
-
                 [ContentDisplay("获取")]
                 Task<GetOutput> Get(GetInput input);
-
                 [ContentDisplay("获取多条")]
                 Task<GetAllOutput> GetAll(GetAllInput input);
             }
@@ -189,7 +192,7 @@ function templateAppService()
 end
 
 -- 模板文件
-function templateDto()
+function templateDtos()
 
     local templateCode = { };
 
@@ -200,21 +203,16 @@ function templateDto()
                 {
                     public int Id { get; set; }
                     }
-
                     }
-
                     ]];
     templateCode.GetAllInput = [[
                     using Cloud.Framework;
     namespace Cloud.@tableName.Dtos
                 {
-
                     public class GetAllInput : PageIndex
                 {
-
                     }
                     }
-
                     ]];
     templateCode.GetAllOutput = [[
     using System.Collections.Generic;
@@ -223,7 +221,6 @@ function templateDto()
                     public class GetAllOutput
                 {
                     public IEnumerable<@tableNameDto> Items { get; set; }
-
                     }
                     }
                     ]];
@@ -235,7 +232,6 @@ function templateDto()
                     public int Id { get; set; }
                     }
                     }
-
                     ]];
 
     templateCode.GetOutput = [[
@@ -243,10 +239,8 @@ function templateDto()
                 {
                     public class GetOutput
                 {
-
                     }
                     }
-
                     ]];
     templateCode.PostInput = [[
     using Abp.AutoMapper;
@@ -255,10 +249,8 @@ function templateDto()
                     [AutoMap(typeof(Domain.@tableName))]
                     public class PostInput
                 {
-
                     }
                     }
-
                     ]];
     templateCode.PutInput = [[
                     using Abp.AutoMapper;
@@ -270,7 +262,6 @@ function templateDto()
                     public int Id { get; set; }
                     }
                     }
-
                     ]];
     templateCode.TemplateDto = [[
                     using Abp.AutoMapper;
@@ -279,10 +270,12 @@ function templateDto()
                     [AutoMap(typeof(Domain.@tableName))]
                     public class @tableNameDto
                 {
-
                     }
                     }
-
                     ]];
     return templateCode;
 end
+
+
+
+build();
