@@ -105,6 +105,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiManager\CodeBuild\CodeBuildAppService.cs" />
+    <Compile Include="ApiManager\CodeBuild\ICodeBuildAppService.cs" />
     <Compile Include="ApiManager\Manager\Dtos\DeleteInput.cs" />
     <Compile Include="ApiManager\Manager\Dtos\GetInfoOutput.cs" />
     <Compile Include="ApiManager\Manager\Dtos\GetInput.cs" />
@@ -139,6 +141,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ApiManager\CodeBuild\Dtos\" />
     <Folder Include="User\Dtos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

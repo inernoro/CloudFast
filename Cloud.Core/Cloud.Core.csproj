@@ -97,6 +97,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\IBuildCodeExcuteStrategy.cs" />
     <Compile Include="Domain\IManagerUrlStrategy.cs" />
     <Compile Include="Domain\InterfaceManager.cs" />
     <Compile Include="Domain\TestEnvironment.cs" />

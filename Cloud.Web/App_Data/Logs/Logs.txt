@@ -11105,3 +11105,36 @@ DEBUG 2016-09-03 17:15:58,827 [1    ] Abp.AutoMapper.AbpAutoMapperModule       -
 DEBUG 2016-09-03 17:15:59,022 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
 DEBUG 2016-09-03 17:15:59,023 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.TestManager.ITestManagerAppService' with service name 'app/testManager'.
 DEBUG 2016-09-03 17:15:59,024 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
+DEBUG 2016-09-03 17:23:33,843 [51   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-03 17:23:33,844 [51   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-03 17:23:33,845 [51   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-03 17:23:33,845 [51   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-09-03 17:23:46,420 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-03 17:23:46,598 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2016-09-03 17:23:46,603 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Web.CloudWebModule, Cloud.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,605 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudApplicationModule, Cloud.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,605 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudCoreModule, Cloud.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Framework.CloudWebApiModule, Cloud.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Mongo.Framework.CloudMongoModule, Cloud.Mongo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Redis.Framework.CloudRedisModule, Cloud.Redis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Dapper.Framework.CloudDapperModule, Cloud.Dapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Cloud.Strategy.Framework.CloudStrategyModule, Cloud.Strategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-03 17:23:46,610 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2016-09-03 17:23:47,458 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2016-09-03 17:23:47,463 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-09-03 17:23:47,464 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-09-03 17:23:47,697 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-03 17:23:47,845 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes defines auto mapping attributes
+DEBUG 2016-09-03 17:23:47,845 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Cloud.ApiManager.TestManager.Dtos.TestManagerDto
+DEBUG 2016-09-03 17:23:47,851 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Cloud.ApiManager.Manager.TestInput
+DEBUG 2016-09-03 17:23:47,851 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Cloud.ApiManager.Manager.Dtos.GetInfoOutput
+DEBUG 2016-09-03 17:23:47,851 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Cloud.ApiManager.Manager.Dtos.GetOutput
+DEBUG 2016-09-03 17:23:48,044 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.User.IUserInfoAppService' with service name 'app/userInfo'.
+DEBUG 2016-09-03 17:23:48,045 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.TestManager.ITestManagerAppService' with service name 'app/testManager'.
+DEBUG 2016-09-03 17:23:48,047 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
