@@ -7,35 +7,52 @@ using System.Text;
 
 namespace Cloud.Domain
 {
-    public static class StaticEnvironment
-    {
-        public static TestEnvironment TestEnvironment = new TestEnvironment();
-
-
-    }
-    ///  
-    /// 系统信息类 - 获取CPU、内存、磁盘、进程信息 
-    ///   
+   
     public class TestEnvironment
     {
-        public string CommandLine => Environment.CommandLine;
-        public string CurrentDirectory => Environment.CurrentDirectory;
-        public int CurrentManagedThreadId => Environment.CurrentManagedThreadId;
-        public int ExitCode => Environment.ExitCode;
-        public bool HasShutdownStarted => Environment.HasShutdownStarted;
-        public bool Is64BitOperatingSystem => Environment.Is64BitOperatingSystem;
-        public bool Is64BitProcess => Environment.Is64BitProcess;
-        public string MachineName => Environment.MachineName;
-        public string NewLine => Environment.NewLine;
-        public OperatingSystem OsVersion => Environment.OSVersion;
-        public long WorkingSet => Environment.WorkingSet;
-        public string UserName => Environment.UserName;
-        public bool UserInteractive => Environment.UserInteractive;
-        public string UserDomainName => Environment.UserDomainName;
-        public string StackTrace => Environment.StackTrace;
-        public int TickCount => Environment.TickCount;
-        public int ProcessorCount => Environment.ProcessorCount;
-        public int SystemPageSize => Environment.SystemPageSize;
-        public string SystemDirectory => Environment.SystemDirectory;
+        public TestEnvironment()
+        {
+        }
+
+        public TestEnvironment(bool boo)
+        {
+            CommandLine = Environment.CommandLine;
+            CurrentDirectory = Environment.CurrentDirectory;
+            CurrentManagedThreadId = Environment.CurrentManagedThreadId;
+            ExitCode = Environment.ExitCode;
+            HasShutdownStarted = Environment.HasShutdownStarted;
+            Is64BitOperatingSystem = Environment.Is64BitOperatingSystem;
+            Is64BitProcess = Environment.Is64BitProcess;
+            MachineName = Environment.MachineName;
+            NewLine = Environment.NewLine;
+            OsVersion = Environment.OSVersion.ToString();
+            WorkingSet = Environment.WorkingSet;
+            UserName = Environment.UserName;
+            UserInteractive = Environment.UserInteractive;
+            UserDomainName = Environment.UserDomainName;
+            TickCount = Environment.TickCount;
+            ProcessorCount = Environment.ProcessorCount;
+            SystemPageSize = Environment.SystemPageSize;
+            SystemDirectory = Environment.SystemDirectory;
+        }
+
+        public string CommandLine { set; get; }
+        public string CurrentDirectory { set; get; }
+        public int CurrentManagedThreadId { set; get; }
+        public int ExitCode { set; get; }
+        public bool HasShutdownStarted { set; get; }
+        public bool Is64BitOperatingSystem { set; get; }
+        public bool Is64BitProcess { set; get; }
+        public string MachineName { set; get; }
+        public string NewLine { set; get; }
+        public string OsVersion { set; get; }
+        public long WorkingSet { set; get; }
+        public string UserName { set; get; }
+        public bool UserInteractive { set; get; }
+        public string UserDomainName { set; get; }
+        public int TickCount { set; get; }
+        public int ProcessorCount { set; get; }
+        public int SystemPageSize { set; get; }
+        public string SystemDirectory { set; get; }
     }
 }
