@@ -10,7 +10,7 @@ namespace Cloud.Framework.Dapper
     /// 对象仓储
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public interface IDapperRepositories<TEntity> : IDapperRepositorie where TEntity : IEntity
+    public interface IDapperRepositories<TEntity> : IDapperRepositories where TEntity : IEntity
     {
 
         #region Select/Get/Query  
@@ -76,7 +76,7 @@ namespace Cloud.Framework.Dapper
     /// <summary>
     /// 轻仓储（无状态）
     /// </summary>
-    public interface IDapperRepositorie : ISingletonDependency
+    public interface IDapperRepositories : ISingletonDependency
     {
         IEnumerable<TType> Query<TType>(string sql, object parament = null);
 

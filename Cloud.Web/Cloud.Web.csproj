@@ -316,6 +316,7 @@
     <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="Areas\ApiManager\Views\Test\Edit.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\List.cshtml" />
+    <None Include="Excute\Cloud\Strategy\ApiManager\BuildCodeExcuteStrategy.lua" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
@@ -343,6 +344,7 @@
     <Compile Include="Areas\ApiManager\ApiManagerAreaRegistration.cs" />
     <Compile Include="Areas\ApiManager\Controllers\ManagerController.cs" />
     <Compile Include="Areas\ApiManager\Controllers\TestController.cs" />
+    <None Include="Excute\Cloud\ApiManager\CodeBuild\CodeBuildAppService.lua" />
     <Compile Include="Framework\HtmlHelper.cs" />
     <Compile Include="Framework\Ilogin.cs" />
     <Compile Include="Framework\Signin.cs" />

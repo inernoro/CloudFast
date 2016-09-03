@@ -9,14 +9,28 @@ namespace Cloud.Framework
     /// Derive your application services from this class.
     /// </summary>
     public abstract class CloudAppServiceBase : ApplicationService
-    {
-        /// <summary>
-        /// 中断并执行
-        /// </summary>
-        /// <param name="message"></param>
-        public void SystemInfo(string message)
+    { 
+
+
+        private static ILuaAssembly Dynamic => IocManager.Instance.Resolve<ILuaAssembly>();
+
+        public dynamic Physics
         {
-            throw new UserFriendlyException(message);
+            get
+            {
+                var basetype = new StackTrace().GetFrame(1).GetMethod().DeclaringType.FullName;
+                if (basetype != null) return Dynamic.NamespaceGetValue(basetype);
+                throw new UserFriendlyException("BaseType Is Null");
+            }
+        }
+
+        public dynamic Current
+        {
+            get
+            {
+                var dy = new StackTrace().GetFrame(1).GetMethod().Name;
+                return Physics[dy];
+            }
         }
 
     }

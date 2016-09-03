@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using Abp.Dependency;
 using Abp.UI;
 using Castle.Core.Internal;
+using Cloud.Framework.Assembly;
 
 namespace Cloud.Strategy.Framework
 {
@@ -37,6 +40,39 @@ namespace Cloud.Strategy.Framework
             return Declare.FindAll(match);
         }
 
+
+
+        #region dynamic Lua
+
+        private static dynamic DynamicSql => IocManager.Instance.Resolve<ILuaAssembly>();
+
+        public void Excute(Action<dynamic> func)
+        {
+            func(DynamicSql.GetSql(Physics));
+        }
+
+        public dynamic Physics
+        {
+            get
+            {
+                var basetype = GetType();
+                var name = basetype.FullName;
+                if (basetype != null) return DynamicSql.GetSql(name);
+                throw new UserFriendlyException("BaseType Is Null");
+            }
+        }
+
+        public dynamic Current
+        {
+            get
+            {
+                var names = new StackTrace().GetFrame(1).GetMethod().Name;
+                var name = Physics[names];
+                return name;
+            }
+        }
+
+        #endregion
     }
 
     public abstract class StrategyBase : StrategyBase<string>

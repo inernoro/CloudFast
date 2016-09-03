@@ -117,7 +117,7 @@ namespace Cloud.Dapper.Framework
         }
     }
 
-    public class DapperRepositories : IDapperRepositorie
+    public class DapperRepositories : IDapperRepositories
     {
         public static IDbConnection Connection
         {
