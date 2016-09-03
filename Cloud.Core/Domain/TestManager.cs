@@ -24,7 +24,7 @@ namespace Cloud.Domain
         /// <summary>
         /// 测试环境
         /// </summary>
-        public TestEnvironment TestEnvironment { set; get; };
+        public TestEnvironment TestEnvironment { set; get; }
 
         /// <summary>
         /// 数据类型

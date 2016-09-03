@@ -44,6 +44,21 @@ namespace Cloud.Web.Areas.ApiManager.Controllers
         {
             return View();
         }
-
+        /// <summary>
+        /// 功能测试
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        /// <summary>
+        /// 功能测试
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }

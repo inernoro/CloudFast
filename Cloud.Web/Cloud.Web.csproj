@@ -304,7 +304,7 @@
     <Content Include="Areas\ApiManager\Views\web.config" />
     <Content Include="Areas\ApiManager\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ApiManager\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\ApiManager\Views\Manager\List1.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Manager\TestList.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\Index.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\Query.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\Monitor.cshtml" />
@@ -314,6 +314,8 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="Areas\ApiManager\Views\Test\Edit.cshtml" />
+    <Content Include="Areas\ApiManager\Views\Test\List.cshtml" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
