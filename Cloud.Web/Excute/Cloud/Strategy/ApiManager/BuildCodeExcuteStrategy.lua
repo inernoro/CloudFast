@@ -54,9 +54,9 @@ function ExcuteBuild(tableName, fields)
 end
 
 function templateModel(fields)
-    for k, v in ipairs() do
-
-    end
+     for k,v in ipairs(fields) do
+		
+	end
 
 end
 
@@ -66,29 +66,29 @@ function templateRepositories()
     local templateCode = { };
 
     templateCode.IRepositories = [[
-                using Cloud.Framework.Dapper;
+            using Cloud.Framework.Dapper;
 
-                namespace Cloud.Domain
-                {
-            	    public interface I@tableNameRepositories : IDapperRepositories<@tableName>
-            	    {
+            namespace Cloud.Domain
+            {
+        	    public interface I@tableNameRepositories : IDapperRepositories<@tableName>
+        	    {
 
-            	    }
-                }
-            ]];
+        	    }
+            }
+        ]];
 
     templateCode.Repositories = [[
-            using Cloud.Domain;
+        using Cloud.Domain;
 
-            namespace Cloud.Dapper.Framework
-            {
-            	public class @tableNameRepositorie : DapperRepositories<@tableName>, I@tableNameRepositories
-            	{
+        namespace Cloud.Dapper.Framework
+        {
+        	public class @tableNameRepositorie : DapperRepositories<@tableName>, I@tableNameRepositories
+        	{
 
-            	}
-            }
+        	}
+        }
 
-            ]];
+        ]];
 
     return templateCode;
 end
@@ -98,92 +98,92 @@ function templateAppService()
     local templateCode = { };
 
     templateCode.AppService = [[
-            using System.Collections.Generic;
-            using System.Threading.Tasks;
-            using Abp.AutoMapper;
-            using Abp.UI;
-            using Cloud.Domain;
-            using Cloud.Framework;
-            using Cloud.@tableName.Dtos;
+        using System.Collections.Generic;
+        using System.Threading.Tasks;
+        using Abp.AutoMapper;
+        using Abp.UI;
+        using Cloud.Domain;
+        using Cloud.Framework;
+        using Cloud.@tableName.Dtos;
 
-            namespace Cloud.@tableName
+        namespace Cloud.@tableName
+        {
+            public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
             {
-                public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
+                private readonly I@tableNameRepositorie _@tableNameRepositorie;
+
+                public @tableNameAppService(I@tableNameRepositorie @tableNameRepositorie)
                 {
-                    private readonly I@tableNameRepositorie _@tableNameRepositorie;
-
-                    public @tableNameAppService(I@tableNameRepositorie @tableNameRepositorie)
-                    {
-                        _@tableNameRepositorie = @tableNameRepositorie;
-                    }
+                    _@tableNameRepositorie = @tableNameRepositorie;
+                }
 
 
-                    public Task Post(PostInput input)
-                    {
-                        var model = input.MapTo<Domain.@tableName>();
-                        return _@tableNameRepositorie.InsertAsync(model);
-                    }
+                public Task Post(PostInput input)
+                {
+                    var model = input.MapTo<Domain.@tableName>();
+                    return _@tableNameRepositorie.InsertAsync(model);
+                }
 
-                    public Task Delete(DeletetInput input)
-                    {
-                        return _@tableNameRepositorie.DeleteAsync(input.Id);
-                    }
+                public Task Delete(DeletetInput input)
+                {
+                    return _@tableNameRepositorie.DeleteAsync(input.Id);
+                }
 
-                    public Task Put(PutInput input)
-                    {
-                        var oldData = _@tableNameRepositorie.Get(input.Id);
-                        if (oldData == null)
-                            throw new UserFriendlyException("该数据为空，不能修改");
-                        var newData = input.MapTo(oldData);
-                        return _@tableNameRepositorie.UpdateAsync(newData);
+                public Task Put(PutInput input)
+                {
+                    var oldData = _@tableNameRepositorie.Get(input.Id);
+                    if (oldData == null)
+                        throw new UserFriendlyException("该数据为空，不能修改");
+                    var newData = input.MapTo(oldData);
+                    return _@tableNameRepositorie.UpdateAsync(newData);
 
-                    }
+                }
 
-                    public Task<GetOutput> Get(GetInput input)
-                    {
-                        return Task.Run(() => _@tableNameRepositorie.Get(input.Id).MapTo<GetOutput>());
+                public Task<GetOutput> Get(GetInput input)
+                {
+                    return Task.Run(() => _@tableNameRepositorie.Get(input.Id).MapTo<GetOutput>());
 
-                    }
+                }
 
-                    public async Task<GetAllOutput> GetAll(GetAllInput input)
-                    {
-                        var page = await Task.Run(() => _@tableNameRepositorie.ToPaging("@tableName", input, "*", "Id", new { }));
+                public async Task<GetAllOutput> GetAll(GetAllInput input)
+                {
+                    var page = await Task.Run(() => _@tableNameRepositorie.ToPaging("@tableName", input, "*", "Id", new { }));
 
-                        return new GetAllOutput() { Items = page.MapTo<IEnumerable<@tableNameDto>>() };
+                    return new GetAllOutput() { Items = page.MapTo<IEnumerable<@tableNameDto>>() };
 
-                    }
                 }
             }
-                    ]]
+        }
+                ]]
 
     templateCode.IAppService = [[
 
-            using System.Threading.Tasks;
-            using Abp.Application.Services;
-            using Cloud.Framework.Assembly;
-            using Cloud.@tableName.Dtos;
+        using System.Threading.Tasks;
+        using Abp.Application.Services;
+        using Cloud.Framework.Assembly;
+        using Cloud.@tableName.Dtos;
 
-            namespace Cloud.@tableName
+        namespace Cloud.@tableName
+        {
+            public interface I@tableNameAppService : IApplicationService
             {
-                public interface I@tableNameAppService : IApplicationService
-                {
-                    [ContentDisplay("添加")]
-                    Task Post(PostInput input);
+                [ContentDisplay("添加")]
+                Task Post(PostInput input);
 
-                    [ContentDisplay("删除")]
-                    Task Delete(DeletetInput input);
+                [ContentDisplay("删除")]
+                Task Delete(DeletetInput input);
 
-                    [ContentDisplay("修改")]
-                    Task Put(PutInput input);
+                [ContentDisplay("修改")]
+                Task Put(PutInput input);
 
-                    [ContentDisplay("获取")]
-                    Task<GetOutput> Get(GetInput input);
+                [ContentDisplay("获取")]
+                Task<GetOutput> Get(GetInput input);
 
-                    [ContentDisplay("获取多条")]
-                    Task<GetAllOutput> GetAll(GetAllInput input);
-                }
+                [ContentDisplay("获取多条")]
+                Task<GetAllOutput> GetAll(GetAllInput input);
             }
-                    ]]
+        }
+                ]]
 
     return templateCode;
 end
@@ -194,95 +194,95 @@ function templateDto()
     local templateCode = { };
 
     templateCode.DeleteInput = [[
-                        namespace Cloud.@tableName.Dtos
-                    {
-                        public class DeletetInput
-                    {
-                        public int Id { get; set; }
-                        }
+                    namespace Cloud.@tableName.Dtos
+                {
+                    public class DeletetInput
+                {
+                    public int Id { get; set; }
+                    }
 
-                        }
+                    }
 
-                        ]];
+                    ]];
     templateCode.GetAllInput = [[
-                        using Cloud.Framework;
-        namespace Cloud.@tableName.Dtos
-                    {
+                    using Cloud.Framework;
+    namespace Cloud.@tableName.Dtos
+                {
 
-                        public class GetAllInput : PageIndex
-                    {
+                    public class GetAllInput : PageIndex
+                {
 
-                        }
-                        }
+                    }
+                    }
 
-                        ]];
+                    ]];
     templateCode.GetAllOutput = [[
-        using System.Collections.Generic;
-        namespace Cloud.@tableName.Dtos
-                    {
-                        public class GetAllOutput
-                    {
-                        public IEnumerable<@tableNameDto> Items { get; set; }
+    using System.Collections.Generic;
+    namespace Cloud.@tableName.Dtos
+                {
+                    public class GetAllOutput
+                {
+                    public IEnumerable<@tableNameDto> Items { get; set; }
 
-                        }
-                        }
-                        ]];
+                    }
+                    }
+                    ]];
     templateCode.GetInput = [[
-                        namespace Cloud.@tableName.Dtos
-                    {
-                        public class GetInput
-                    {
-                        public int Id { get; set; }
-                        }
-                        }
+                    namespace Cloud.@tableName.Dtos
+                {
+                    public class GetInput
+                {
+                    public int Id { get; set; }
+                    }
+                    }
 
-                        ]];
+                    ]];
 
     templateCode.GetOutput = [[
-                        namespace Cloud.@tableName.Dtos
-                    {
-                        public class GetOutput
-                    {
+                    namespace Cloud.@tableName.Dtos
+                {
+                    public class GetOutput
+                {
 
-                        }
-                        }
+                    }
+                    }
 
-                        ]];
+                    ]];
     templateCode.PostInput = [[
-        using Abp.AutoMapper;
-        namespace Cloud.@tableName.Dtos
-                    {
-                        [AutoMap(typeof(Domain.@tableName))]
-                        public class PostInput
-                    {
+    using Abp.AutoMapper;
+    namespace Cloud.@tableName.Dtos
+                {
+                    [AutoMap(typeof(Domain.@tableName))]
+                    public class PostInput
+                {
 
-                        }
-                        }
+                    }
+                    }
 
-                        ]];
+                    ]];
     templateCode.PutInput = [[
-                        using Abp.AutoMapper;
-        namespace Cloud.@tableName.Dtos
-                    {
-                        [AutoMap(typeof(Domain.@tableName))]
-                        public class PutInput
-                    {
-                        public int Id { get; set; }
-                        }
-                        }
+                    using Abp.AutoMapper;
+    namespace Cloud.@tableName.Dtos
+                {
+                    [AutoMap(typeof(Domain.@tableName))]
+                    public class PutInput
+                {
+                    public int Id { get; set; }
+                    }
+                    }
 
-                        ]];
+                    ]];
     templateCode.TemplateDto = [[
-                        using Abp.AutoMapper;
-        namespace Cloud.@tableName.Dtos
-                    {
-                        [AutoMap(typeof(Domain.@tableName))]
-                        public class @tableNameDto
-                    {
+                    using Abp.AutoMapper;
+    namespace Cloud.@tableName.Dtos
+                {
+                    [AutoMap(typeof(Domain.@tableName))]
+                    public class @tableNameDto
+                {
 
-                        }
-                        }
+                    }
+                    }
 
-                        ]];
+                    ]];
     return templateCode;
 end
