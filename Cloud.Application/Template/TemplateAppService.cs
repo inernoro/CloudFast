@@ -10,9 +10,9 @@ namespace Cloud.Template
 {
     public class TemplateAppService : CloudAppServiceBase, ITemplateAppService
     {
-        private readonly ITemplateRepositorie _templateRepositorie;
+        private readonly ITemplateRepositories _templateRepositorie;
 
-        public TemplateAppService(ITemplateRepositorie templateRepositorie)
+        public TemplateAppService(ITemplateRepositories templateRepositorie)
         {
             _templateRepositorie = templateRepositorie;
         }
