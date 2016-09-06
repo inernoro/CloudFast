@@ -39,6 +39,25 @@ namespace Cloud.Framework.Assembly
     }
     public static class TableObject
     {
+        public static LuaTable GetTable(params string[] fields)
+        {
+            var types = new LuaTable();
+            foreach (var t in fields)
+            {
+                types.ArrayList.Add(t);
+            }
+            return types;
+        }
+
+        public static LuaTable GetTable(params int[] fields)
+        {
+            var types = new LuaTable();
+            foreach (var t in fields)
+            {
+                types.ArrayList.Add(t);
+            }
+            return types;
+        }
 
         public static LuaTable GetTable(params object[] fields)
         {

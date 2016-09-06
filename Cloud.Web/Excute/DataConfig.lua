@@ -7,8 +7,8 @@ dataConfig.persistent = function()
         -- 该扩展的应用地址
         url =
         {
-            master = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@",
-            slave = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@"
+            master = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@;",
+            slave = "Server=123.56.129.104;database=Cloud;uid=e2eDeveloper;pwd=1qazXSW@1qazXSW@;"
         },
         -- 该扩展的名称
         name = "sqlserver",

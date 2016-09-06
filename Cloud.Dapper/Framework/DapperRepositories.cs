@@ -27,12 +27,12 @@ namespace Cloud.Dapper.Framework
 
         public override List<TEntity> GetAllList(string where, object parament = null, string field = "*")
         {
-            return Connection.Query<TEntity>($"select {field} from [" + TableName + "] " + where, parament).ToList();
+            return ConnectionExcute(x => x.Query<TEntity>($"select {field} from [" + TableName + "] " + where, parament).ToList());
         }
 
         public override TEntity Get(int id)
         {
-            return Connection.Query<TEntity>("select top 1 * from [" + TableName + "] where id = " + id).FirstOrDefault();
+            return ConnectionExcute(x => x.Query<TEntity>("select top 1 * from [" + TableName + "] where id = " + id).FirstOrDefault());
         }
 
         public override TEntity Insert(TEntity entity)
@@ -40,7 +40,7 @@ namespace Cloud.Dapper.Framework
             List<string> list;
             var parament = GetParament(entity, out list);
             var sql = $"INSERT INTO [{TableName}] ({string.Join(",", list)}) VALUES (@{string.Join(",@", list)});SELECT @@IDENTITY";
-            entity.Id = Connection.ExecuteScalar<int>(sql, parament);
+            entity.Id = ConnectionExcute(x => x.ExecuteScalar<int>(sql, parament));
             return entity;
         }
 
@@ -58,7 +58,7 @@ namespace Cloud.Dapper.Framework
                 return x;
             });
             var sql = $"UPDATE [{TableName}] SET {agg.ToString().TrimEnd(',')} WHERE ID = {entity.Id}";
-            Connection.Execute(sql, parament);
+            ConnectionExcute(x => x.Execute(sql, parament));
             return entity;
         }
 
@@ -66,34 +66,34 @@ namespace Cloud.Dapper.Framework
         {
             var sql = $"delete from [{ TableName }] where id in @Id";
             var list = entities.Select(x => x.Id);
-            Connection.Execute(sql, new { Id = list });
+            ConnectionExcute(x => x.Execute(sql, new { Id = list }));
         }
 
         public override void Delete(int id)
         {
-            Connection.Execute($"delete from [{TableName}] where id = {id}");
+            ConnectionExcute(x => x.Execute($"delete from [{TableName}] where id = {id}"));
         }
 
         public override void Delete(string where, object parament = null)
         {
             var sql = $"delete from [{ TableName }] {where}";
-            Connection.Execute(sql, parament);
+            ConnectionExcute(x => x.Execute(sql, parament));
         }
 
         public override int Count()
         {
-            return Connection.ExecuteScalar<int>("SELECT COUNT(1) FROM [" + TableName + "]");
+            return ConnectionExcute(x => x.ExecuteScalar<int>("SELECT COUNT(1) FROM [" + TableName + "]"));
         }
 
         public override int Count(string where, object parament = null)
         {
-            return Connection.ExecuteScalar<int>("SELECT COUNT(1) FROM [" + TableName + "] " + where, parament);
+            return ConnectionExcute(x => x.ExecuteScalar<int>("SELECT COUNT(1) FROM [" + TableName + "] " + where, parament));
         }
 
 
         public override TEntity FirstOrDefault(string where, object parament = null, string field = "*")
         {
-            return Connection.Query<TEntity>($" select top 1 {field} from [" + TableName + "] " + where, parament).FirstOrDefault();
+            return ConnectionExcute(x => x.Query<TEntity>($" select top 1 {field} from [" + TableName + "] " + where, parament).FirstOrDefault());
         }
 
         public List<string> GetFieNameArray<T>()
@@ -118,23 +118,19 @@ namespace Cloud.Dapper.Framework
 
     public class DapperRepositories : IDapperRepositories
     {
-        public static IDbConnection Connection
+        public T ConnectionExcute<T>(Func<IDbConnection, T> func)
         {
-            get
+            using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
             {
-                using (IDbConnection conn = new SqlConnection(PersistentConfigurage.MasterConnectionString))
-                {
-                    return conn;
-                }
+                return func(conn);
             }
-
         }
 
         #region  
 
         public List<IEnumerable<object>> QueryMultiple(string sql, object p, params Type[] type)
         {
-            var procMultiple = Connection.QueryMultiple(sql, p);
+            var procMultiple = ConnectionExcute(x => x.QueryMultiple(sql, p));
             List<IEnumerable<object>> list = new EditableList<IEnumerable<object>>();
             list.AddRange(type.Select(node => procMultiple.Read(node)));
             return list;
@@ -147,28 +143,29 @@ namespace Cloud.Dapper.Framework
 
         public IEnumerable<TType> Query<TType>(string sql, object parament = null)
         {
-            return Connection.Query<TType>(sql, parament);
+            return ConnectionExcute(x => x.Query<TType>(sql, parament));
         }
 
         public int Excute(string sql, object parament = null)
         {
-            return Connection.Execute(sql, parament);
+            return ConnectionExcute(x => x.Execute(sql, parament));
         }
 
         public void ExecProc(string procName, object parament = null, Action func = null)
         {
-            Connection.Execute(procName, parament, commandType: CommandType.StoredProcedure);
+            ConnectionExcute(x => x.Execute(procName, parament, commandType: CommandType.StoredProcedure));
             func?.Invoke();
         }
 
         public IEnumerable<TModel> ExecProc<TModel>(string procName, object parament, Action func = null)
         {
-            return Connection.Query<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+            return ConnectionExcute(x => x.Query<TModel>(procName, parament, commandType: CommandType.StoredProcedure));
         }
 
         public TOutType ExecProc<TModel, TOutType>(string procName, object parament, Func<IEnumerable<TModel>, TOutType> func)
         {
-            var data = Connection.Query<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+
+            var data = ConnectionExcute(x => x.Query<TModel>(procName, parament, commandType: CommandType.StoredProcedure));
             return func(data);
         }
 
@@ -184,28 +181,28 @@ namespace Cloud.Dapper.Framework
         #region Async
         public Task<IEnumerable<TType>> QueryAsync<TType>(string sql, object parament = null)
         {
-            return Connection.QueryAsync<TType>(sql, parament);
+            return ConnectionExcute(x => x.QueryAsync<TType>(sql, parament));
         }
 
         public Task<int> ExcuteAsync(string sql, object parament = null)
         {
-            return Connection.ExecuteAsync(sql, parament);
+            return ConnectionExcute(x => x.ExecuteAsync(sql, parament));
         }
 
         public async Task ExecProcAsync(string procName, object parament = null, Action func = null)
         {
-            await Connection.ExecuteAsync(procName, parament, commandType: CommandType.StoredProcedure);
+            await ConnectionExcute(x => x.ExecuteAsync(procName, parament, commandType: CommandType.StoredProcedure));
             func?.Invoke();
         }
 
         public Task<IEnumerable<TModel>> ExecProcAsync<TModel>(string procName, object parament, Action func = null)
         {
-            return Connection.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+            return ConnectionExcute(x => x.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure));
         }
 
         public async Task<TOutType> ExecProcAsync<TModel, TOutType>(string procName, object parament, Func<IEnumerable<TModel>, TOutType> func)
         {
-            var data = Connection.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure);
+            var data = ConnectionExcute(x => x.QueryAsync<TModel>(procName, parament, commandType: CommandType.StoredProcedure));
             return func(await data);
         }
 
@@ -228,13 +225,13 @@ namespace Cloud.Dapper.Framework
             )
         {
             var excuteSql = GetPaginationSql(sql, currentIndex, pageSize, translate, orderBy);
-            return Connection.Query<TOutType>(excuteSql, parament).ToList();
+            return ConnectionExcute(x => x.Query<TOutType>(excuteSql, parament).ToList());
         }
 
         public PageEntity<TOutType> Pagination<TOutType>(string sql, int currentIndex, int pageSize, bool sumCount, string translate = "*", string orderBy = "Id", object parament = null)
         {
             var excuteSql = GetPaginationSql(sql, currentIndex, pageSize, translate, orderBy) + $";SELECT A.COUNT FROM ( SELECT COUNT(1) AS COUNT FROM {sql}) A";
-            var read = Connection.QueryMultiple(excuteSql, parament);
+            var read = ConnectionExcute(x => x.QueryMultiple(excuteSql, parament));
             var page = new PageEntity<TOutType>
             {
                 EntityList = read.Read<TOutType>().ToList(),

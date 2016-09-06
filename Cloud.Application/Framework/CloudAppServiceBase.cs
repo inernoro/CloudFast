@@ -15,12 +15,13 @@ namespace Cloud.Framework
 
 
         private static ILuaAssembly Dynamic => IocManager.Instance.Resolve<ILuaAssembly>();
+         
 
         public dynamic Physics
         {
             get
             {
-                var basetype = new StackTrace().GetFrame(1).GetMethod().DeclaringType.FullName;
+                var basetype = GetType().BaseType.FullName;
                 if (basetype != null) return Dynamic.NamespaceGetValue(basetype);
                 throw new UserFriendlyException("BaseType Is Null");
             }

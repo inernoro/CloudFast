@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Abp.Domain.Entities;
 using Abp.UI;
@@ -34,12 +35,32 @@ namespace Cloud.Strategy.ApiManager
                 writer.Close();
             }
         }
-
-        public void ExcuteCode()
+        public void ExcuteBuildReturn(Dictionary<string, string> dictionary)
         {
-            var field = TableObject.GetTable("Id", "Name");
-            var types = TableObject.GetTable(56, 239);
-            Dictionary<string, string> str = Physics.BuildCode("Student", field, types);
+
+        }
+
+
+
+
+        public void ExcuteCode(IEnumerable<BuildTable> paBuildTables)
+        {
+            var buildTables = paBuildTables.ToList();
+            var tableName = buildTables.Select(x => x.Name).Distinct();
+            foreach (var node in tableName)
+            {
+                var f = buildTables.FindAll(x => x.Name == node);
+                var field = f.Select(x => x.ColName).ToArray();
+                var types = f.Select(x => x.Xtype).ToArray();
+                GetBuild(node, field, types);
+            }
+        }
+
+        public void GetBuild(string tableName, string[] a, int[] b)
+        {
+            var field = TableObject.GetTable(a);
+            var types = TableObject.GetTable(b);
+            Dictionary<string, string> str = Physics.BuildCode(tableName, field, types);
             ExcuteBuild(str);
         }
     }

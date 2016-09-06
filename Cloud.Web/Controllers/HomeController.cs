@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Abp.Dependency;
+using Cloud.ApiManager.CodeBuild;
 using Cloud.ApiManager.TestManager;
 using Cloud.ApiManager.TestManager.Dtos;
 using Cloud.Domain;
@@ -11,17 +12,16 @@ namespace Cloud.Web.Controllers
 {
     public class HomeController : CloudControllerBase
     {
-        private readonly IBuildCodeExcuteStrategy _buildCodeExcuteStrategy;
+        private readonly ICodeBuildAppService _codeBuildAppService;
 
-        public HomeController(IBuildCodeExcuteStrategy buildCodeExcuteStrategy)
+        public HomeController(ICodeBuildAppService codeBuildAppService)
         {
-            _buildCodeExcuteStrategy = buildCodeExcuteStrategy;
+            _codeBuildAppService = codeBuildAppService;
         }
 
         public ActionResult Index()
-        { 
-            _buildCodeExcuteStrategy.ExcuteCode();
-
+        {
+            _codeBuildAppService.BuildAllCode();
             return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
     }

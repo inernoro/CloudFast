@@ -5,7 +5,7 @@ namespace Cloud.Domain
 {
     public interface IBuildCodeExcuteStrategy : IStrategy
     { 
-        void ExcuteCode();
+        void ExcuteCode(IEnumerable<BuildTable> buildTables);
 
     }
 }

@@ -22,15 +22,16 @@ namespace Cloud.ApiManager.CodeBuild
 
         public void BuildAllCode()
         {
-            var sql = Current();
-            var tableName = sql.tables.ToString();
-            var tableObject = _dapperRepositorie.Query<BuildTable>(tableName);
-            _buildCodeExcuteStrategy.ExcuteCode();
+            var str = Current();
+            string sql = str.tables.ToString();
+            var tableObject = _dapperRepositorie.Query<BuildTable>(sql);
+            _buildCodeExcuteStrategy.ExcuteCode(tableObject);
 
         }
 
         public void BuildCode(string tableName)
-        { 
+        {
+
         }
     }
 }
