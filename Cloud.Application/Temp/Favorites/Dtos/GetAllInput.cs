@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.Favorites.Dtos{
+
+namespace Cloud.Temp.Favorites.Dtos{
         public class GetAllInput : PageIndex
         {
         }

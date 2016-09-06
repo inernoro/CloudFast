@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Case.Dtos;
-namespace Cloud.Case
+using Cloud.Temp.Case.Dtos;
+
+namespace Cloud.Temp.Case
 {
     public interface ICaseAppService : IApplicationService
     {

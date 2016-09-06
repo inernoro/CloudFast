@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstructLog.Dtos
+
+namespace Cloud.Temp.ConstructLog.Dtos
 {
     public class GetAllOutput
     {

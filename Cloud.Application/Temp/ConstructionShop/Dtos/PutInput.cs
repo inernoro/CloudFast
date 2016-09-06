@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ConstructionShop.Dtos{
+
+namespace Cloud.Temp.ConstructionShop.Dtos{
 [AutoMap(typeof(Domain.ConstructionShop))]
     public class PutInput
     {

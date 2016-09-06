@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.UserDetails.Dtos {
+namespace Cloud.Temp.UserDetails.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

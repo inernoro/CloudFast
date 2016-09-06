@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstMakeQuestion.Dtos;
-namespace Cloud.ConstMakeQuestion
+using Cloud.Temp.ConstMakeQuestion.Dtos;
+
+namespace Cloud.Temp.ConstMakeQuestion
 {
     public interface IConstMakeQuestionAppService : IApplicationService
     {

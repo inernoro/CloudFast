@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Bid.Dtos{
+
+namespace Cloud.Temp.Bid.Dtos{
 [AutoMap(typeof(Domain.Bid))]
     public class PutInput
     {

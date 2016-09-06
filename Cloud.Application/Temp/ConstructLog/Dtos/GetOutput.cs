@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstructLog.Dtos {
+
+namespace Cloud.Temp.ConstructLog.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

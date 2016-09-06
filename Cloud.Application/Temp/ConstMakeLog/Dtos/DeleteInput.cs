@@ -1,4 +1,4 @@
-namespace Cloud.ConstMakeLog.Dtos{
+namespace Cloud.Temp.ConstMakeLog.Dtos{
     public class DeletetInput
     {
         public int Id { get; set; }

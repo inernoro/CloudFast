@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.TeamAudit.Dtos {
+
+namespace Cloud.Temp.TeamAudit.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

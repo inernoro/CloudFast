@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstMake.Dtos {
+
+namespace Cloud.Temp.ConstMake.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

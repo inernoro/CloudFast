@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.TeamAudit.Dtos
+
+namespace Cloud.Temp.TeamAudit.Dtos
 {
     public class GetAllOutput
     {

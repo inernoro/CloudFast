@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Gallery.Dtos{
+
+namespace Cloud.Temp.Gallery.Dtos{
 [AutoMap(typeof(Domain.Gallery))]
     public class PutInput
     {

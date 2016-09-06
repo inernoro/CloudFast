@@ -1,9 +1,10 @@
 using System.Collections.Generic;
-namespace Cloud.sysdiagrams.Dtos
+
+namespace Cloud.Temp.sysdiagrams.Dtos
 {
     public class GetAllOutput
     {
-            public IEnumerable<sysdiagramsDto> Items { get; set; }
+            public IEnumerable<SysdiagramsDto> Items { get; set; }
 
             }
     }

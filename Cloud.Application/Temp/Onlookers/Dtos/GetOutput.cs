@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Onlookers.Dtos {
+
+namespace Cloud.Temp.Onlookers.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

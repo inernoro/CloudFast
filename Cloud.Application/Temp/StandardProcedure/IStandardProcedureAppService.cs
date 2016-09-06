@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.StandardProcedure.Dtos;
-namespace Cloud.StandardProcedure
+using Cloud.Temp.StandardProcedure.Dtos;
+
+namespace Cloud.Temp.StandardProcedure
 {
     public interface IStandardProcedureAppService : IApplicationService
     {

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.PlanDesignRenderDetail.Dtos
+
+namespace Cloud.Temp.PlanDesignRenderDetail.Dtos
 {
     public class GetAllOutput
     {

@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Space.Dtos{
+
+namespace Cloud.Temp.Space.Dtos{
 [AutoMap(typeof(Domain.Space))]
     public class PutInput
     {

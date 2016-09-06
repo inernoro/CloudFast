@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstMemberRelation.Dtos {
+
+namespace Cloud.Temp.ConstMemberRelation.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

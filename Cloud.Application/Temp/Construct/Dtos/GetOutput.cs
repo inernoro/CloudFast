@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Construct.Dtos {
+
+namespace Cloud.Temp.Construct.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

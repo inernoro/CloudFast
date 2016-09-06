@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Favorites.Dtos {
+
+namespace Cloud.Temp.Favorites.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

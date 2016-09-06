@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ProductProtection.Dtos {
+
+namespace Cloud.Temp.ProductProtection.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

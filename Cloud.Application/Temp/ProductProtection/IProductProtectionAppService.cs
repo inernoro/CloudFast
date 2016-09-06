@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ProductProtection.Dtos;
-namespace Cloud.ProductProtection
+using Cloud.Temp.ProductProtection.Dtos;
+
+namespace Cloud.Temp.ProductProtection
 {
     public interface IProductProtectionAppService : IApplicationService
     {

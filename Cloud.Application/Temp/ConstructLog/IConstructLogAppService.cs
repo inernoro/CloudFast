@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstructLog.Dtos;
-namespace Cloud.ConstructLog
+using Cloud.Temp.ConstructLog.Dtos;
+
+namespace Cloud.Temp.ConstructLog
 {
     public interface IConstructLogAppService : IApplicationService
     {

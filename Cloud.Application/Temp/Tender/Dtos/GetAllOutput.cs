@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Tender.Dtos
+
+namespace Cloud.Temp.Tender.Dtos
 {
     public class GetAllOutput
     {

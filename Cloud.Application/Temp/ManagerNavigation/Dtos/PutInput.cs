@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ManagerNavigation.Dtos{
+
+namespace Cloud.Temp.ManagerNavigation.Dtos{
 [AutoMap(typeof(Domain.ManagerNavigation))]
     public class PutInput
     {

@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.City.Dtos{
+
+namespace Cloud.Temp.City.Dtos{
 	[AutoMap(typeof(Domain.City))]
 	public class CityDto{
 		public string CityName{ get; set; }

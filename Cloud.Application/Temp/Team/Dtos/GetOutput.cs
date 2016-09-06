@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Team.Dtos {
+
+namespace Cloud.Temp.Team.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

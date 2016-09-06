@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.UnitCategory.Dtos{
+
+namespace Cloud.Temp.UnitCategory.Dtos{
 [AutoMap(typeof(Domain.UnitCategory))]
     public class PutInput
     {

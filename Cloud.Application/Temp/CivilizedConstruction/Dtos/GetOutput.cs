@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.CivilizedConstruction.Dtos {
+
+namespace Cloud.Temp.CivilizedConstruction.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

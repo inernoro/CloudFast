@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.UserInfo.Dtos;
-namespace Cloud.UserInfo
+using Cloud.Temp.UserInfo.Dtos;
+
+namespace Cloud.Temp.UserInfo
 {
     public interface IUserInfoAppService : IApplicationService
     {

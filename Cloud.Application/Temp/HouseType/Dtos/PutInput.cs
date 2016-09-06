@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.HouseType.Dtos{
+
+namespace Cloud.Temp.HouseType.Dtos{
 [AutoMap(typeof(Domain.HouseType))]
     public class PutInput
     {

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstMakeLog.Dtos
+
+namespace Cloud.Temp.ConstMakeLog.Dtos
 {
     public class GetAllOutput
     {

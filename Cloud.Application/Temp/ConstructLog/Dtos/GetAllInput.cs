@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.ConstructLog.Dtos{
+
+namespace Cloud.Temp.ConstructLog.Dtos{
         public class GetAllInput : PageIndex
         {
         }

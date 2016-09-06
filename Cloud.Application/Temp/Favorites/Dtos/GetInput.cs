@@ -1,4 +1,4 @@
-namespace Cloud.Favorites.Dtos{
+namespace Cloud.Temp.Favorites.Dtos{
 public class GetInput{
     public int Id { get; set; }
     }

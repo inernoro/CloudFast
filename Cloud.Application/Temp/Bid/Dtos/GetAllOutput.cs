@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Bid.Dtos
+
+namespace Cloud.Temp.Bid.Dtos
 {
     public class GetAllOutput
     {

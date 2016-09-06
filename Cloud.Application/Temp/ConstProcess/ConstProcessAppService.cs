@@ -4,40 +4,41 @@ using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.ConstProcess.Dtos;
-namespace Cloud.ConstProcess
+using Cloud.Temp.ConstProcess.Dtos;
+
+namespace Cloud.Temp.ConstProcess
 {
     public class ConstProcessAppService : CloudAppServiceBase, IConstProcessAppService
     {
-        private readonly IConstProcessRepositories _ConstProcessRepositories;
-        public ConstProcessAppService(IConstProcessRepositories ConstProcessRepositories)
+        private readonly IConstProcessRepositories _constProcessRepositories;
+        public ConstProcessAppService(IConstProcessRepositories constProcessRepositories)
         {
-            _ConstProcessRepositories = ConstProcessRepositories;
+            _constProcessRepositories = constProcessRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.ConstProcess>();
-            return _ConstProcessRepositories.InsertAsync(model);
+            return _constProcessRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _ConstProcessRepositories.DeleteAsync(input.Id);
+            return _constProcessRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _ConstProcessRepositories.Get(input.Id);
+            var oldData = _constProcessRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _ConstProcessRepositories.UpdateAsync(newData);
+            return _constProcessRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _ConstProcessRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _constProcessRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _ConstProcessRepositories.ToPaging("ConstProcess", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _constProcessRepositories.ToPaging("ConstProcess", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<ConstProcessDto>>() };
         }
     }

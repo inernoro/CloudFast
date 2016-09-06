@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Template.Dtos;
-namespace Cloud.Template
+using Cloud.Temp.Template.Dtos;
+
+namespace Cloud.Temp.Template
 {
     public interface ITemplateAppService : IApplicationService
     {

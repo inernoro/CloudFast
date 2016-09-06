@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.Unit.Dtos {
+namespace Cloud.Temp.Unit.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

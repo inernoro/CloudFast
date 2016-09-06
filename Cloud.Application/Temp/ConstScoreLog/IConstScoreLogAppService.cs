@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstScoreLog.Dtos;
-namespace Cloud.ConstScoreLog
+using Cloud.Temp.ConstScoreLog.Dtos;
+
+namespace Cloud.Temp.ConstScoreLog
 {
     public interface IConstScoreLogAppService : IApplicationService
     {

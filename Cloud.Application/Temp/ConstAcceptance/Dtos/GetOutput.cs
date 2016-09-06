@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.ConstAcceptance.Dtos {
+namespace Cloud.Temp.ConstAcceptance.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

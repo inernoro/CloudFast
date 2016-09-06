@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.FloorPlanDetail.Dtos;
-namespace Cloud.FloorPlanDetail
+using Cloud.Temp.FloorPlanDetail.Dtos;
+
+namespace Cloud.Temp.FloorPlanDetail
 {
     public interface IFloorPlanDetailAppService : IApplicationService
     {

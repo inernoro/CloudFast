@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.PlanDesignRenderDetail.Dtos
+
+namespace Cloud.Temp.PlanDesignRenderDetail.Dtos
 {
 	[AutoMap(typeof(Domain.PlanDesignRenderDetail))]
 	public class PostInput {

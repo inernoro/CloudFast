@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Gallery.Dtos;
-namespace Cloud.Gallery
+using Cloud.Temp.Gallery.Dtos;
+
+namespace Cloud.Temp.Gallery
 {
     public interface IGalleryAppService : IApplicationService
     {

@@ -1,4 +1,4 @@
-namespace Cloud.Case.Dtos{
+namespace Cloud.Temp.Case.Dtos{
     public class DeletetInput
     {
         public int Id { get; set; }

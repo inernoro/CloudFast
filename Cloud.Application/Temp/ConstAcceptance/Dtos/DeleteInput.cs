@@ -1,4 +1,4 @@
-namespace Cloud.ConstAcceptance.Dtos{
+namespace Cloud.Temp.ConstAcceptance.Dtos{
     public class DeletetInput
     {
         public int Id { get; set; }

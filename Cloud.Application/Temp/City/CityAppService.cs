@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.City.Dtos;
-namespace Cloud.City
+using Cloud.Temp.City.Dtos;
+
+namespace Cloud.Temp.City
 {
     public class CityAppService : CloudAppServiceBase, ICityAppService
     {
-        private readonly ICityRepositories _CityRepositories;
-        public CityAppService(ICityRepositories CityRepositories)
+        private readonly ICityRepositories _cityRepositories;
+        public CityAppService(ICityRepositories cityRepositories)
         {
-            _CityRepositories = CityRepositories;
+            _cityRepositories = cityRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.City>();
-            return _CityRepositories.InsertAsync(model);
+            return _cityRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _CityRepositories.DeleteAsync(input.Id);
+            return _cityRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _CityRepositories.Get(input.Id);
+            var oldData = _cityRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _CityRepositories.UpdateAsync(newData);
+            return _cityRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _CityRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _cityRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _CityRepositories.ToPaging("City", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _cityRepositories.ToPaging("City", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<CityDto>>() };
         }
     }

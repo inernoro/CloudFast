@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.Team.Dtos{
+
+namespace Cloud.Temp.Team.Dtos{
         public class GetAllInput : PageIndex
         {
         }

@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.ManagerNavigation.Dtos {
+namespace Cloud.Temp.ManagerNavigation.Dtos {
 public class GetOutput {
   
 		public string Navtype{ get; set; }

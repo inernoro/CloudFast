@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.ConstructionShop.Dtos;
-namespace Cloud.ConstructionShop
+using Cloud.Temp.ConstructionShop.Dtos;
+
+namespace Cloud.Temp.ConstructionShop
 {
     public class ConstructionShopAppService : CloudAppServiceBase, IConstructionShopAppService
     {
-        private readonly IConstructionShopRepositories _ConstructionShopRepositories;
-        public ConstructionShopAppService(IConstructionShopRepositories ConstructionShopRepositories)
+        private readonly IConstructionShopRepositories _constructionShopRepositories;
+        public ConstructionShopAppService(IConstructionShopRepositories constructionShopRepositories)
         {
-            _ConstructionShopRepositories = ConstructionShopRepositories;
+            _constructionShopRepositories = constructionShopRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.ConstructionShop>();
-            return _ConstructionShopRepositories.InsertAsync(model);
+            return _constructionShopRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _ConstructionShopRepositories.DeleteAsync(input.Id);
+            return _constructionShopRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _ConstructionShopRepositories.Get(input.Id);
+            var oldData = _constructionShopRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _ConstructionShopRepositories.UpdateAsync(newData);
+            return _constructionShopRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _ConstructionShopRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _constructionShopRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _ConstructionShopRepositories.ToPaging("ConstructionShop", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _constructionShopRepositories.ToPaging("ConstructionShop", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<ConstructionShopDto>>() };
         }
     }

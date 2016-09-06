@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.PlanDesignRenderDetail.Dtos;
-namespace Cloud.PlanDesignRenderDetail
+using Cloud.Temp.PlanDesignRenderDetail.Dtos;
+
+namespace Cloud.Temp.PlanDesignRenderDetail
 {
     public interface IPlanDesignRenderDetailAppService : IApplicationService
     {

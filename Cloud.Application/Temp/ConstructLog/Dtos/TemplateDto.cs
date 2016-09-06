@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstructLog.Dtos{
+
+namespace Cloud.Temp.ConstructLog.Dtos{
 	[AutoMap(typeof(Domain.ConstructLog))]
 	public class ConstructLogDto{
 		public int ConstId{ get; set; }

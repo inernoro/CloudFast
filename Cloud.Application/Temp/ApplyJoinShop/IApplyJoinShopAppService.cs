@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ApplyJoinShop.Dtos;
-namespace Cloud.ApplyJoinShop
+using Cloud.Temp.ApplyJoinShop.Dtos;
+
+namespace Cloud.Temp.ApplyJoinShop
 {
     public interface IApplyJoinShopAppService : IApplicationService
     {

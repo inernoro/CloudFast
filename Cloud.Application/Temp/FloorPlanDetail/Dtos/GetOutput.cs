@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.FloorPlanDetail.Dtos {
+namespace Cloud.Temp.FloorPlanDetail.Dtos {
 public class GetOutput {
   
 		public int LocalPlanId{ get; set; }

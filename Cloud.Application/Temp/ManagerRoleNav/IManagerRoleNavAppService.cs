@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ManagerRoleNav.Dtos;
-namespace Cloud.ManagerRoleNav
+using Cloud.Temp.ManagerRoleNav.Dtos;
+
+namespace Cloud.Temp.ManagerRoleNav
 {
     public interface IManagerRoleNavAppService : IApplicationService
     {

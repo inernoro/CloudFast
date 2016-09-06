@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.PlanDesignRenderDetail.Dtos {
+namespace Cloud.Temp.PlanDesignRenderDetail.Dtos {
 public class GetOutput {
   
 		public int RenderId{ get; set; }

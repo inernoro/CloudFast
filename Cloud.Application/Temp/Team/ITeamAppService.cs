@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Team.Dtos;
-namespace Cloud.Team
+using Cloud.Temp.Team.Dtos;
+
+namespace Cloud.Temp.Team
 {
     public interface ITeamAppService : IApplicationService
     {

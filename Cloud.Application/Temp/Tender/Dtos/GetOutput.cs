@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Tender.Dtos {
+
+namespace Cloud.Temp.Tender.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

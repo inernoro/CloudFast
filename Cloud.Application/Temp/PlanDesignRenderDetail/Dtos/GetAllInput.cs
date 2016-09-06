@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.PlanDesignRenderDetail.Dtos{
+
+namespace Cloud.Temp.PlanDesignRenderDetail.Dtos{
         public class GetAllInput : PageIndex
         {
         }

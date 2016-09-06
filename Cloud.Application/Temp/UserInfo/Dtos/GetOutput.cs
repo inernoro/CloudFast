@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.UserInfo.Dtos {
+
+namespace Cloud.Temp.UserInfo.Dtos {
 public class GetOutput {
   
 		public string UserName{ get; set; }

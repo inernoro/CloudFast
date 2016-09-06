@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Student.Dtos;
-namespace Cloud.Student
+using Cloud.Temp.Student.Dtos;
+
+namespace Cloud.Temp.Student
 {
     public interface IStudentAppService : IApplicationService
     {

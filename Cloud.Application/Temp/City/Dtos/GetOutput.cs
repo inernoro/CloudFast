@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.City.Dtos {
+namespace Cloud.Temp.City.Dtos {
 public class GetOutput {
   
 		public string CityName{ get; set; }

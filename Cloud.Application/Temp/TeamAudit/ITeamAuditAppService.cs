@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.TeamAudit.Dtos;
-namespace Cloud.TeamAudit
+using Cloud.Temp.TeamAudit.Dtos;
+
+namespace Cloud.Temp.TeamAudit
 {
     public interface ITeamAuditAppService : IApplicationService
     {

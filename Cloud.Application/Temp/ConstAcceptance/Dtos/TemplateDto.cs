@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstAcceptance.Dtos{
+
+namespace Cloud.Temp.ConstAcceptance.Dtos{
 	[AutoMap(typeof(Domain.ConstAcceptance))]
 	public class ConstAcceptanceDto{
 		public int ConstId{ get; set; }

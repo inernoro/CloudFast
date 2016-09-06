@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Construct.Dtos;
-namespace Cloud.Construct
+using Cloud.Temp.Construct.Dtos;
+
+namespace Cloud.Temp.Construct
 {
     public interface IConstructAppService : IApplicationService
     {

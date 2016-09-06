@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstMakeMeasure.Dtos
+
+namespace Cloud.Temp.ConstMakeMeasure.Dtos
 {
     public class GetAllOutput
     {

@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ApplyJoinShop.Dtos {
+
+namespace Cloud.Temp.ApplyJoinShop.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

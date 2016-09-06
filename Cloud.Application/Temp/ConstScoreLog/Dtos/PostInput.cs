@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstScoreLog.Dtos
+
+namespace Cloud.Temp.ConstScoreLog.Dtos
 {
 	[AutoMap(typeof(Domain.ConstScoreLog))]
 	public class PostInput {

@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstMakeMeasure.Dtos{
+
+namespace Cloud.Temp.ConstMakeMeasure.Dtos{
 	[AutoMap(typeof(Domain.ConstMakeMeasure))]
 	public class ConstMakeMeasureDto{
 		public int ConstMakeId{ get; set; }

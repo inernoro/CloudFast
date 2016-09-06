@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.FloorPlanDetail.Dtos
+
+namespace Cloud.Temp.FloorPlanDetail.Dtos
 {
     public class GetAllOutput
     {

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Tender.Dtos;
-namespace Cloud.Tender
+using Cloud.Temp.Tender.Dtos;
+
+namespace Cloud.Temp.Tender
 {
     public interface ITenderAppService : IApplicationService
     {

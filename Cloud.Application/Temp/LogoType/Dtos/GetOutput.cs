@@ -1,9 +1,10 @@
 using System;
-namespace Cloud.LogoType.Dtos {
+
+namespace Cloud.Temp.LogoType.Dtos {
 public class GetOutput {
   
-		public int id{ get; set; }
-		public string name{ get; set; }
-		public DateTime cratetime{ get; set; }  
+		public int Id{ get; set; }
+		public string Name{ get; set; }
+		public DateTime Cratetime{ get; set; }  
 	}
 }

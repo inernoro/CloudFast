@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstMemberRelation.Dtos;
-namespace Cloud.ConstMemberRelation
+using Cloud.Temp.ConstMemberRelation.Dtos;
+
+namespace Cloud.Temp.ConstMemberRelation
 {
     public interface IConstMemberRelationAppService : IApplicationService
     {

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ManagerNavigation.Dtos;
-namespace Cloud.ManagerNavigation
+using Cloud.Temp.ManagerNavigation.Dtos;
+
+namespace Cloud.Temp.ManagerNavigation
 {
     public interface IManagerNavigationAppService : IApplicationService
     {

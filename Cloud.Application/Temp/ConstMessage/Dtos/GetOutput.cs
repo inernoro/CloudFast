@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstMessage.Dtos {
+
+namespace Cloud.Temp.ConstMessage.Dtos {
 public class GetOutput {
   
 		public int Category{ get; set; }

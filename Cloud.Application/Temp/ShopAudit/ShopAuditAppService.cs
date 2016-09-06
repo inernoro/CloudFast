@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.ShopAudit.Dtos;
-namespace Cloud.ShopAudit
+using Cloud.Temp.ShopAudit.Dtos;
+
+namespace Cloud.Temp.ShopAudit
 {
     public class ShopAuditAppService : CloudAppServiceBase, IShopAuditAppService
     {
-        private readonly IShopAuditRepositories _ShopAuditRepositories;
-        public ShopAuditAppService(IShopAuditRepositories ShopAuditRepositories)
+        private readonly IShopAuditRepositories _shopAuditRepositories;
+        public ShopAuditAppService(IShopAuditRepositories shopAuditRepositories)
         {
-            _ShopAuditRepositories = ShopAuditRepositories;
+            _shopAuditRepositories = shopAuditRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.ShopAudit>();
-            return _ShopAuditRepositories.InsertAsync(model);
+            return _shopAuditRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _ShopAuditRepositories.DeleteAsync(input.Id);
+            return _shopAuditRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _ShopAuditRepositories.Get(input.Id);
+            var oldData = _shopAuditRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _ShopAuditRepositories.UpdateAsync(newData);
+            return _shopAuditRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _ShopAuditRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _shopAuditRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _ShopAuditRepositories.ToPaging("ShopAudit", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _shopAuditRepositories.ToPaging("ShopAudit", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<ShopAuditDto>>() };
         }
     }

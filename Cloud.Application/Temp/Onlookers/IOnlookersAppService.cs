@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Onlookers.Dtos;
-namespace Cloud.Onlookers
+using Cloud.Temp.Onlookers.Dtos;
+
+namespace Cloud.Temp.Onlookers
 {
     public interface IOnlookersAppService : IApplicationService
     {

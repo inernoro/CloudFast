@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstructionShop.Dtos {
+
+namespace Cloud.Temp.ConstructionShop.Dtos {
 public class GetOutput {
   
 		public int ConstId{ get; set; }

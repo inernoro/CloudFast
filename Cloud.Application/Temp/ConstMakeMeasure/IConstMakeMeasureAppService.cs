@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstMakeMeasure.Dtos;
-namespace Cloud.ConstMakeMeasure
+using Cloud.Temp.ConstMakeMeasure.Dtos;
+
+namespace Cloud.Temp.ConstMakeMeasure
 {
     public interface IConstMakeMeasureAppService : IApplicationService
     {

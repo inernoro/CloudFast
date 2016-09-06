@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Gallery.Dtos
+
+namespace Cloud.Temp.Gallery.Dtos
 {
     public class GetAllOutput
     {

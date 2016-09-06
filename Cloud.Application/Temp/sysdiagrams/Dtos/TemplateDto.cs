@@ -1,12 +1,12 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.sysdiagrams.Dtos{
+
+namespace Cloud.Temp.sysdiagrams.Dtos{
 	[AutoMap(typeof(Domain.sysdiagrams))]
-	public class sysdiagramsDto{
-		public string name{ get; set; }
-		public int principal_id{ get; set; }
-		public int diagram_id{ get; set; }
-		public int version{ get; set; }
-		public string definition{ get; set; }
+	public class SysdiagramsDto{
+		public string Name{ get; set; }
+		public int PrincipalId{ get; set; }
+		public int DiagramId{ get; set; }
+		public int Version{ get; set; }
+		public string Definition{ get; set; }
 	}
 }

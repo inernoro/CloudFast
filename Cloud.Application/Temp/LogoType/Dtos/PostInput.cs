@@ -1,11 +1,12 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.LogoType.Dtos
+
+namespace Cloud.Temp.LogoType.Dtos
 {
 	[AutoMap(typeof(Domain.LogoType))]
 	public class PostInput {
-		public int id{ get; set; }
-		public string name{ get; set; }
-		public DateTime cratetime{ get; set; }
+		public int Id{ get; set; }
+		public string Name{ get; set; }
+		public DateTime Cratetime{ get; set; }
 	}
 }

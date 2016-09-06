@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ConstProcess.Dtos{
+
+namespace Cloud.Temp.ConstProcess.Dtos{
 [AutoMap(typeof(Domain.ConstProcess))]
     public class PutInput
     {

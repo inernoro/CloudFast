@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.Style.Dtos
+
+namespace Cloud.Temp.Style.Dtos
 {
 	[AutoMap(typeof(Domain.Style))]
 	public class PostInput {

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Test.Dtos;
-namespace Cloud.Test
+using Cloud.Temp.Test.Dtos;
+
+namespace Cloud.Temp.Test
 {
     public interface ITestAppService : IApplicationService
     {

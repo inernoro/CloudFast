@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Style.Dtos {
+
+namespace Cloud.Temp.Style.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

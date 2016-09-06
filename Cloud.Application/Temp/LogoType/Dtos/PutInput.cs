@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.LogoType.Dtos{
+
+namespace Cloud.Temp.LogoType.Dtos{
 [AutoMap(typeof(Domain.LogoType))]
     public class PutInput
     {

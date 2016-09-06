@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstDocument.Dtos
+
+namespace Cloud.Temp.ConstDocument.Dtos
 {
 	[AutoMap(typeof(Domain.ConstDocument))]
 	public class PostInput {

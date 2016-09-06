@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Bid.Dtos {
+
+namespace Cloud.Temp.Bid.Dtos {
 public class GetOutput {
   
 		public int ShopId{ get; set; }

@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.Case.Dtos;
-namespace Cloud.Case
+using Cloud.Temp.Case.Dtos;
+
+namespace Cloud.Temp.Case
 {
     public class CaseAppService : CloudAppServiceBase, ICaseAppService
     {
-        private readonly ICaseRepositories _CaseRepositories;
-        public CaseAppService(ICaseRepositories CaseRepositories)
+        private readonly ICaseRepositories _caseRepositories;
+        public CaseAppService(ICaseRepositories caseRepositories)
         {
-            _CaseRepositories = CaseRepositories;
+            _caseRepositories = caseRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.Case>();
-            return _CaseRepositories.InsertAsync(model);
+            return _caseRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _CaseRepositories.DeleteAsync(input.Id);
+            return _caseRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _CaseRepositories.Get(input.Id);
+            var oldData = _caseRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _CaseRepositories.UpdateAsync(newData);
+            return _caseRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _CaseRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _caseRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _CaseRepositories.ToPaging("Case", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _caseRepositories.ToPaging("Case", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<CaseDto>>() };
         }
     }

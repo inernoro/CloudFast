@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.Template.Dtos {
+namespace Cloud.Temp.Template.Dtos {
 public class GetOutput {
     
 	}

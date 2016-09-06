@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.ConstProcess.Dtos {
+namespace Cloud.Temp.ConstProcess.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstMemberRelation.Dtos
+
+namespace Cloud.Temp.ConstMemberRelation.Dtos
 {
 	[AutoMap(typeof(Domain.ConstMemberRelation))]
 	public class PostInput {

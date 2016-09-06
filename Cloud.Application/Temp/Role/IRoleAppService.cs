@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Role.Dtos;
-namespace Cloud.Role
+using Cloud.Temp.Role.Dtos;
+
+namespace Cloud.Temp.Role
 {
     public interface IRoleAppService : IApplicationService
     {

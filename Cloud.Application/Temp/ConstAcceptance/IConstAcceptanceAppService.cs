@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstAcceptance.Dtos;
-namespace Cloud.ConstAcceptance
+using Cloud.Temp.ConstAcceptance.Dtos;
+
+namespace Cloud.Temp.ConstAcceptance
 {
     public interface IConstAcceptanceAppService : IApplicationService
     {

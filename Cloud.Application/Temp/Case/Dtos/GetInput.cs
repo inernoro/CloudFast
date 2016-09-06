@@ -1,4 +1,4 @@
-namespace Cloud.Case.Dtos{
+namespace Cloud.Temp.Case.Dtos{
 public class GetInput{
     public int Id { get; set; }
     }

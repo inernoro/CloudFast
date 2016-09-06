@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.City.Dtos
+
+namespace Cloud.Temp.City.Dtos
 {
     public class GetAllOutput
     {

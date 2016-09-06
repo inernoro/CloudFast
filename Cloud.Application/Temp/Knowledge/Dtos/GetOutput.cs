@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Knowledge.Dtos {
+
+namespace Cloud.Temp.Knowledge.Dtos {
 public class GetOutput {
   
 		public int Category{ get; set; }

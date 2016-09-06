@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.Onlookers.Dtos{
+
+namespace Cloud.Temp.Onlookers.Dtos{
 	[AutoMap(typeof(Domain.Onlookers))]
 	public class OnlookersDto{
 		public int UserId{ get; set; }

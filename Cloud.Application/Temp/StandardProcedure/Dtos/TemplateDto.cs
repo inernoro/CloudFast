@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.StandardProcedure.Dtos{
+
+namespace Cloud.Temp.StandardProcedure.Dtos{
 	[AutoMap(typeof(Domain.StandardProcedure))]
 	public class StandardProcedureDto{
 		public int ProcessId{ get; set; }

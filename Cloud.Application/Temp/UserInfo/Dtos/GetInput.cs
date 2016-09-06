@@ -1,4 +1,4 @@
-namespace Cloud.UserInfo.Dtos{
+namespace Cloud.Temp.UserInfo.Dtos{
 public class GetInput{
     public int Id { get; set; }
     }

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Space.Dtos;
-namespace Cloud.Space
+using Cloud.Temp.Space.Dtos;
+
+namespace Cloud.Temp.Space
 {
     public interface ISpaceAppService : IApplicationService
     {

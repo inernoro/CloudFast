@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.StandardProcedure.Dtos {
+
+namespace Cloud.Temp.StandardProcedure.Dtos {
 public class GetOutput {
   
 		public int ProcessId{ get; set; }

@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Shop.Dtos {
+
+namespace Cloud.Temp.Shop.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

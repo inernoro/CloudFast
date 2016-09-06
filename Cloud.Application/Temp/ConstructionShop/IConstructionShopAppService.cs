@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstructionShop.Dtos;
-namespace Cloud.ConstructionShop
+using Cloud.Temp.ConstructionShop.Dtos;
+
+namespace Cloud.Temp.ConstructionShop
 {
     public interface IConstructionShopAppService : IApplicationService
     {

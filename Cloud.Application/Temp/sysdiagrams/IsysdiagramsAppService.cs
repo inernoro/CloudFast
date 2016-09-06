@@ -1,10 +1,11 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.sysdiagrams.Dtos;
-namespace Cloud.sysdiagrams
+using Cloud.Temp.sysdiagrams.Dtos;
+
+namespace Cloud.Temp.sysdiagrams
 {
-    public interface IsysdiagramsAppService : IApplicationService
+    public interface ISysdiagramsAppService : IApplicationService
     {
         [ContentDisplay("添加")]
         Task Post(PostInput input);

@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstMakeMeasure.Dtos {
+
+namespace Cloud.Temp.ConstMakeMeasure.Dtos {
 public class GetOutput {
   
 		public int ConstMakeId{ get; set; }

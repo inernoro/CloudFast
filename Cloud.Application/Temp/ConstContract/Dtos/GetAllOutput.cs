@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstContract.Dtos
+
+namespace Cloud.Temp.ConstContract.Dtos
 {
     public class GetAllOutput
     {

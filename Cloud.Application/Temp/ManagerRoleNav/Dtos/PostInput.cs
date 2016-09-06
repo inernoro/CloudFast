@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.ManagerRoleNav.Dtos
+
+namespace Cloud.Temp.ManagerRoleNav.Dtos
 {
 	[AutoMap(typeof(Domain.ManagerRoleNav))]
 	public class PostInput {

@@ -1,4 +1,4 @@
-namespace Cloud.ConstDocument.Dtos{
+namespace Cloud.Temp.ConstDocument.Dtos{
     public class DeletetInput
     {
         public int Id { get; set; }

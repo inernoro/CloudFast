@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstMessage.Dtos;
-namespace Cloud.ConstMessage
+using Cloud.Temp.ConstMessage.Dtos;
+
+namespace Cloud.Temp.ConstMessage
 {
     public interface IConstMessageAppService : IApplicationService
     {

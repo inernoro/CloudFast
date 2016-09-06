@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.UserDetails.Dtos{
+
+namespace Cloud.Temp.UserDetails.Dtos{
 	[AutoMap(typeof(Domain.UserDetails))]
 	public class UserDetailsDto{
 		public int UserId{ get; set; }

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Favorites.Dtos;
-namespace Cloud.Favorites
+using Cloud.Temp.Favorites.Dtos;
+
+namespace Cloud.Temp.Favorites
 {
     public interface IFavoritesAppService : IApplicationService
     {

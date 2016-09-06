@@ -1,16 +1,17 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.sysdiagrams.Dtos;
-namespace Cloud.sysdiagrams
+using Cloud.Temp.sysdiagrams.Dtos;
+
+namespace Cloud.Temp.sysdiagrams
 {
-    public class sysdiagramsAppService : CloudAppServiceBase, IsysdiagramsAppService
+    public class SysdiagramsAppService : CloudAppServiceBase, ISysdiagramsAppService
     {
         private readonly IsysdiagramsRepositories _sysdiagramsRepositories;
-        public sysdiagramsAppService(IsysdiagramsRepositories sysdiagramsRepositories)
+        public SysdiagramsAppService(IsysdiagramsRepositories sysdiagramsRepositories)
         {
             _sysdiagramsRepositories = sysdiagramsRepositories;
         }
@@ -38,7 +39,7 @@ namespace Cloud.sysdiagrams
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
             var page = await Task.Run(() => _sysdiagramsRepositories.ToPaging("sysdiagrams", input, "*", "Id", new { }));
-            return new GetAllOutput() { Items = page.MapTo<IEnumerable<sysdiagramsDto>>() };
+            return new GetAllOutput() { Items = page.MapTo<IEnumerable<SysdiagramsDto>>() };
         }
     }
 }

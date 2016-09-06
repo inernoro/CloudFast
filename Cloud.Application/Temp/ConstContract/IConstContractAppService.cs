@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstContract.Dtos;
-namespace Cloud.ConstContract
+using Cloud.Temp.ConstContract.Dtos;
+
+namespace Cloud.Temp.ConstContract
 {
     public interface IConstContractAppService : IApplicationService
     {

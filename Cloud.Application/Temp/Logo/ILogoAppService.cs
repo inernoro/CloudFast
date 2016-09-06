@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Logo.Dtos;
-namespace Cloud.Logo
+using Cloud.Temp.Logo.Dtos;
+
+namespace Cloud.Temp.Logo
 {
     public interface ILogoAppService : IApplicationService
     {

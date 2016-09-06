@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.Knowledge.Dtos;
-namespace Cloud.Knowledge
+using Cloud.Temp.Knowledge.Dtos;
+
+namespace Cloud.Temp.Knowledge
 {
     public class KnowledgeAppService : CloudAppServiceBase, IKnowledgeAppService
     {
-        private readonly IKnowledgeRepositories _KnowledgeRepositories;
-        public KnowledgeAppService(IKnowledgeRepositories KnowledgeRepositories)
+        private readonly IKnowledgeRepositories _knowledgeRepositories;
+        public KnowledgeAppService(IKnowledgeRepositories knowledgeRepositories)
         {
-            _KnowledgeRepositories = KnowledgeRepositories;
+            _knowledgeRepositories = knowledgeRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.Knowledge>();
-            return _KnowledgeRepositories.InsertAsync(model);
+            return _knowledgeRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _KnowledgeRepositories.DeleteAsync(input.Id);
+            return _knowledgeRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _KnowledgeRepositories.Get(input.Id);
+            var oldData = _knowledgeRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _KnowledgeRepositories.UpdateAsync(newData);
+            return _knowledgeRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _KnowledgeRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _knowledgeRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _KnowledgeRepositories.ToPaging("Knowledge", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _knowledgeRepositories.ToPaging("Knowledge", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<KnowledgeDto>>() };
         }
     }

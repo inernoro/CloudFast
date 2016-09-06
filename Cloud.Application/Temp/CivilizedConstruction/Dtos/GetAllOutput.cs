@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.CivilizedConstruction.Dtos
+
+namespace Cloud.Temp.CivilizedConstruction.Dtos
 {
     public class GetAllOutput
     {

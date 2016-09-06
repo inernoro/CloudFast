@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Style.Dtos;
-namespace Cloud.Style
+using Cloud.Temp.Style.Dtos;
+
+namespace Cloud.Temp.Style
 {
     public interface IStyleAppService : IApplicationService
     {

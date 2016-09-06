@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.Test.Dtos;
-namespace Cloud.Test
+using Cloud.Temp.Test.Dtos;
+
+namespace Cloud.Temp.Test
 {
     public class TestAppService : CloudAppServiceBase, ITestAppService
     {
-        private readonly ITestRepositories _TestRepositories;
-        public TestAppService(ITestRepositories TestRepositories)
+        private readonly ITestRepositories _testRepositories;
+        public TestAppService(ITestRepositories testRepositories)
         {
-            _TestRepositories = TestRepositories;
+            _testRepositories = testRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.Test>();
-            return _TestRepositories.InsertAsync(model);
+            return _testRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _TestRepositories.DeleteAsync(input.Id);
+            return _testRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _TestRepositories.Get(input.Id);
+            var oldData = _testRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _TestRepositories.UpdateAsync(newData);
+            return _testRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _TestRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _testRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _TestRepositories.ToPaging("Test", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _testRepositories.ToPaging("Test", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<TestDto>>() };
         }
     }

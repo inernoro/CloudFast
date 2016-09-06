@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstMakeQuestion.Dtos
+
+namespace Cloud.Temp.ConstMakeQuestion.Dtos
 {
     public class GetAllOutput
     {

@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstApply.Dtos {
+
+namespace Cloud.Temp.ConstApply.Dtos {
 public class GetOutput {
   
 		public int CityId{ get; set; }

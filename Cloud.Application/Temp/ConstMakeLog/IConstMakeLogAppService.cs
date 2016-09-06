@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ConstMakeLog.Dtos;
-namespace Cloud.ConstMakeLog
+using Cloud.Temp.ConstMakeLog.Dtos;
+
+namespace Cloud.Temp.ConstMakeLog
 {
     public interface IConstMakeLogAppService : IApplicationService
     {

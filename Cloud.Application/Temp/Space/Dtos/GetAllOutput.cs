@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Space.Dtos
+
+namespace Cloud.Temp.Space.Dtos
 {
     public class GetAllOutput
     {

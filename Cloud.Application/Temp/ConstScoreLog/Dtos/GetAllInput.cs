@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.ConstScoreLog.Dtos{
+
+namespace Cloud.Temp.ConstScoreLog.Dtos{
         public class GetAllInput : PageIndex
         {
         }

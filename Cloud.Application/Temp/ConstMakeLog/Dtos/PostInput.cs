@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstMakeLog.Dtos
+
+namespace Cloud.Temp.ConstMakeLog.Dtos
 {
 	[AutoMap(typeof(Domain.ConstMakeLog))]
 	public class PostInput {

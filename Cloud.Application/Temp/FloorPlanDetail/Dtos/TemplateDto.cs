@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.FloorPlanDetail.Dtos{
+
+namespace Cloud.Temp.FloorPlanDetail.Dtos{
 	[AutoMap(typeof(Domain.FloorPlanDetail))]
 	public class FloorPlanDetailDto{
 		public int LocalPlanId{ get; set; }

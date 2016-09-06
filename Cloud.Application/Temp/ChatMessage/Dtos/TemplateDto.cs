@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ChatMessage.Dtos{
+
+namespace Cloud.Temp.ChatMessage.Dtos{
 	[AutoMap(typeof(Domain.ChatMessage))]
 	public class ChatMessageDto{
 		public int UserId{ get; set; }

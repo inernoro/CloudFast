@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.sysdiagrams.Dtos{
+
+namespace Cloud.Temp.sysdiagrams.Dtos{
 [AutoMap(typeof(Domain.sysdiagrams))]
     public class PutInput
     {

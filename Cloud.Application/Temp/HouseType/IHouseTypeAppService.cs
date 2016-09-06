@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.HouseType.Dtos;
-namespace Cloud.HouseType
+using Cloud.Temp.HouseType.Dtos;
+
+namespace Cloud.Temp.HouseType
 {
     public interface IHouseTypeAppService : IApplicationService
     {

@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Onlookers.Dtos{
+
+namespace Cloud.Temp.Onlookers.Dtos{
 [AutoMap(typeof(Domain.Onlookers))]
     public class PutInput
     {

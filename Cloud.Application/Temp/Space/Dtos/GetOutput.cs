@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Space.Dtos {
+
+namespace Cloud.Temp.Space.Dtos {
 public class GetOutput {
   
 		public string Name{ get; set; }

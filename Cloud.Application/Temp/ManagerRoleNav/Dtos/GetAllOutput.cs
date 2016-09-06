@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ManagerRoleNav.Dtos
+
+namespace Cloud.Temp.ManagerRoleNav.Dtos
 {
     public class GetAllOutput
     {

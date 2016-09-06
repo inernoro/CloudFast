@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ShopAudit.Dtos {
+
+namespace Cloud.Temp.ShopAudit.Dtos {
 public class GetOutput {
   
 		public int ShopType{ get; set; }

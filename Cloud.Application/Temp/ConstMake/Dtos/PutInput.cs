@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ConstMake.Dtos{
+
+namespace Cloud.Temp.ConstMake.Dtos{
 [AutoMap(typeof(Domain.ConstMake))]
     public class PutInput
     {

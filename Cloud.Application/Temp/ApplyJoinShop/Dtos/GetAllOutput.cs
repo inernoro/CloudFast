@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ApplyJoinShop.Dtos
+
+namespace Cloud.Temp.ApplyJoinShop.Dtos
 {
     public class GetAllOutput
     {

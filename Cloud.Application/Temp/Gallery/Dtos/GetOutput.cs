@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.Gallery.Dtos {
+
+namespace Cloud.Temp.Gallery.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }

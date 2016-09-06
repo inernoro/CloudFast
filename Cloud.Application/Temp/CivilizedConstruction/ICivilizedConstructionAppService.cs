@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.CivilizedConstruction.Dtos;
-namespace Cloud.CivilizedConstruction
+using Cloud.Temp.CivilizedConstruction.Dtos;
+
+namespace Cloud.Temp.CivilizedConstruction
 {
     public interface ICivilizedConstructionAppService : IApplicationService
     {

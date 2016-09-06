@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Test.Dtos
+
+namespace Cloud.Temp.Test.Dtos
 {
     public class GetAllOutput
     {

@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.Bid.Dtos{
+
+namespace Cloud.Temp.Bid.Dtos{
         public class GetAllInput : PageIndex
         {
         }

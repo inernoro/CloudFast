@@ -1,8 +1,9 @@
 using System;
-namespace Cloud.ConstMakeQuestion.Dtos {
+
+namespace Cloud.Temp.ConstMakeQuestion.Dtos {
 public class GetOutput {
   
-		public int id{ get; set; }
+		public int Id{ get; set; }
 		public int ConstMakeId{ get; set; }
 		public int Space{ get; set; }
 		public string ImageUrl{ get; set; }

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Knowledge.Dtos;
-namespace Cloud.Knowledge
+using Cloud.Temp.Knowledge.Dtos;
+
+namespace Cloud.Temp.Knowledge
 {
     public interface IKnowledgeAppService : IApplicationService
     {

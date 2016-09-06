@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.Knowledge.Dtos{
+
+namespace Cloud.Temp.Knowledge.Dtos{
 	[AutoMap(typeof(Domain.Knowledge))]
 	public class KnowledgeDto{
 		public int Category{ get; set; }

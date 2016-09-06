@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.ChatMessage.Dtos;
-namespace Cloud.ChatMessage
+using Cloud.Temp.ChatMessage.Dtos;
+
+namespace Cloud.Temp.ChatMessage
 {
     public class ChatMessageAppService : CloudAppServiceBase, IChatMessageAppService
     {
-        private readonly IChatMessageRepositories _ChatMessageRepositories;
-        public ChatMessageAppService(IChatMessageRepositories ChatMessageRepositories)
+        private readonly IChatMessageRepositories _chatMessageRepositories;
+        public ChatMessageAppService(IChatMessageRepositories chatMessageRepositories)
         {
-            _ChatMessageRepositories = ChatMessageRepositories;
+            _chatMessageRepositories = chatMessageRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.ChatMessage>();
-            return _ChatMessageRepositories.InsertAsync(model);
+            return _chatMessageRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _ChatMessageRepositories.DeleteAsync(input.Id);
+            return _chatMessageRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _ChatMessageRepositories.Get(input.Id);
+            var oldData = _chatMessageRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _ChatMessageRepositories.UpdateAsync(newData);
+            return _chatMessageRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _ChatMessageRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _chatMessageRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _ChatMessageRepositories.ToPaging("ChatMessage", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _chatMessageRepositories.ToPaging("ChatMessage", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<ChatMessageDto>>() };
         }
     }

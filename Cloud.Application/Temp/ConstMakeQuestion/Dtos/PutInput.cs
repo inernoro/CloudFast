@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ConstMakeQuestion.Dtos{
+
+namespace Cloud.Temp.ConstMakeQuestion.Dtos{
 [AutoMap(typeof(Domain.ConstMakeQuestion))]
     public class PutInput
     {

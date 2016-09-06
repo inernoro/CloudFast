@@ -1,43 +1,44 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.ConstAcceptance.Dtos;
-namespace Cloud.ConstAcceptance
+using Cloud.Temp.ConstAcceptance.Dtos;
+
+namespace Cloud.Temp.ConstAcceptance
 {
     public class ConstAcceptanceAppService : CloudAppServiceBase, IConstAcceptanceAppService
     {
-        private readonly IConstAcceptanceRepositories _ConstAcceptanceRepositories;
-        public ConstAcceptanceAppService(IConstAcceptanceRepositories ConstAcceptanceRepositories)
+        private readonly IConstAcceptanceRepositories _constAcceptanceRepositories;
+        public ConstAcceptanceAppService(IConstAcceptanceRepositories constAcceptanceRepositories)
         {
-            _ConstAcceptanceRepositories = ConstAcceptanceRepositories;
+            _constAcceptanceRepositories = constAcceptanceRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.ConstAcceptance>();
-            return _ConstAcceptanceRepositories.InsertAsync(model);
+            return _constAcceptanceRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _ConstAcceptanceRepositories.DeleteAsync(input.Id);
+            return _constAcceptanceRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _ConstAcceptanceRepositories.Get(input.Id);
+            var oldData = _constAcceptanceRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _ConstAcceptanceRepositories.UpdateAsync(newData);
+            return _constAcceptanceRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _ConstAcceptanceRepositories.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _constAcceptanceRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _ConstAcceptanceRepositories.ToPaging("ConstAcceptance", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _constAcceptanceRepositories.ToPaging("ConstAcceptance", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<ConstAcceptanceDto>>() };
         }
     }

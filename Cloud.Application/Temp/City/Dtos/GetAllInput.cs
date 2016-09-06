@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.City.Dtos{
+
+namespace Cloud.Temp.City.Dtos{
         public class GetAllInput : PageIndex
         {
         }

@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Role.Dtos{
+
+namespace Cloud.Temp.Role.Dtos{
 [AutoMap(typeof(Domain.Role))]
     public class PutInput
     {

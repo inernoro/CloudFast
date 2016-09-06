@@ -1,6 +1,6 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.Student.Dtos
+
+namespace Cloud.Temp.Student.Dtos
 {
 	[AutoMap(typeof(Domain.Student))]
 	public class PostInput {

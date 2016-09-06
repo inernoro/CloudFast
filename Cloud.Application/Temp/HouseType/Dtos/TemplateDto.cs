@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.HouseType.Dtos{
+
+namespace Cloud.Temp.HouseType.Dtos{
 	[AutoMap(typeof(Domain.HouseType))]
 	public class HouseTypeDto{
 		public string Name{ get; set; }

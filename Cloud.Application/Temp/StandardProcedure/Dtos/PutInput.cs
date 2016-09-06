@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.StandardProcedure.Dtos{
+
+namespace Cloud.Temp.StandardProcedure.Dtos{
 [AutoMap(typeof(Domain.StandardProcedure))]
     public class PutInput
     {

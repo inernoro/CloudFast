@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.Gallery.Dtos{
+
+namespace Cloud.Temp.Gallery.Dtos{
         public class GetAllInput : PageIndex
         {
         }

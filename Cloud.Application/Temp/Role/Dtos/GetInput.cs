@@ -1,4 +1,4 @@
-namespace Cloud.Role.Dtos{
+namespace Cloud.Temp.Role.Dtos{
 public class GetInput{
     public int Id { get; set; }
     }

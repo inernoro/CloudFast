@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.ConstScoreLog.Dtos
+
+namespace Cloud.Temp.ConstScoreLog.Dtos
 {
     public class GetAllOutput
     {

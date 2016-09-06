@@ -1,5 +1,6 @@
 using Cloud.Framework;
-namespace Cloud.sysdiagrams.Dtos{
+
+namespace Cloud.Temp.sysdiagrams.Dtos{
         public class GetAllInput : PageIndex
         {
         }

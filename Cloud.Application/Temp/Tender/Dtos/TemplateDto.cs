@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.Tender.Dtos{
+
+namespace Cloud.Temp.Tender.Dtos{
 	[AutoMap(typeof(Domain.Tender))]
 	public class TenderDto{
 		public int UserId{ get; set; }

@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ShopAudit.Dtos{
+
+namespace Cloud.Temp.ShopAudit.Dtos{
 	[AutoMap(typeof(Domain.ShopAudit))]
 	public class ShopAuditDto{
 		public int ShopType{ get; set; }

@@ -1,11 +1,10 @@
-using System;
-namespace Cloud.sysdiagrams.Dtos {
+namespace Cloud.Temp.sysdiagrams.Dtos {
 public class GetOutput {
   
-		public string name{ get; set; }
-		public int principal_id{ get; set; }
-		public int diagram_id{ get; set; }
-		public int version{ get; set; }
-		public string definition{ get; set; }  
+		public string Name{ get; set; }
+		public int PrincipalId{ get; set; }
+		public int DiagramId{ get; set; }
+		public int Version{ get; set; }
+		public string Definition{ get; set; }  
 	}
 }

@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.Bid.Dtos;
-namespace Cloud.Bid
+using Cloud.Temp.Bid.Dtos;
+
+namespace Cloud.Temp.Bid
 {
     public interface IBidAppService : IApplicationService
     {

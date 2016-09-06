@@ -1,8 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.ShopAudit.Dtos;
-namespace Cloud.ShopAudit
+using Cloud.Temp.ShopAudit.Dtos;
+
+namespace Cloud.Temp.ShopAudit
 {
     public interface IShopAuditAppService : IApplicationService
     {

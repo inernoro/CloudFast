@@ -1,5 +1,4 @@
-using System;
-namespace Cloud.ManagerRoleNav.Dtos {
+namespace Cloud.Temp.ManagerRoleNav.Dtos {
 public class GetOutput {
   
 		public int RoleId{ get; set; }

@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.ShopAudit.Dtos{
+
+namespace Cloud.Temp.ShopAudit.Dtos{
 [AutoMap(typeof(Domain.ShopAudit))]
     public class PutInput
     {

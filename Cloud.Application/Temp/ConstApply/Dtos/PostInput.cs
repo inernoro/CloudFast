@@ -1,6 +1,7 @@
 using System;
 using Abp.AutoMapper;
-namespace Cloud.ConstApply.Dtos
+
+namespace Cloud.Temp.ConstApply.Dtos
 {
 	[AutoMap(typeof(Domain.ConstApply))]
 	public class PostInput {

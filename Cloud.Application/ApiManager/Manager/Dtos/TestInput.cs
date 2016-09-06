@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using Abp.AutoMapper;
 using Cloud.Framework.Mongo;
 
-namespace Cloud.ApiManager.Manager
+namespace Cloud.ApiManager.Manager.Dtos
 {
     [AutoMap(typeof(Domain.TestManager))]
     public class TestInput

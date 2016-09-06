@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-namespace Cloud.Onlookers.Dtos
+
+namespace Cloud.Temp.Onlookers.Dtos
 {
     public class GetAllOutput
     {

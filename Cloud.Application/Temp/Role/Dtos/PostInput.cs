@@ -1,10 +1,10 @@
-using System;
 using Abp.AutoMapper;
-namespace Cloud.Role.Dtos
+
+namespace Cloud.Temp.Role.Dtos
 {
 	[AutoMap(typeof(Domain.Role))]
 	public class PostInput {
-		public int ID{ get; set; }
+		public int Id{ get; set; }
 		public string Name{ get; set; }
 		public int ParentId{ get; set; }
 		public int RoleType{ get; set; }

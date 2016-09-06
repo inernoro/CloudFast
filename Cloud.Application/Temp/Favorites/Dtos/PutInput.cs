@@ -1,5 +1,6 @@
 using Abp.AutoMapper;
-namespace Cloud.Favorites.Dtos{
+
+namespace Cloud.Temp.Favorites.Dtos{
 [AutoMap(typeof(Domain.Favorites))]
     public class PutInput
     {

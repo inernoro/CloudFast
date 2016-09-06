@@ -1,5 +1,6 @@
 using System;
-namespace Cloud.ConstContract.Dtos {
+
+namespace Cloud.Temp.ConstContract.Dtos {
 public class GetOutput {
   
 		public int UserId{ get; set; }
