@@ -319,6 +319,7 @@
     <None Include="Excute\Cloud\Strategy\ApiManager\BuildCodeExcuteStrategy.lua" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="Scripts\CloudPlatform\ApiHelper.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
     <Content Include="Scripts\jquery-3.1.0.slim.js" />
