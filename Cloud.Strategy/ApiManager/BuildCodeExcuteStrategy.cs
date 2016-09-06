@@ -52,16 +52,28 @@ namespace Cloud.Strategy.ApiManager
                 var f = buildTables.FindAll(x => x.Name == node);
                 var field = f.Select(x => x.ColName).ToArray();
                 var types = f.Select(x => x.Xtype).ToArray();
-                GetBuild(node, field, types);
+                var str = GetBuild(node, field, types);
+                ExcuteBuild(str);
             }
         }
 
-        public void GetBuild(string tableName, string[] a, int[] b)
+        public Dictionary<string, string> SigleDictionary(IEnumerable<BuildTable> paBuildTables)
+        {
+            var buildTables = paBuildTables.ToList();
+            var tableName = buildTables.Select(x => x.Name).Distinct(); 
+            var f = buildTables.FindAll(x => x.Name == tableName.First());
+            var field = f.Select(x => x.ColName).ToArray();
+            var types = f.Select(x => x.Xtype).ToArray();
+            var str = GetBuild(tableName.First(), field, types);
+            return str;
+        }
+
+        public Dictionary<string, string> GetBuild(string tableName, string[] a, int[] b)
         {
             var field = TableObject.GetTable(a);
             var types = TableObject.GetTable(b);
             Dictionary<string, string> str = Physics.BuildCode(tableName, field, types);
-            ExcuteBuild(str);
+            return str;
         }
     }
 

@@ -21,13 +21,12 @@ namespace Cloud.ApiManager.CodeBuild
             _buildCodeExcuteStrategy = buildCodeExcuteStrategy;
         }
 
-        public void BuildAllCode()
+        public Dictionary<string, string> BuilDictionary(string tableName)
         {
             var str = Current();
             string sql = str.tables.ToString();
-            var tableObject = _dapperRepositorie.Query<BuildTable>(sql);
-            _buildCodeExcuteStrategy.ExcuteCode(tableObject);
-
+            var tableObject = _dapperRepositorie.Query<BuildTable>(sql, new { name = tableName });
+            return _buildCodeExcuteStrategy.SigleDictionary(tableObject);
         }
 
         public void BuildCode(string tableName)

@@ -7,5 +7,7 @@ namespace Cloud.Domain
     { 
         void ExcuteCode(IEnumerable<BuildTable> buildTables);
 
+        Dictionary<string, string> SigleDictionary(IEnumerable<BuildTable> paBuildTables);
+
     }
 }
