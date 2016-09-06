@@ -70,7 +70,7 @@ function ExcuteBuild(fields, types)
 end
 
 -- 生成代码的主方法
-function BuildCode(fields , types)
+function BuildCode(tableName , fields , types)
 local dictionary = clr.System.Collections.Generic.Dictionary[clr.System.String,clr.System.String]();
    local data = ExcuteBuild(fields , types);
     for k, v in pairs(data) do 
@@ -268,17 +268,37 @@ namespace Cloud.@tableName.Dtos{
 end
 
 function TesttempList()
-	--[[local fields ={ "Id", "Name", "Age", "Item", "Sheck","Ksd" };
+	local fields ={ "Id", "Name", "Age", "Item", "Sheck","Ksd" };
 	local types = {34,35,36,48,52,56};
+	--[[
 	local values = ExcuteBuild(fields,types).model.tempList;
 	local fields ={ "Id", "Name", "Age", "Item", "Sheck" };
 	]]
+	--[[
 	local types = {34,35,36,48,52,56};
 	local temps = templateDtos(fields,types);
 	print(temps.TemplateDto);
 	local temps2 = templateModel(fields,types);
 	print(temps2);
-	print(values);
+	print(values);]]
+	local tableName = "Student";
+	local data = ExcuteBuild(fields , types);
+    for k, v in pairs(data) do 
+        if (type(v.tempList) == "string") then 
+            local key = string.gsub(v.url, "@tableName", tableName);
+            local value = string.gsub( v.tempList , "@tableName", tableName );
+			print(key, value);
+        else
+            for k2, v2 in pairs(v.tempList) do
+                if(v2 ~= nil) then 
+                    local key2 = string.gsub(v.url..k2, "@tableName", tableName);
+                    local value2 = string.gsub(v2, "@tableName", tableName);
+				    print(key2, value2);
+                end
+            end
+        end
+    end
+	
 end
 
-BuildCode();
+--TesttempList();
