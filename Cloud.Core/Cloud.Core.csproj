@@ -109,8 +109,6 @@
     <Compile Include="Domain\IBuildCodeExcuteStrategy.cs" />
     <Compile Include="Domain\IManagerUrlStrategy.cs" />
     <Compile Include="Domain\InterfaceManager.cs" />
-    <Compile Include="Domain\ITemplateRepositorie.cs" />
-    <Compile Include="Domain\Template.cs" />
     <Compile Include="Domain\TestEnvironment.cs" />
     <Compile Include="Domain\TestManager.cs" />
     <Compile Include="Domain\IManagerMongoRepositories.cs" />
@@ -121,7 +119,6 @@
     <Compile Include="Framework\Assembly\ScriptDomainService.cs" />
     <Compile Include="Framework\Assembly\EntityEventBus.cs" />
     <Compile Include="Framework\CloudCoreModule.cs" />
-    <Compile Include="Domain\UserInfo.cs" />
     <Compile Include="Framework\Cache\CacheAssembly.cs" />
     <Compile Include="Framework\Cache\CacheBaseAssembly.cs" />
     <Compile Include="Framework\Assembly\CloudConfigurage.cs" />

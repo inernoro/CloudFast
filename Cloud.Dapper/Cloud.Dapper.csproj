@@ -100,7 +100,6 @@
     <Compile Include="Framework\CloudDapperModule.cs" />
     <Compile Include="Framework\DapperRepositories.cs" />
     <Compile Include="Framework\DapperRepositoriesBase.cs" />
-    <Compile Include="Repositories\TemplateRepositorie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +111,9 @@
       <Project>{17298EA0-AF73-4F30-B6F1-2066100D7D74}</Project>
       <Name>Cloud.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

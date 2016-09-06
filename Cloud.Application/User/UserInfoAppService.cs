@@ -18,9 +18,9 @@ namespace Cloud.User
 
         public void Get()
         {
-            _eventBus.Trigger(new EntityChangedEventData<UserInfo>(new UserInfo()));
-            _eventBus.Trigger(new EntityCreatedEventData<UserInfo>(new UserInfo()));
-            _eventBus.Trigger(new EntityDeletedEventData<UserInfo>(new UserInfo()));
+            //_eventBus.Trigger(new EntityChangedEventData<UserInfo>(new UserInfo()));
+            //_eventBus.Trigger(new EntityCreatedEventData<UserInfo>(new UserInfo()));
+            //_eventBus.Trigger(new EntityDeletedEventData<UserInfo>(new UserInfo()));
         }
     }
 }
