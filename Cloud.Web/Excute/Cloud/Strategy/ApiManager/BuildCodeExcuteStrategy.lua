@@ -247,11 +247,7 @@ public class GetInput{
     }
 }]];
 
-    templateCode.GetOutput = [[namespace Cloud.@tableName.Dtos {
-    public class GetOutput {
-
-    }
-}]];
+    templateCode.GetOutput = "namespace Cloud.@tableName.Dtos {\r\npublic class GetOutput {\r\n  ".. getMember(fields,types,false) .."  \r\n\t}\r\n}";
     templateCode.PostInput = "using Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos\r\n{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class PostInput {" .. getMember(fields,types,false) .. "\r\n\t}\r\n}";
     templateCode.PutInput = [[using Abp.AutoMapper;
 namespace Cloud.@tableName.Dtos{
