@@ -129,7 +129,7 @@ function templateRepositories()
     templateCode.Repositories = [[using Cloud.Domain;
 namespace Cloud.Dapper.Framework
 {
-    public class @tableNameRepositorie : DapperRepositories<@tableName>, I@tableNameRepositories
+    public class @tableNameRepositories : DapperRepositories<@tableName>, I@tableNameRepositories
     {
     }
 }]];
@@ -153,35 +153,35 @@ namespace Cloud.@tableName
 {
     public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
     {
-        private readonly I@tableNameRepositorie _@tableNameRepositories;
-        public @tableNameAppService(I@tableNameRepositorie @tableNameRepositories)
+        private readonly I@tableNameRepositories _@tableNameRepositories;
+        public @tableNameAppService(I@tableNameRepositories @tableNameRepositories)
         {
-            _@tableNameRepositorie = @tableNameRepositorie;
+            _@tableNameRepositories = @tableNameRepositories;
         }
         public Task Post(PostInput input)
         {
             var model = input.MapTo<Domain.@tableName>();
-            return _@tableNameRepositorie.InsertAsync(model);
+            return _@tableNameRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)
         {
-            return _@tableNameRepositorie.DeleteAsync(input.Id);
+            return _@tableNameRepositories.DeleteAsync(input.Id);
         }
         public Task Put(PutInput input)
         {
-            var oldData = _@tableNameRepositorie.Get(input.Id);
+            var oldData = _@tableNameRepositories.Get(input.Id);
             if (oldData == null)
                 throw new UserFriendlyException("该数据为空，不能修改");
             var newData = input.MapTo(oldData);
-            return _@tableNameRepositorie.UpdateAsync(newData);
+            return _@tableNameRepositories.UpdateAsync(newData);
         }
         public Task<GetOutput> Get(GetInput input)
         {
-            return Task.Run(() => _@tableNameRepositorie.Get(input.Id).MapTo<GetOutput>());
+            return Task.Run(() => _@tableNameRepositories.Get(input.Id).MapTo<GetOutput>());
         }
         public async Task<GetAllOutput> GetAll(GetAllInput input)
         {
-            var page = await Task.Run(() => _@tableNameRepositorie.ToPaging("@tableName", input, "*", "Id", new { }));
+            var page = await Task.Run(() => _@tableNameRepositories.ToPaging("@tableName", input, "*", "Id", new { }));
             return new GetAllOutput() { Items = page.MapTo<IEnumerable<@tableNameDto>>() };
         }
     }

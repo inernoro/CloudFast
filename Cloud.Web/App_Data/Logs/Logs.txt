@@ -14939,3 +14939,7 @@ DEBUG 2016-09-06 15:16:39,745 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2016-09-06 15:16:39,746 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.TestManager.ITestManagerAppService' with service name 'app/testManager'.
 DEBUG 2016-09-06 15:16:39,748 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.Manager.IManagerAppService' with service name 'app/manager'.
 DEBUG 2016-09-06 15:16:39,749 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Cloud.ApiManager.CodeBuild.ICodeBuildAppService' with service name 'app/codeBuild'.
+DEBUG 2016-09-06 15:23:40,719 [33   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-09-06 15:23:40,720 [33   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-06 15:23:40,721 [33   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-09-06 15:23:40,721 [33   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
