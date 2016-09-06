@@ -6,8 +6,7 @@ Cloud.Web\Logs
 *.user
 *.userosscache
 *.sln.docstates
-Cloud.Web/Logs/Logs.txt 
-
+Cloud.Web/App_Data/Logs
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
