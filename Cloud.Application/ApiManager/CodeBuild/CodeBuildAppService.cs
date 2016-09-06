@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Cloud.Domain;
 using Cloud.Framework;
@@ -31,7 +32,11 @@ namespace Cloud.ApiManager.CodeBuild
 
         public void BuildCode(string tableName)
         {
-
+            var str = Current();
+            string sql = str.tables.ToString();
+            var tableObject = _dapperRepositorie.Query<BuildTable>(sql);
+            var newObj = tableObject.Where(x => x.Name == "UserInfo").ToList();
+            _buildCodeExcuteStrategy.ExcuteCode(newObj);
         }
     }
 }

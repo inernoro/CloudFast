@@ -51,17 +51,17 @@ function ExcuteBuild(fields, types)
         },
         dto =
         {
-            url = "Cloud.Application\\@tableName\\Dtos\\",
+            url = "Cloud.Application\\@tableNameApp\\Dtos\\",
             tempList = dtoStr
         },
         iAppService =
         {
-            url = "Cloud.Application\\@tableName\\I@tableNameAppService",
+            url = "Cloud.Application\\@tableNameApp\\I@tableNameAppService",
             tempList = templateAppService().IAppService
         },
         appService =
         {
-            url = "Cloud.Application\\@tableName\\@tableNameAppService",
+            url = "Cloud.Application\\@tableNameApp\\@tableNameAppService",
             tempList = templateAppService().AppService
         }
 
@@ -148,8 +148,8 @@ using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
-using Cloud.@tableName.Dtos;
-namespace Cloud.@tableName
+using Cloud.@tableNameApp.Dtos;
+namespace Cloud.@tableNameApp
 {
     public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
     {
@@ -191,8 +191,8 @@ namespace Cloud.@tableName
     templateCode.IAppService = [[using System.Threading.Tasks;
 using Abp.Application.Services;
 using Cloud.Framework.Assembly;
-using Cloud.@tableName.Dtos;
-namespace Cloud.@tableName
+using Cloud.@tableNameApp.Dtos;
+namespace Cloud.@tableNameApp
 {
     public interface I@tableNameAppService : IApplicationService
     {
@@ -217,7 +217,7 @@ function templateDtos(fields,types)
 
     local templateCode = { };
 
-    templateCode.DeleteInput = [[namespace Cloud.@tableName.Dtos{
+    templateCode.DeleteInput = [[namespace Cloud.@tableNameApp.Dtos{
     public class DeletetInput
     {
         public int Id { get; set; }
@@ -225,16 +225,15 @@ function templateDtos(fields,types)
     }
 ]];
     templateCode.GetAllInput = [[using Cloud.Framework;
-namespace Cloud.@tableName.Dtos{
+namespace Cloud.@tableNameApp.Dtos{
         public class GetAllInput : PageIndex
         {
         }
 }]];
 
     templateCode.GetAllOutput = [[using System.Collections.Generic;
-namespace Cloud.@tableName.Dtos
+namespace Cloud.@tableNameApp.Dtos
 {
-    [AutoMap(typeof(Domain.@tableName))]
     public class GetAllOutput
     { 
             public IEnumerable<@tableNameDto> Items { get; set; }
@@ -242,23 +241,22 @@ namespace Cloud.@tableName.Dtos
             }
     }]];
 
-    templateCode.GetInput = [[namespace Cloud.@tableName.Dtos{
+    templateCode.GetInput = [[namespace Cloud.@tableNameApp.Dtos{
 public class GetInput{
     public int Id { get; set; }
     }
 }]];
 
-    templateCode.GetOutput = "using System;\r\nnamespace Cloud.@tableName.Dtos {\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\t\r\npublic class GetOutput {\r\n  ".. getMember(fields,types,false) .."  \r\n\t}\r\n}";
-    templateCode.PostInput = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos\r\n{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class PostInput {" .. getMember(fields,types,false) .. "\r\n\t}\r\n}";
-    templateCode.PutInput = [[using Abp.AutoMapper;
-namespace Cloud.@tableName.Dtos{
+    templateCode.GetOutput = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableNameApp.Dtos {\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\t\r\npublic class GetOutput {\r\n  ".. getMember(fields,types,false) .."  \r\n\t}\r\n}";
+    templateCode.PostInput = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableNameApp.Dtos\r\n{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class PostInput {" .. getMember(fields,types,false) .. "\r\n\t}\r\n}";
+    templateCode.PutInput = [[using System;
+using Abp.AutoMapper;
+namespace Cloud.@tableNameApp.Dtos{
 [AutoMap(typeof(Domain.@tableName))]
     public class PutInput
     {
-        public int Id { get; set; }]] .. getMember(fields,types,false) ..[[
-    }
-}]];
-    templateCode.TemplateDto = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class @tableNameDto{"
+        public int Id { get; set; }]] .. getMember(fields,types,false) .."\r\n\t}\r\n}";
+    templateCode.TemplateDto = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableNameApp.Dtos{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class @tableNameDto{"
 .. getMember(fields,types,false) ..
     "\r\n\t}\r\n}";
     return templateCode;

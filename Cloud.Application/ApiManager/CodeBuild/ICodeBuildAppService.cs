@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using System.Web.Http;
 using Abp.Application.Services;
 
 namespace Cloud.ApiManager.CodeBuild
@@ -7,6 +8,7 @@ namespace Cloud.ApiManager.CodeBuild
     {
         void BuildAllCode();
 
+        [HttpGet]
         void BuildCode(string tableName);
 
 

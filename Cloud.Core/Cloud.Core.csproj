@@ -151,6 +151,8 @@
     <Compile Include="Framework\Cache\Redis\KeyValueStruct.cs" />
     <Compile Include="Framework\Cache\Redis\CacheConfigurage.cs" />
     <Compile Include="Framework\Cache\Redis\Transformations.cs" />
+    <Compile Include="Temp\IUserInfoRepositories.cs" />
+    <Compile Include="Temp\UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
