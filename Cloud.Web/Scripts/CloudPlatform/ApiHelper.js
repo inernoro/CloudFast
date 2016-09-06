@@ -2,7 +2,7 @@
 var apiHelper = {
     //可以直接在浏览器测试，若是不想写回调函数，设置为true则将回调值自动输出到控制台
     isInputErrorLog: false,
-    urlPath: "/api/services/CloudApi/",
+    urlPath: "/api/services/app/",
     defaultType: "POST",
     defaultDataType: "JSON",
     debug: false,

@@ -234,8 +234,9 @@ namespace Cloud.@tableName.Dtos{
     templateCode.GetAllOutput = [[using System.Collections.Generic;
 namespace Cloud.@tableName.Dtos
 {
+    [AutoMap(typeof(Domain.@tableName))]
     public class GetAllOutput
-    {
+    { 
             public IEnumerable<@tableNameDto> Items { get; set; }
 
             }
@@ -247,14 +248,14 @@ public class GetInput{
     }
 }]];
 
-    templateCode.GetOutput = "using System;\r\nnamespace Cloud.@tableName.Dtos {\r\npublic class GetOutput {\r\n  ".. getMember(fields,types,false) .."  \r\n\t}\r\n}";
+    templateCode.GetOutput = "using System;\r\nnamespace Cloud.@tableName.Dtos {\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\t\r\npublic class GetOutput {\r\n  ".. getMember(fields,types,false) .."  \r\n\t}\r\n}";
     templateCode.PostInput = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos\r\n{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class PostInput {" .. getMember(fields,types,false) .. "\r\n\t}\r\n}";
     templateCode.PutInput = [[using Abp.AutoMapper;
 namespace Cloud.@tableName.Dtos{
 [AutoMap(typeof(Domain.@tableName))]
     public class PutInput
     {
-        public int Id { get; set; }
+        public int Id { get; set; }]] .. getMember(fields,types,false) ..[[
     }
 }]];
     templateCode.TemplateDto = "using System;\r\nusing Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class @tableNameDto{"

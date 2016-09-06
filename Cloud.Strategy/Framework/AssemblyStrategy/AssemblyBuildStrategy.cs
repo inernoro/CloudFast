@@ -86,7 +86,7 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
                         }
                     }
                     //调用地址
-                    response.CallUrl = $"{LocalUrl}/api/services/CloudAPI/{response.ControllerName}/{response.ActionName}";
+                    response.CallUrl = $"{LocalUrl}/api/services/app/{response.ControllerName}/{response.ActionName}";
                     response.CallUrl = response.CallUrl.Replace("//", "/").Replace("http:/", "http://");
                     //action描述
                     var actionAttribute = methods[index].GetCustomAttribute(typeof(ContentDisplayAttribute), true);

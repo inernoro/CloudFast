@@ -109,6 +109,8 @@ namespace Cloud.Dapper.Framework
             foreach (var node in typeof(T).GetProperties())
             {
                 if (node.Name.ToLower() == "id" || node.GetValue(t) == null) continue;
+                if (node.Name == "CreateTime")
+                    node.SetValue(t, DateTime.Now);
                 list.Add(node.Name);
                 parament.Add("@" + node.Name, node.GetValue(t));
             }
