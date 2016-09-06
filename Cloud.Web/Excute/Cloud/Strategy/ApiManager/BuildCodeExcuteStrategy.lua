@@ -9,14 +9,14 @@ function getFieldXtype()
         'varchar','binary','char','timestamp','sysname','nvarchar','nchar'
     } ]]
     local data = {
-        'string','string','string','int',
+        'string','string','string','DateTime','int',
         'int','int','DateTime','string','string',
         'DateTime','double','string','string','string',
         'decimal','double','string','long','string',
         'string','string','string','long','string','string','string'
     }
     local key = {
-        34,35,36,48,52,56,58,59,60,61,
+        34,35,36,40,48,52,56,58,59,60,61,
         62,98,99,104,106,108,122,127,
         165,167,173,175,189,231,231,239
     }
@@ -94,7 +94,7 @@ end
  
 -- 获取模型方法
 function templateModel(fields,types)
-    local model = "using Abp.Domain.Entities;\r\nnamespace Cloud.Domain{\r\n\tpublic class @tableName :Entity {";  
+    local model = "using Abp.Domain.Entities;\r\nusing System;\r\nnamespace Cloud.Domain{\r\n\tpublic class @tableName :Entity {";  
 	  model = model .. getMember(fields,types,true).."\r\n\t}\r\n}";
     return model;
 end
