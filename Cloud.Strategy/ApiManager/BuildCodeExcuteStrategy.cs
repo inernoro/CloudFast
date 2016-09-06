@@ -37,8 +37,8 @@ namespace Cloud.Strategy.ApiManager
 
         public void ExcuteCode()
         {
-            var field = TableObject.GetTable("Id", "Name", "Age", "Item", "Sheck");
-            var types = TableObject.GetTable(34, 35, 36, 48, 52, 56);
+            var field = TableObject.GetTable("Id", "Name");
+            var types = TableObject.GetTable(56, 239);
             Dictionary<string, string> str = Physics.BuildCode("Student", field, types);
             ExcuteBuild(str);
         }

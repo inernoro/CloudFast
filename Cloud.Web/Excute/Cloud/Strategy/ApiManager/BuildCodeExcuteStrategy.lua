@@ -31,6 +31,7 @@ end
 function ExcuteBuild(fields, types)
 
     local modelStr = templateModel(fields, types);
+	local dtoStr = templateDtos(fields, types);
     local tempData = {
 
         model =
@@ -51,7 +52,7 @@ function ExcuteBuild(fields, types)
         dto =
         {
             url = "Cloud.Application\\@tableName\\Dtos\\",
-            tempList = templateDtos()
+            tempList = dtoStr
         },
         iAppService =
         {
@@ -69,9 +70,7 @@ function ExcuteBuild(fields, types)
 end
 
 -- 生成代码的主方法
-function BuildCode( tableName ,fields,types)
---local fields ={ "Id", "Name", "Age", "Item", "Sheck" };
---local types = {34,35,36,48,52,56};
+function BuildCode(fields , types)
 local dictionary = clr.System.Collections.Generic.Dictionary[clr.System.String,clr.System.String]();
    local data = ExcuteBuild(fields , types);
     for k, v in pairs(data) do 
@@ -90,16 +89,26 @@ local dictionary = clr.System.Collections.Generic.Dictionary[clr.System.String,c
         end
     end
     return dictionary;
+	
 end
  
 -- 获取模型方法
 function templateModel(fields,types)
-    local fx = getFieldXtype();
-    local model = "public class @tableName :Entity {\r\n"; 
-     for i,v in ipairs(fields) do 
-	  model = model .. "\r\n\t" .. "public ".. fx[types[i]].. " " .. v .. "{ get; set; }";
+    local model = "using Abp.Domain.Entities;\r\nnamespace Cloud.Domain\r\n\tpublic class @tableName :Entity {";  
+	  model = model .. getMember(fields,types,true).."\r\n\t}\r\n}";
+    return model;
+end
+
+function getMember(fields,types,isEntity)
+local fx = getFieldXtype();
+local model = "";
+	for i,v in ipairs(fields) do
+		if(isEntity and v=="Id")then
+			model = model .. "\r\n\t\t" .. "public override ".. fx[types[i]].. " " .. v .. "{ get; set; }";
+	elseif(v~="Id") then
+		  model = model .. "\r\n\t\t" .. "public ".. fx[types[i]].. " " .. v .. "{ get; set; }";
+		end
 	end
-	model = model .. "\r\n}";
     return model;
 end
 
@@ -144,8 +153,8 @@ namespace Cloud.@tableName
 {
     public class @tableNameAppService : CloudAppServiceBase, I@tableNameAppService
     {
-        private readonly I@tableNameRepositorie _@tableNameRepositorie;
-        public @tableNameAppService(I@tableNameRepositorie @tableNameRepositorie)
+        private readonly I@tableNameRepositorie _@tableNameRepositories;
+        public @tableNameAppService(I@tableNameRepositorie @tableNameRepositories)
         {
             _@tableNameRepositorie = @tableNameRepositorie;
         }
@@ -204,7 +213,7 @@ namespace Cloud.@tableName
 end
 
 -- dto代码
-function templateDtos()
+function templateDtos(fields,types)
 
     local templateCode = { };
 
@@ -243,15 +252,7 @@ public class GetInput{
 
     }
 }]];
-    templateCode.PostInput = [[using Abp.AutoMapper;
-namespace Cloud.@tableName.Dtos
-{
-    [AutoMap(typeof(Domain.@tableName))]
-        public class PostInput
-        {
-
-        }
-}]];
+    templateCode.PostInput = "using Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos\r\n{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class PostInput {" .. getMember(fields,types,false) .. "\r\n\t}\r\n}";
     templateCode.PutInput = [[using Abp.AutoMapper;
 namespace Cloud.@tableName.Dtos{
 [AutoMap(typeof(Domain.@tableName))]
@@ -260,20 +261,24 @@ namespace Cloud.@tableName.Dtos{
         public int Id { get; set; }
     }
 }]];
-    templateCode.TemplateDto = [[using Abp.AutoMapper;
-namespace Cloud.@tableName.Dtos{
-    [AutoMap(typeof(Domain.@tableName))]
-    public class @tableNameDto
-    {
-
-    }
-}]];
+    templateCode.TemplateDto = "using Abp.AutoMapper;\r\nnamespace Cloud.@tableName.Dtos{\r\n\t[AutoMap(typeof(Domain.@tableName))]\r\n\tpublic class @tableNameDto{"
+.. getMember(fields,types,false) ..
+    "\r\n\t}\r\n}";
     return templateCode;
 end
 
 function TesttempList()
-	local fields ={ "Id", "Name", "Age", "Item", "Sheck","Ksd" };
+	--[[local fields ={ "Id", "Name", "Age", "Item", "Sheck","Ksd" };
 	local types = {34,35,36,48,52,56};
 	local values = ExcuteBuild(fields,types).model.tempList;
+	local fields ={ "Id", "Name", "Age", "Item", "Sheck" };
+	]]
+	local types = {34,35,36,48,52,56};
+	local temps = templateDtos(fields,types);
+	print(temps.TemplateDto);
+	local temps2 = templateModel(fields,types);
+	print(temps2);
 	print(values);
 end
+
+BuildCode();
