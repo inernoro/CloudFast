@@ -1,9 +1,0 @@
-using Abp.AutoMapper;
-
-namespace Cloud.Temp.ConstructionShop.Dtos{
-[AutoMap(typeof(Domain.ConstructionShop))]
-    public class PutInput
-    {
-        public int Id { get; set; }
-    }
-}
