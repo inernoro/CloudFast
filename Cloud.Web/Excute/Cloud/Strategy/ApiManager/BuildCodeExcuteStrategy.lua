@@ -65,9 +65,9 @@ function ExcuteBuild(fields, types)
 end
 
 -- 生成代码的主方法
-function BuildCode( tableName)
-local fields ={ "Id", "Name", "Age", "Item", "Sheck" };
-local types = {34,35,36,48,52,56};
+function BuildCode( tableName ,fields,types)
+--local fields ={ "Id", "Name", "Age", "Item", "Sheck" };
+--local types = {34,35,36,48,52,56};
 local dictionary = clr.System.Collections.Generic.Dictionary[clr.System.String,clr.System.String]();
    local data = ExcuteBuild(fields , types);
     for k, v in pairs(data) do 

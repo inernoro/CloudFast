@@ -2,9 +2,10 @@
 using System.IO;
 using Cloud.Domain;
 using Cloud.Framework.Assembly;
+using Cloud.Framework.Cache.Redis;
 using Cloud.Framework.Dapper;
 using Cloud.Framework.Mongo;
-using Cloud.Framework.Redis;
+using Cloud.Framework.Script;
 using Cloud.Framework.Strategy;
 using Neo.IronLua;
 

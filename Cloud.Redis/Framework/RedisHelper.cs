@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cloud.Framework.Redis;
+using Cloud.Framework.Cache.Redis;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 

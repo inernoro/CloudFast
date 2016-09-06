@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Abp.Dependency;
 
-namespace Cloud.Framework.Redis
+namespace Cloud.Framework.Cache.Redis
 {
     public interface IRedisHelper : ISingletonDependency
     {

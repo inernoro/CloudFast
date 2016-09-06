@@ -6,6 +6,7 @@ using Abp.Dependency;
 using Abp.UI;
 using Castle.Core.Internal;
 using Cloud.Framework.Assembly;
+using Cloud.Framework.Script;
 
 namespace Cloud.Strategy.Framework
 {

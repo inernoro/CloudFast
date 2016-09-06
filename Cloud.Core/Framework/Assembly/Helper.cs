@@ -5,10 +5,11 @@ using Abp.Domain.Entities;
 using Abp.Runtime.Session;
 using Abp.UI;
 using Cloud.Domain;
-using Cloud.Framework.Redis;
 using Jil;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using Neo.IronLua;
 
 namespace Cloud.Framework.Assembly
 {
@@ -32,6 +33,31 @@ namespace Cloud.Framework.Assembly
             return JSON.Deserialize<T>(str);
         }
 
+
+
         #endregion
+    }
+    public static class TableObject
+    {
+
+        public static LuaTable GetTable(params object[] fields)
+        {
+            var types = new LuaTable();
+            foreach (var t in fields)
+            {
+                types.ArrayList.Add(t);
+            }
+            return types;
+        }
+
+        public static LuaTable ToLuaTable(this Entity entity)
+        {
+            var types = new LuaTable();
+            foreach (var t in entity.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            {
+                types.Members.Add(new KeyValuePair<string, object>(t.Name, t.GetValue(entity)));
+            }
+            return types;
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Cloud.Framework.Assembly
+namespace Cloud.Framework.Cache
 {
     /// <summary>
     /// 系统缓存操作类（内存存储）

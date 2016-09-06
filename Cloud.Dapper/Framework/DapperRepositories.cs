@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Abp.Domain.Entities;
 using Castle.Components.DictionaryAdapter;
 using Cloud.Framework.Dapper;
-using Cloud.Framework.Redis;
 using Dapper;
 
 namespace Cloud.Dapper.Framework

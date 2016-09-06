@@ -56,6 +56,14 @@
       <HintPath>..\packages\Jil.2.14.5\lib\net45\Jil.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NeoLua.1.2.8\lib\net45\Neo.Lua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Neo.Lua.Desktop, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NeoLua.1.2.8\lib\net45\Neo.Lua.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -106,24 +114,24 @@
     <Compile Include="Domain\TestEnvironment.cs" />
     <Compile Include="Domain\TestManager.cs" />
     <Compile Include="Domain\IManagerMongoRepositories.cs" />
-    <Compile Include="Framework\Assembly\Cache.cs" />
+    <Compile Include="Framework\Cache\Cache.cs" />
     <Compile Include="Framework\Assembly\ICurrentUser.cs" />
     <Compile Include="Framework\Assembly\Network.cs" />
     <Compile Include="Framework\Assembly\Root.cs" />
     <Compile Include="Framework\Assembly\ScriptDomainService.cs" />
-    <Compile Include="Framework\Assembly\EntityCache.cs" />
+    <Compile Include="Framework\Assembly\EntityEventBus.cs" />
     <Compile Include="Framework\CloudCoreModule.cs" />
     <Compile Include="Domain\UserInfo.cs" />
-    <Compile Include="Framework\Assembly\CacheAssembly.cs" />
-    <Compile Include="Framework\Assembly\CacheBaseAssembly.cs" />
+    <Compile Include="Framework\Cache\CacheAssembly.cs" />
+    <Compile Include="Framework\Cache\CacheBaseAssembly.cs" />
     <Compile Include="Framework\Assembly\CloudConfigurage.cs" />
     <Compile Include="Framework\Assembly\ContentDisplayAttribute.cs" />
     <Compile Include="Framework\Assembly\ICloudAssembly.cs" />
     <Compile Include="Framework\Assembly\ICloudBuildStrategy.cs" />
     <Compile Include="Framework\Assembly\INetWorkStrategy.cs" />
     <Compile Include="Framework\Assembly\IStartupStrategy.cs" />
-    <Compile Include="Framework\Assembly\LuaAssembly.cs" />
-    <Compile Include="Framework\Assembly\LuaConfig.cs" />
+    <Compile Include="Framework\Script\LuaAssembly.cs" />
+    <Compile Include="Framework\Script\LuaConfig.cs" />
     <Compile Include="Framework\Assembly\Helper.cs" />
     <Compile Include="Framework\Dapper\PersistentConfigurage.cs" />
     <Compile Include="Framework\Dapper\IDapperHelper.cs" />
@@ -139,11 +147,11 @@
     <Compile Include="Framework\Mongo\ViewDataMongoModel.cs" />
     <Compile Include="Framework\Strategy\IStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Framework\Redis\CloudKey.cs" />
-    <Compile Include="Framework\Redis\IRedisHelper.cs" />
-    <Compile Include="Framework\Redis\KeyValueStruct.cs" />
-    <Compile Include="Framework\Redis\CacheConfigurage.cs" />
-    <Compile Include="Framework\Redis\Transformations.cs" />
+    <Compile Include="Framework\Cache\Redis\CloudKey.cs" />
+    <Compile Include="Framework\Cache\Redis\IRedisHelper.cs" />
+    <Compile Include="Framework\Cache\Redis\KeyValueStruct.cs" />
+    <Compile Include="Framework\Cache\Redis\CacheConfigurage.cs" />
+    <Compile Include="Framework\Cache\Redis\Transformations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using Abp.Dependency;
+﻿using Abp.Dependency;
 
-namespace Cloud.Framework.Assembly
+namespace Cloud.Framework.Script
 {
     public class LuaConfig : ITransientDependency
     {

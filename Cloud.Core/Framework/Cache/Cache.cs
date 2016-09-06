@@ -1,9 +1,9 @@
 ﻿using Abp.Dependency;
 using Abp.Domain.Entities;
 using Abp.Json;
-using Cloud.Framework.Redis;
+using Cloud.Framework.Cache.Redis;
 
-namespace Cloud.Framework.Assembly
+namespace Cloud.Framework.Cache
 {
     public static class Cache
     {

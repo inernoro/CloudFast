@@ -2,7 +2,7 @@
 using System.Linq;
 using Abp.Domain.Entities;
 
-namespace Cloud.Framework.Redis
+namespace Cloud.Framework.Cache.Redis
 {
     public static class CloudKey
     {

@@ -3,6 +3,8 @@ using Abp.Application.Services;
 using Abp.Dependency;
 using Abp.UI;
 using Cloud.Framework.Assembly;
+using Cloud.Framework.Script;
+
 namespace Cloud.Framework
 {
     /// <summary>

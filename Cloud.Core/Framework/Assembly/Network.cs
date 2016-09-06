@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Net;
 using Abp.Dependency;
 using Cloud.Domain;
-using Cloud.Framework.Redis;
 using Newtonsoft.Json;
 using Abp.Extensions;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Cloud.Framework.Cache.Redis;
 
 namespace Cloud.Framework.Assembly
 {

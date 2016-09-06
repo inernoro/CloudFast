@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Cloud.Framework.Assembly
+namespace Cloud.Framework.Cache
 {
     /// <summary>
     /// 程序集中央缓存管理

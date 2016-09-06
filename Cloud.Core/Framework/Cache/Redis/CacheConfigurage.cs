@@ -1,4 +1,4 @@
-﻿namespace Cloud.Framework.Redis
+﻿namespace Cloud.Framework.Cache.Redis
 {
     public static class CacheConfigurage
     {

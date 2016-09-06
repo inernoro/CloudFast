@@ -5,7 +5,7 @@ using System.Reflection;
 using Abp.Domain.Entities;
 using Castle.Core.Internal;
 
-namespace Cloud.Framework.Redis
+namespace Cloud.Framework.Cache.Redis
 {
     public static class Transformations
     {

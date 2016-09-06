@@ -9,11 +9,10 @@ using Abp.Events.Bus.Entities;
 using Abp.Events.Bus.Handlers;
 using Abp.Json;
 using Cloud.Domain;
-using Cloud.Framework.Redis;
 
 namespace Cloud.Framework.Assembly
 {
-    public class EntityCache : Entity,
+    public class EntityEventBus : Entity,
         IEventHandler<EntityCreatedEventData<Entity>>,
         IEventHandler<EntityChangedEventData<Entity>>,
         IEventHandler<EntityDeletedEventData<Entity>>,
@@ -22,7 +21,7 @@ namespace Cloud.Framework.Assembly
 
         private readonly ScriptDomainService _scriptDomainService;
 
-        public EntityCache(ScriptDomainService scriptDomainService)
+        public EntityEventBus(ScriptDomainService scriptDomainService)
         {
             _scriptDomainService = scriptDomainService;
         }

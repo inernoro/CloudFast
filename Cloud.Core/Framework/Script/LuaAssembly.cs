@@ -1,6 +1,6 @@
 ﻿using Cloud.Framework.Strategy;
 
-namespace Cloud.Framework.Assembly
+namespace Cloud.Framework.Script
 {
     public interface ILuaAssembly : IStrategy
     {

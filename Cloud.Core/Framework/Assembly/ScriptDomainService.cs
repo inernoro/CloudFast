@@ -2,6 +2,7 @@
 using Abp.Dependency;
 using Abp.Domain.Services;
 using Abp.UI;
+using Cloud.Framework.Script;
 
 namespace Cloud.Framework.Assembly
 {

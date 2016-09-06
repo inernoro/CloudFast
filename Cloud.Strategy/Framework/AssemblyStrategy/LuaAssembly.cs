@@ -2,6 +2,7 @@
 using System.IO;
 using Castle.Core.Internal;
 using Cloud.Framework.Assembly;
+using Cloud.Framework.Script;
 using Neo.IronLua;
 
 namespace Cloud.Strategy.Framework.AssemblyStrategy
