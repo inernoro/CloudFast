@@ -11,8 +11,17 @@ namespace Cloud.Web.Controllers
 {
     public class HomeController : CloudControllerBase
     {
-        public ActionResult Index()
+        private readonly IBuildCodeExcuteStrategy _buildCodeExcuteStrategy;
+
+        public HomeController(IBuildCodeExcuteStrategy buildCodeExcuteStrategy)
         {
+            _buildCodeExcuteStrategy = buildCodeExcuteStrategy;
+        }
+
+        public ActionResult Index()
+        { 
+            _buildCodeExcuteStrategy.ExcuteCode();
+
             return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
     }

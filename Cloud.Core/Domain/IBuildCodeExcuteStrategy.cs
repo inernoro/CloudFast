@@ -10,5 +10,7 @@ namespace Cloud.Domain
         /// </summary> 
         void ExcuteBuild(IEnumerable<BuildTable> buildTables);
 
+        void ExcuteCode();
+
     }
 }

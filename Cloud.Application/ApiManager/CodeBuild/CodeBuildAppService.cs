@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Cloud.Domain;
 using Cloud.Framework;
 using Cloud.Framework.Dapper;
@@ -29,8 +30,7 @@ namespace Cloud.ApiManager.CodeBuild
         }
 
         public void BuildCode(string tableName)
-        {
-            throw new System.NotImplementedException();
+        { 
         }
     }
 }

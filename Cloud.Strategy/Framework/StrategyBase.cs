@@ -44,12 +44,7 @@ namespace Cloud.Strategy.Framework
 
         #region dynamic Lua
 
-        private static dynamic DynamicSql => IocManager.Instance.Resolve<ILuaAssembly>();
-
-        public void Excute(Action<dynamic> func)
-        {
-            func(DynamicSql.GetSql(Physics));
-        }
+        private static ILuaAssembly DynamicSql => IocManager.Instance.Resolve<ILuaAssembly>(); 
 
         public dynamic Physics
         {
@@ -57,7 +52,7 @@ namespace Cloud.Strategy.Framework
             {
                 var basetype = GetType();
                 var name = basetype.FullName;
-                if (basetype != null) return DynamicSql.GetSql(name);
+                if (basetype != null) return DynamicSql.NamespaceGetValue(name);
                 throw new UserFriendlyException("BaseType Is Null");
             }
         }
