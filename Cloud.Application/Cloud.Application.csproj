@@ -128,6 +128,16 @@
     <Compile Include="Framework\IPageIndex.cs" />
     <Compile Include="Framework\PageIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\Dtos\DeleteInput.cs" />
+    <Compile Include="Student\Dtos\GetAllInput.cs" />
+    <Compile Include="Student\Dtos\GetAllOutput.cs" />
+    <Compile Include="Student\Dtos\GetInput.cs" />
+    <Compile Include="Student\Dtos\GetOutput.cs" />
+    <Compile Include="Student\Dtos\PostInput.cs" />
+    <Compile Include="Student\Dtos\PutInput.cs" />
+    <Compile Include="Student\Dtos\TemplateDto.cs" />
+    <Compile Include="Student\IStudentAppService.cs" />
+    <Compile Include="Student\StudentAppService.cs" />
     <Compile Include="Template\Dtos\DeletetInput.cs" />
     <Compile Include="Template\Dtos\GetAllInput.cs" />
     <Compile Include="Template\Dtos\GetAllOutput.cs" />

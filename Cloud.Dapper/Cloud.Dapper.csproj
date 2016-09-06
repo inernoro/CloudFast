@@ -100,6 +100,7 @@
     <Compile Include="Framework\CloudDapperModule.cs" />
     <Compile Include="Framework\DapperRepositories.cs" />
     <Compile Include="Framework\DapperRepositoriesBase.cs" />
+    <Compile Include="Repositories\StudentRepositories.cs" />
     <Compile Include="Repositories\TemplateRepositorie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

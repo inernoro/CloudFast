@@ -109,7 +109,9 @@
     <Compile Include="Domain\IBuildCodeExcuteStrategy.cs" />
     <Compile Include="Domain\IManagerUrlStrategy.cs" />
     <Compile Include="Domain\InterfaceManager.cs" />
+    <Compile Include="Domain\IStudentRepositories.cs" />
     <Compile Include="Domain\ITemplateRepositorie.cs" />
+    <Compile Include="Domain\Student.cs" />
     <Compile Include="Domain\Template.cs" />
     <Compile Include="Domain\TestEnvironment.cs" />
     <Compile Include="Domain\TestManager.cs" />

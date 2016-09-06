@@ -14,9 +14,7 @@ using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Domain;
 using Cloud.Framework.Assembly;
 using Cloud.Framework.Mongo;
-using Newtonsoft.Json;
-using MongoDB.Bson;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Json; 
 
 namespace Cloud.ApiManager.Manager
 {

@@ -94,7 +94,7 @@ end
  
 -- 获取模型方法
 function templateModel(fields,types)
-    local model = "using Abp.Domain.Entities;\r\nnamespace Cloud.Domain\r\n\tpublic class @tableName :Entity {";  
+    local model = "using Abp.Domain.Entities;\r\nnamespace Cloud.Domain{\r\n\tpublic class @tableName :Entity {";  
 	  model = model .. getMember(fields,types,true).."\r\n\t}\r\n}";
     return model;
 end
