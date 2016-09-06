@@ -7,18 +7,18 @@ using Abp.Dependency;
 using Abp.Domain.Services;
 using Abp.Extensions;
 using Cloud.Framework.Assembly;
-using Cloud.Framework.Mongo; 
+using Cloud.Framework.Mongo;
 
 namespace Cloud.Strategy.Framework.AssemblyStrategy
-{ 
+{
     /// <summary>
     /// 核心程序及解析驱动
     /// </summary>
-    public class AssemblyDomainService : DomainService
+    public class AssemblyStrategy : StrategyBase, IAssemblyStrategy
     {
         private readonly ICloudBuildStrategy _cloudBuildStrategy;
 
-        public AssemblyDomainService(ICloudBuildStrategy cloudBuildStrategy)
+        public AssemblyStrategy(ICloudBuildStrategy cloudBuildStrategy)
         {
             _cloudBuildStrategy = cloudBuildStrategy;
         }

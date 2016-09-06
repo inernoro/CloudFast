@@ -7,8 +7,8 @@ dataConfig.persistent = function()
         -- 该扩展的应用地址
         url =
         {
-            master = "Server=inernoro.sqlserver.rds.aliyuncs.com,3433;database=CloudPlatform;uid=inernoro;pwd=KONGque00",
-            slave = "Server=inernoro.sqlserver.rds.aliyuncs.com,3433;database=CloudPlatform;uid=inernoro;pwd=KONGque00"
+            master = "Server=inernoro-new.sqlserver.rds.aliyuncs.com,3433;database=CloudPlatform;uid=inernoro;pwd=KONGque00",
+            slave = "Server=inernoro-new.sqlserver.rds.aliyuncs.com,3433;database=CloudPlatform;uid=inernoro;pwd=KONGque00"
         },
         -- 该扩展的名称
         name = "sqlserver",

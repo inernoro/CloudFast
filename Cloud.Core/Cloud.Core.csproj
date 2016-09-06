@@ -112,6 +112,8 @@
     <Compile Include="Domain\TestEnvironment.cs" />
     <Compile Include="Domain\TestManager.cs" />
     <Compile Include="Domain\IManagerMongoRepositories.cs" />
+    <Compile Include="Framework\Assembly\IAssemblyStrategy.cs" />
+    <Compile Include="Framework\Assembly\IEcmaScriptPacker.cs" />
     <Compile Include="Framework\Cache\Cache.cs" />
     <Compile Include="Framework\Assembly\ICurrentUser.cs" />
     <Compile Include="Framework\Assembly\Network.cs" />

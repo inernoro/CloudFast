@@ -29,5 +29,9 @@ namespace Cloud.ApiManager.Manager
 
         Task<TestOutput> Test(TestInput input);
 
+        [ContentDisplay("动态Js")]
+        [HttpGet]
+        Task<string> CloudHelper();
+
     }
 }

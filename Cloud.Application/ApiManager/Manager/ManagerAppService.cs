@@ -12,27 +12,41 @@ using Abp.UI;
 using Abp.Web.Models;
 using Cloud.ApiManager.Manager.Dtos;
 using Cloud.Domain;
+using Cloud.Framework;
 using Cloud.Framework.Assembly;
+using Cloud.Framework.Cache.Redis;
 using Cloud.Framework.Mongo;
-using Newtonsoft.Json; 
+using Newtonsoft.Json;
 
 namespace Cloud.ApiManager.Manager
 {
     public class ManagerAppService : AbpServiceBase, IManagerAppService
     {
+        public string AssemblyJsKey() => "AssemblyJs";
         private readonly IManagerMongoRepositories _managerMongoRepositories;
         private readonly IManagerUrlStrategy _managerUrlStrategy;
         private readonly IAbpSession _abpSession;
+        private readonly IAssemblyStrategy _domainService;
+        private readonly IRedisHelper _redisHelper;
+        private readonly IEcmaScriptPacker _iecmaScriptPacker;
 
 
 
         public ManagerAppService(
             IManagerMongoRepositories managerMongoRepositories,
-            IManagerUrlStrategy managerUrlStrategy, IAbpSession abpSession)
+            IManagerUrlStrategy managerUrlStrategy, 
+            IAbpSession abpSession, 
+            IAssemblyStrategy domainService,
+            IRedisHelper redisHelper,
+            IEcmaScriptPacker iecmaScriptPacker
+            )
         {
             _managerMongoRepositories = managerMongoRepositories;
             _managerUrlStrategy = managerUrlStrategy;
             _abpSession = abpSession;
+            _domainService = domainService;
+            _redisHelper = redisHelper;
+            _iecmaScriptPacker = iecmaScriptPacker;
         }
 
         /// <summary>
@@ -42,6 +56,25 @@ namespace Cloud.ApiManager.Manager
         public async Task<ListResultOutput<GetOutput>> GetBatch()
         {
             return new ListResultOutput<GetOutput>((await _managerMongoRepositories.GetAllListAsync()).MapTo<IReadOnlyList<GetOutput>>());
+        }
+
+        public async Task<string> CloudHelper()
+        {
+
+#if DEBUG
+            return await Task.Run(() => _domainService.BuildCloudHelper(typeof(CloudApplicationModule).Assembly));
+#else
+            return await Task.Run(() =>
+             {
+                 var key = AssemblyJsKey();
+                 if (_redisHelper.KeyExists(key)) return _redisHelper.StringGet(key);
+                 var buildAssembly = _domainService.BuildCloudHelper(typeof(CloudApplicationModule).Assembly);
+                 var zip = _iecmaScriptPacker.Pack(buildAssembly);
+                 _redisHelper.StringSet(key, zip);
+                 return _redisHelper.StringGet(key);
+             });
+#endif
+
         }
 
         private static ViewDataMongoModel _data;
@@ -130,7 +163,7 @@ namespace Cloud.ApiManager.Manager
             back.Take = output.Take;
             back.CreateTime = DateTime.Now;
             back.UserId = _abpSession.UserId;
-           // back.TestEnvironment = new TestEnvironment(true);
+            // back.TestEnvironment = new TestEnvironment(true);
             await _managerMongoRepositories.AdditionalTestData(input.Url, back);
             return output;
         }

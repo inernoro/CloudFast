@@ -104,6 +104,12 @@ namespace Cloud.Redis.Framework
             redis.KeyDelete(rediskey);
         }
 
+        public bool KeyExists(string key, int database = 0)
+        {
+            var redis = Manager.GetDatabase(database);
+            return redis.KeyExists(key);
+        }
+
         #endregion 
 
         #region String

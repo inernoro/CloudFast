@@ -97,6 +97,8 @@
   <ItemGroup>
     <Compile Include="ApiManager\BuildCodeExcuteStrategy.cs" />
     <Compile Include="ApiManager\ManagerUrlStrategy.cs" />
+    <Compile Include="Framework\AssemblyStrategy\EcmaScriptPacker.cs" />
+    <Compile Include="Framework\AssemblyStrategy\ParseMaster.cs" />
     <Compile Include="Framework\CloudStrategyModule.cs" />
     <Compile Include="Framework\AssemblyStrategy\AssemblyBuildStrategy.cs" />
     <Compile Include="Framework\AssemblyStrategy\CloudBuildStrategy.cs" />

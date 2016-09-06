@@ -21,7 +21,7 @@ namespace Cloud.Web.Controllers
 
         public ActionResult Index()
         {
-            _codeBuildAppService.BuildAllCode();
+            //_codeBuildAppService.BuildAllCode();
             return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
     }

@@ -34,6 +34,8 @@ namespace Cloud.Framework.Cache.Redis
 
         void KeyDelete(string[] key, int database = 0);
 
+        bool KeyExists(string key, int database = 0);
+
         #endregion
 
         #region String
