@@ -25,7 +25,7 @@ namespace Cloud.ApiManager.CodeBuild
             var sql = Current();
             var tableName = sql.tables.ToString();
             var tableObject = _dapperRepositorie.Query<BuildTable>(tableName);
-            _buildCodeExcuteStrategy.ExcuteBuild(tableObject);
+            _buildCodeExcuteStrategy.ExcuteCode();
 
         }
 

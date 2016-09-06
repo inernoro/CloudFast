@@ -32,32 +32,36 @@ function ExcuteBuild(fields, types)
 	
 	local modelStr = templateModel(fields,types);
     local tempData = {
-        dto =
-        {
-            url = "/@tableName/Dtos/",
-            tempList = templateDtos()
-        },
-
-        appService =
-        {
-            url = "/@tableName/@tableNameAppServices",
-            tempList = templateAppService().AppService
-        },
+        
         model =
         {
-            url = "/Domain/@tableName",
+            url = "Cloud.Core\\Domain\\@tableName",
             tempList = modelStr
         },
-
+        iRepositories =
+        {
+            url = "Cloud.Core\\Domain\\I@tableNameRepositories",
+            tempList = templateRepositories().IRepositories
+        },
         repositories =
         {
-            url = "/Repositories/@tableNameRepositories",
+            url = "Cloud.Dapper\\Repositories\\@tableNameRepositories",
             tempList = templateRepositories().Repositories
+        },
+        dto =
+        {
+            url = "Cloud.Application\\@tableName\\Dtos\\",
+            tempList = templateDtos()
         },
         iAppService =
         {
-            url = "/@tableName/I@tableNameRepositories",
-            tempList = templateRepositories().IRepositories
+            url = "Cloud.Application\\@tableName\\I@tableNameAppService",
+            tempList = templateAppService().IAppService
+        },
+        appService =
+        {
+            url = "Cloud.Application\\@tableName\\@tableNameAppService",
+            tempList = templateAppService().AppService
         }
 
     }
