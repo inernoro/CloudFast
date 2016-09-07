@@ -7,6 +7,7 @@ namespace Cloud.ApiManager.CodeBuild
 {
     public interface ICodeBuildAppService : IApplicationService
     {
+        [HttpGet]
         void BuildCode(string tableName);
 
 

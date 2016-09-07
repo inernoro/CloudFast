@@ -128,6 +128,16 @@
     <Compile Include="Framework\IPageIndex.cs" />
     <Compile Include="Framework\PageIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\DeleteInput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\GetAllInput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\GetAllOutput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\GetInput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\GetOutput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\PostInput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\PutInput.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\Dtos\TemplateDto.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\IScriptManagerAppService.cs" />
+    <Compile Include="ScriptManager\ScriptManagerApp\ScriptManagerAppService.cs" />
     <Compile Include="UserInfoApp\Dtos\DeleteInput.cs" />
     <Compile Include="UserInfoApp\Dtos\GetAllInput.cs" />
     <Compile Include="UserInfoApp\Dtos\GetAllOutput.cs" />

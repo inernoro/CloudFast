@@ -6,6 +6,5 @@ namespace Cloud.Domain
     public interface IManagerMongoRepositories : IMongoRepositories<InterfaceManager, string>
     {
         Task AdditionalTestData(string url, TestManager addManager);
-
     }
 }

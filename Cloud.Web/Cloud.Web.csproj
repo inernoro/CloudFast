@@ -320,6 +320,7 @@
     <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="Areas\ApiManager\Views\Test\Edit.cshtml" />
     <Content Include="Areas\ApiManager\Views\Test\List.cshtml" />
+    <Content Include="Areas\Wiki\Views\web.config" />
     <None Include="Excute\Cloud\Strategy\ApiManager\BuildCodeExcuteStrategy.lua" />
     <None Include="Properties\PublishProfiles\CloudFast.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
@@ -337,6 +338,7 @@
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\vue.min.js" />
+    <Content Include="Scripts\zepto.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -350,6 +352,7 @@
     <Compile Include="Areas\ApiManager\Controllers\ManagerController.cs" />
     <Compile Include="Areas\ApiManager\Controllers\TestController.cs" />
     <None Include="Excute\Cloud\ApiManager\CodeBuild\CodeBuildAppService.lua" />
+    <Compile Include="Areas\Wiki\WikiAreaRegistration.cs" />
     <Compile Include="Framework\HtmlHelper.cs" />
     <Compile Include="Framework\Ilogin.cs" />
     <Compile Include="Framework\Signin.cs" />
@@ -397,6 +400,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\ApiManager\Models\" />
+    <Folder Include="Areas\Wiki\Controllers\" />
+    <Folder Include="Areas\Wiki\Models\" />
+    <Folder Include="Areas\Wiki\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cloud.Application\Cloud.Application.csproj">

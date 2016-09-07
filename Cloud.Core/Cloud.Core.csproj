@@ -109,6 +109,8 @@
     <Compile Include="Domain\IBuildCodeExcuteStrategy.cs" />
     <Compile Include="Domain\IManagerUrlStrategy.cs" />
     <Compile Include="Domain\InterfaceManager.cs" />
+    <Compile Include="Domain\IScriptManagerRepositories.cs" />
+    <Compile Include="Domain\ScriptManager.cs" />
     <Compile Include="Domain\TestEnvironment.cs" />
     <Compile Include="Domain\TestManager.cs" />
     <Compile Include="Domain\IManagerMongoRepositories.cs" />

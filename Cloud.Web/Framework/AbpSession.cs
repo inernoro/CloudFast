@@ -10,8 +10,6 @@ namespace Cloud.Web.Framework
     public class AbpSession : IAbpSession, ISingletonDependency
     {
         public long? UserId => 1;
-
-
         public int? TenantId { get; }
         public MultiTenancySides MultiTenancySide { get; }
         public long? ImpersonatorUserId { get; }

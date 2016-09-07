@@ -1,5 +1,6 @@
                 using Cloud.Framework.Dapper;
-                namespace Cloud.Domain
+
+namespace Cloud.Temp
                 {
             	    public interface IUserInfoRepositories : IDapperRepositories<UserInfo>
             	    {

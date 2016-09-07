@@ -33,8 +33,8 @@ namespace Cloud.ApiManager.CodeBuild
         {
             var str = Current();
             string sql = str.tables.ToString();
-            var tableObject = _dapperRepositorie.Query<BuildTable>(sql);
-            var newObj = tableObject.Where(x => x.Name == "UserInfo").ToList();
+            var tableObject = _dapperRepositorie.Query<BuildTable>(sql, new { name = tableName });
+            var newObj = tableObject.Where(x => x.Name == tableName).ToList();
             _buildCodeExcuteStrategy.ExcuteCode(newObj);
         }
     }

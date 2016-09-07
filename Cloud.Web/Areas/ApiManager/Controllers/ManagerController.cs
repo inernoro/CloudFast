@@ -43,7 +43,7 @@ namespace Cloud.Web.Areas.ApiManager.Controllers
 
         public ActionResult FileStreamDownload1()
         {
-            var path = Server.MapPath("~/Files/鹤冲天.zip");
+            var path = Server.MapPath("");
             var fileStream = new FileStream(path, FileMode.Open);
             var zipInputStream = new ZipInputStream(fileStream);
             var entry = zipInputStream.GetNextEntry();

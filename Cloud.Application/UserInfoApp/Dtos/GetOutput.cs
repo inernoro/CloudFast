@@ -1,7 +1,9 @@
 using System;
 using Abp.AutoMapper;
+using Cloud.Temp;
+
 namespace Cloud.UserInfoApp.Dtos {
-	[AutoMap(typeof(Domain.UserInfo))]
+	[AutoMap(typeof(UserInfo))]
 	
 public class GetOutput {
   

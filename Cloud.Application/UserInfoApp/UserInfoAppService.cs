@@ -4,6 +4,7 @@ using Abp.AutoMapper;
 using Abp.UI;
 using Cloud.Domain;
 using Cloud.Framework;
+using Cloud.Temp;
 using Cloud.UserInfoApp.Dtos;
 namespace Cloud.UserInfoApp
 {
@@ -16,7 +17,7 @@ namespace Cloud.UserInfoApp
         }
         public Task Post(PostInput input)
         {
-            var model = input.MapTo<Domain.UserInfo>();
+            var model = input.MapTo<UserInfo>();
             return _UserInfoRepositories.InsertAsync(model);
         }
         public Task Delete(DeletetInput input)

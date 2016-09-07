@@ -12,16 +12,8 @@ namespace Cloud.Web.Controllers
 {
     public class HomeController : CloudControllerBase
     {
-        private readonly ICodeBuildAppService _codeBuildAppService;
-
-        public HomeController(ICodeBuildAppService codeBuildAppService)
-        {
-            _codeBuildAppService = codeBuildAppService;
-        }
-
         public ActionResult Index()
-        {
-            //_codeBuildAppService.BuildAllCode();
+        { 
             return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
     }

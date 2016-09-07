@@ -26,7 +26,7 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
 
             foreach (var node in value)
             {
-                sb.Append("\r\ncloud." + node.Key + " = {}");
+                sb.Append("\r\ncloud." + node.Key + " = {};");
 
                 foreach (var responsese in node.Value)
                 {
@@ -67,7 +67,7 @@ namespace Cloud.Strategy.Framework.AssemblyStrategy
             sb.Append("\r\n\t\t url : \"" + responsese.CallUrl + "\",");
             sb.Append("\r\n\t\t success : callback,");
             sb.Append("\r\n\t\t error : errorCallback,");
-            sb.Append("\r\n\t  }) ");
+            sb.Append("\r\n\t  }); ");
             sb.Append("\r\n };");
         }
 

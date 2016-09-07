@@ -7,5 +7,6 @@ namespace Cloud.Domain
     {  
 
         public IEnumerable<TestManager> TestManager { get; set; }
+
     }
 }

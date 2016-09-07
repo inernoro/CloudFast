@@ -1,6 +1,7 @@
-using Abp.Domain.Entities;
 using System;
-namespace Cloud.Domain{
+using Abp.Domain.Entities;
+
+namespace Cloud.Temp{
 	public class UserInfo :Entity {
 		public override int Id{ get; set; }
 		public string UserName{ get; set; }
