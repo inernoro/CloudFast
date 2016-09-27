@@ -1,3 +1,5 @@
+#该版本不再更新,请移步 https://github.com/inernoro/Cloud/
+
 # CloudFast
 
 > 架构组件：<br/>
